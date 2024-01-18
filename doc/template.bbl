@@ -495,8 +495,8 @@
       \endverb
     \endentry
     \entry{JADE_website}{misc}{}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labeltitlesource}{title}
       \field{title}{Jade Site | Java Agent DEvelopment Framework}
       \verb{urlraw}
@@ -595,8 +595,8 @@
       \strng{authorbibnamehash}{668ff0e7939be01036a142e75cc82f51}
       \strng{authornamehash}{668ff0e7939be01036a142e75cc82f51}
       \strng{authorfullhash}{1b08b8aa607c343367051559c0a9846c}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the 2012 IEEE 16th International Conference on Computer Supported Cooperative Work in Design (CSCWD)}

@@ -2373,18 +2373,18 @@
     <bcf:citekey order="10" intorder="1">FIPA_website</bcf:citekey>
     <bcf:citekey order="11" intorder="1">marschall01</bcf:citekey>
     <bcf:citekey order="12" intorder="1">karnouskos02</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">Leitao2021</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">Leitao2021</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">Karnouskos2019</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">Karnouskos2019</bcf:citekey>
-    <bcf:citekey order="17" intorder="1">Leitao2021</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">Leitao2021</bcf:citekey>
-    <bcf:citekey order="19" intorder="1">Karnouskos2019</bcf:citekey>
-    <bcf:citekey order="20" intorder="1">8591641</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">8591641</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">9340089</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">birgit01</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">birgit01</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">paulo02</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">Leitao2021</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">Karnouskos2019</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">Karnouskos2019</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">Leitao2021</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">Leitao2021</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">Karnouskos2019</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">8591641</bcf:citekey>
     <bcf:citekey order="23" intorder="1">8591641</bcf:citekey>
-    <bcf:citekey order="24" intorder="1">8591641</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">9340089</bcf:citekey>
     <bcf:citekey order="25" intorder="1">8591641</bcf:citekey>
     <bcf:citekey order="26" intorder="1">8591641</bcf:citekey>
     <bcf:citekey order="27" intorder="1">8591641</bcf:citekey>
@@ -2398,15 +2398,20 @@
     <bcf:citekey order="35" intorder="1">8591641</bcf:citekey>
     <bcf:citekey order="36" intorder="1">8591641</bcf:citekey>
     <bcf:citekey order="37" intorder="1">8591641</bcf:citekey>
-    <bcf:citekey order="38" intorder="1">JADE_website</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">8591641</bcf:citekey>
     <bcf:citekey order="39" intorder="1">8591641</bcf:citekey>
-    <bcf:citekey order="40" intorder="1">OPCUA_website</bcf:citekey>
-    <bcf:citekey order="41" intorder="1">karnouskos02</bcf:citekey>
-    <bcf:citekey order="42" intorder="1">Karnouskos2019</bcf:citekey>
-    <bcf:citekey order="43" intorder="1">marschall01</bcf:citekey>
-    <bcf:citekey order="44" intorder="1">8972169</bcf:citekey>
-    <bcf:citekey order="45" intorder="1">6221793</bcf:citekey>
-    <bcf:citekey order="46" intorder="1">6221793</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">JADE_website</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">8591641</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">OPCUA_website</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">karnouskos02</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">karnouskos02</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">Karnouskos2019</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">Karnouskos2019</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">marschall01</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">8972169</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">8972169</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">6221793</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">6221793</bcf:citekey>
   </bcf:section>
   <!-- SECTION 1 -->
   <bcf:bibdata section="1">

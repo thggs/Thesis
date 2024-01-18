@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.11)  18 JAN 2024 16:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.11)  18 JAN 2024 22:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2183,7 +2183,7 @@ Package biblatex Info: Reference segment=0 on input line 204.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-TIME class loading=273612
+TIME class loading=275513
 \c@/@nt/hook/mainmatter/@names/@sizecnt=\count748
 \c@/@nt/hook/mainmatter/@paths/@sizecnt=\count749
 \c@/@nt/hook/mainmatter/pre/@sizecnt=\count750
@@ -2321,7 +2321,7 @@ l.215 \typeout
 
  <./NOVAthesisFiles/Schools/nova/Images/nova-insignia.pdf> <./NOVAthesisFiles/S
 chools/nova/fct/Images/nova-fct-logo.pdf>]
-TIME process covers=303628
+TIME process covers=305725
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
 (Font)              scaled to size 24.88pt on input line 216.
 LaTeX Font Info:    Font shape `T1/GilliusADFNoTwo-LF/m/n' will be
@@ -2402,7 +2402,7 @@ Package pdftex.def Info: NOVAthesisFiles/Images/novathesis-text.pdf  used on in
 put line 6.
 (pdftex.def)             Requested size: 50.11581pt x 8.19664pt.
 ) (./template.sls)
-TIME process frontmatter=317915
+TIME process frontmatter=320274
 [6
 
 
@@ -2413,41 +2413,66 @@ LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
 (Font)              scaled to size 14.4pt on input line 8.
 LaTeX Font Info:    Trying to load font information for TS1+zpltlf on input lin
-e 17.
+e 14.
 (c:/texlive/2023/texmf-dist/tex/latex/newpx/ts1zpltlf.fd
 File: ts1zpltlf.fd 2021/11/24 v1.0 fd file for TS1/zpltlf
 )
 LaTeX Font Info:    Font shape `TS1/zpltlf/m/n' will be
-(Font)              scaled to size 10.95pt on input line 17.
+(Font)              scaled to size 10.95pt on input line 14.
 
 
 Package microtype Warning: I cannot find a spacing list for font
 (microtype)                `TS1/zpltlf/m/n/10.95' (context: `nonfrench'). Switc
 hing off
-(microtype)                spacing for this font on input line 17.
+(microtype)                spacing for this font on input line 14.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--26
+
+ []
 
 [1
 
 
 {c:/texlive/2023/texmf-dist/fonts/enc/dvips/newpx/zpl_TOsF.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+ []
+
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 38.
+(Font)              scaled to size 12.0pt on input line 33.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
-(Font)              scaled to size 12.0pt on input line 38.
-
-
-LaTeX Warning: Citation '' on page 2 undefined on input line 40.
-
+(Font)              scaled to size 12.0pt on input line 33.
 ) (./Chapters/state-of-the-art.tex
 NT FILE state-of-the-art.tex
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
 (Font)              scaled to size 10.0pt on input line 5.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/sc' will be
 (Font)              scaled to size 10.0pt on input line 5.
-[2] [3
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
-] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
+ []
+
+[3
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
@@ -2456,53 +2481,100 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
 
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
+
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 71--72
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
+
+ []
+
 
 
 pdfTeX warning: pdflatex.exe (file ./Chapters/Figures/TightlyCoupledHybrid.pdf)
 : PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Figures/TightlyCoupledHybrid.pdf, id=211, 406.3983pt x 109.3686pt>
+<Chapters/Figures/TightlyCoupledHybrid.pdf, id=217, 406.3983pt x 109.3686pt>
 File: Chapters/Figures/TightlyCoupledHybrid.pdf Graphic file (type pdf)
 <use Chapters/Figures/TightlyCoupledHybrid.pdf>
 Package pdftex.def Info: Chapters/Figures/TightlyCoupledHybrid.pdf  used on inp
-ut line 53.
+ut line 77.
 (pdftex.def)             Requested size: 406.39731pt x 109.36832pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
 
  []
 
-<Chapters/Figures/LooselyCoupledHybrid.pdf, id=216, 406.3983pt x 109.3686pt>
+<Chapters/Figures/LooselyCoupledHybrid.pdf, id=222, 406.3983pt x 109.3686pt>
 File: Chapters/Figures/LooselyCoupledHybrid.pdf Graphic file (type pdf)
 <use Chapters/Figures/LooselyCoupledHybrid.pdf>
 Package pdftex.def Info: Chapters/Figures/LooselyCoupledHybrid.pdf  used on inp
-ut line 62.
+ut line 86.
 (pdftex.def)             Requested size: 406.39731pt x 109.36832pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--68
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
-[5 <./Chapters/Figures/TightlyCoupledHybrid.pdf>]
-<Chapters/Figures/TightlyCoupledOnDevice.pdf, id=239, 406.3983pt x 129.6042pt>
+[6 <./Chapters/Figures/TightlyCoupledHybrid.pdf>]
+<Chapters/Figures/TightlyCoupledOnDevice.pdf, id=244, 406.3983pt x 129.6042pt>
 File: Chapters/Figures/TightlyCoupledOnDevice.pdf Graphic file (type pdf)
 <use Chapters/Figures/TightlyCoupledOnDevice.pdf>
 Package pdftex.def Info: Chapters/Figures/TightlyCoupledOnDevice.pdf  used on i
-nput line 71.
+nput line 95.
 (pdftex.def)             Requested size: 406.39731pt x 129.60387pt.
-<Chapters/Figures/LooselyCoupledOnDevice.pdf, id=244, 406.3983pt x 129.6042pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+
+ []
+
+<Chapters/Figures/LooselyCoupledOnDevice.pdf, id=249, 406.3983pt x 129.6042pt>
 File: Chapters/Figures/LooselyCoupledOnDevice.pdf Graphic file (type pdf)
 <use Chapters/Figures/LooselyCoupledOnDevice.pdf>
 Package pdftex.def Info: Chapters/Figures/LooselyCoupledOnDevice.pdf  used on i
-nput line 80.
+nput line 104.
 (pdftex.def)             Requested size: 406.39731pt x 129.60387pt.
+[7 <./Chapters/Figures/LooselyCoupledHybrid.pdf> <./Chapters/Figures/TightlyCou
+pledOnDevice.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ []
 
- [6 <./Chapters/Figures/LooselyCoupledHybrid.pdf> <./Chapters/Figures/TightlyCo
-upledOnDevice.pdf>] [7 <./Chapters/Figures/LooselyCoupledOnDevice.pdf>]) [8]
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
+
+ []
+
+[8 <./Chapters/Figures/LooselyCoupledOnDevice.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
+
+ []
+
+[9]) [10]
 LaTeX Font Info:    Font shape `T1/zpltlf/m/sc' will be
 (Font)              scaled to size 10.95pt on input line 236.
- [9
+ [11
 
 ]
 \blx@maxsegment@1=\count751
@@ -2528,9 +2600,9 @@ LaTeX Font Info:    Font shape `T1/npxtt/m/n' will be
 (Font)              scaled to size 0.01pt on input line 236.
 Package biblatex Info: Reference section=0 on input line 236.
 
-TIME process mainmatter=355991
-[10]
-<NOVAthesisFiles/Schools/nova/fct/Images/nova-fct-msc-cover-back.pdf, id=371, 5
+TIME process mainmatter=364118
+[12]
+<NOVAthesisFiles/Schools/nova/fct/Images/nova-fct-msc-cover-back.pdf, id=383, 5
 97.50829pt x 845.0471pt>
 File: NOVAthesisFiles/Schools/nova/fct/Images/nova-fct-msc-cover-back.pdf Graph
 ic file (type pdf)
@@ -2547,7 +2619,7 @@ l.246 \ntprint{backcover}
                                 % Print the back cover, if any! [0
 
  <./NOVAthesisFiles/Schools/nova/fct/Images/nova-fct-msc-cover-back.pdf>]
-TIME process process backcover=361496
+TIME process process backcover=369426
 \tf@toc=\write10
 \openout10 = `template.toc'.
 
@@ -2567,11 +2639,11 @@ Package logreq Info: Writing requests to 'template.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 58938 strings out of 474166
- 1167409 string characters out of 5749518
- 2149993 words of memory out of 5000000
- 79871 multiletter control sequences out of 15000+600000
- 718080 words of font info for 369 fonts, out of 8000000 for 9000
+ 58944 strings out of 474166
+ 1167550 string characters out of 5749518
+ 2150112 words of memory out of 5000000
+ 79873 multiletter control sequences out of 15000+600000
+ 718195 words of font info for 370 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  124i,21n,146p,3602b,5326s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/arkandis/gillius/GilliusADFNo2-Bold.p
@@ -2582,10 +2654,10 @@ FNo2-Regular.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/t1xtt.p
 fb><c:/texlive/2023/texmf-dist/fonts/type1/public/newpx/zplb.pfb><c:/texlive/20
 23/texmf-dist/fonts/type1/public/newpx/zplr.pfb><c:/texlive/2023/texmf-dist/fon
 ts/type1/public/newpx/zplri.pfb>
-Output written on template.pdf (19 pages, 1010015 bytes).
+Output written on template.pdf (21 pages, 1012399 bytes).
 PDF statistics:
- 516 PDF objects out of 1000 (max. 8388607)
- 419 compressed objects within 5 object streams
- 77 named destinations out of 1000 (max. 500000)
+ 528 PDF objects out of 1000 (max. 8388607)
+ 429 compressed objects within 5 object streams
+ 79 named destinations out of 1000 (max. 500000)
  175346 words of extra memory for PDF output out of 184870 (max. 10000000)
 
