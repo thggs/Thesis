@@ -1,0 +1,127 @@
+\typeout{NT FILE state-of-the-art.tex}
+
+\prependtographicspath{{Chapters/Figures/}}
+
+\chapter{State of the Art}
+\label{cha:state-of-the-art}
+
+In this chapter we'll explore how researchers have dealt with the challenges of creating a MAS based CPPS. We'll start by taking a look at the most commonly used designs and tools, as well as the recommended practices for an Industrial MAS. Finally, we'll do a brief analysis on some prototypes that were made to showcase the usefulness of a MAS in an industrial setting.
+
+\section{Best Practices for Industrial Agent Systems}
+\label{sec:best_practices}
+\subsection{Base Requirements for a MAS}
+
+% Recommendation of Best Practices for Industrial Agent Systems based on the IEEE 2660.1 Standard {Leitao2021};
+To understand what should be the best practices in a MAS based CPPS, we first need to understand its base requirements. A Multi-agent system is, in essence a Cyber-physical system, with entities called agents that cooperate to achieve common goals. MAS provides a different approach to designing a CPS because it distributes its decision-making to all the agents in the system. The decision-making derives from the interactions autonomous agents make among themselves \cite{Leitao2021}. Industrial agents inherit all the qualities of software agents, like the intelligence, autonomy and cooperation abilities, but in addition are also designed to operate in industrial settings, and need to satisfy certain industrial requirements such as reliability, scalability, resilience, manageability, maintainability and most important of all, hardware integration \cite{Leitao2021}.
+
+% Key directions for industrial agent based cyber-physical production systems {Karnouskos2019}
+These requirements are generally tough to fulfill, especially so because despite the potential MAS have shown in supporting these requirements, there aren't a lot of agent-based production systems outside the prototyping phase. This has stopped the growth of Industrial MAS due to the lack of practical knowledge in this field \cite{Karnouskos2019}. Another problem seen in Industrial MAS is the lack of models that can represent these systems. One of the key elements of a MAS are the changes made in structure and logic as the system operates. Thanks to the decentralized nature of the system, it is possible to add, remove or reconfigure modules freely to better adjust to the systems needs \cite{Karnouskos2019}.
+
+Now that we have an idea of the requirements for MAS, we can take a look at the most commonly used architectures, followed by what is recommended by the IEEE Standard.
+
+\subsection{Best Practices and Common Architectures}
+% Integration patterns for interfacing software agents with industrial automation systems {8591641}
+% IEEE Recommended Practice for Industrial Agents: Integration of Software Agents and Low-Level Automation Functions {9340089}
+
+\citeauthor{Leitao2021} \cite{Leitao2021} analyzed the IEEE 2660.1 Standard for the recommended practices in integrating software agents and low-level automation functions. They described the use of a MAS as a CPPS, where control is decentralized, emerging from the interactions of agents that are part of the system. And as we've discussed before, one of the biggest problems is creating an interface between the agent and the device associated with it. Because of this, the IEEE 2660.1 Standard was created, defining the best practices in designing one an appropriate interface.
+As an example, the authors mention three main types of interfaces. An interface for a smart sensor, to acquire measurements. An interface for a Programmable Logic Controller (PLC), to control simple devices like conveyor systems. And finally, an interface for a robot controller to control more complex functions in the CPPS. These three interfaces present different challenges on a development level, because each requires consideration on which architecture to follow, with different consequences to the evolution of the manufacturing plant.
+
+The authors then created multiple scenarios, one of them being factory automation. They then proposed that the most valuable criterion was the response time of the system. As a secondary criterion scalability was chosen, but with a lesser importance. From this scenario the authors then concluded that a tightly coupled hybrid Open Platform Communications Unified Architecture (OPC UA) interface was preferable according to the IEEE 2660.1 standard. This means that the interface should have a client-server approach and be running remotely, a Tightly coupled Hybrid approach. However the authors also mention that this setup has a relatively low score, meaning that many of the other proposed practices are still viable, with testing needed to be done in order to pick the best one based on each specific scenario.
+
+
+In \cite{Karnouskos2019}, it is proposed that one of the key requirements in the design of interfaces for MAS is interoperability. This comes with other challenges associated, like re-usability and scalability. In a MAS, the authors identified two main types of interfaces, the interface between agents, which normally is provided through the framework of the agent-based system, and the interface between agent and device. 
+
+
+\citeauthor{8591641} \cite{8591641} analyzed a study performed under the IEEE P2660.1 Working Group \cite{9340089} and concluded that most approaches followed a two-layer convention. The upper layer contained the agents part of the MAS and the lower layer the hardware associated with the physical production system. These two layers can interact in two ways \cite{8591641}:
+\begin{itemize}
+	\item Tight coupling, where the two layers communicate either through shared memory or through a direct network connection. This communication is synchronous and more direct.
+	\item Loose coupling, where the two layers communicate through a queue or a pub/sub channel. This communication is asynchronous and less direct.
+\end{itemize}
+
+These layers can also be hosted in different setups \cite{8591641}:
+\begin{itemize}
+	\item Hybrid setup, where the two layers run in different devices.
+	\item On-device setup, where the two layers run in the same device. 
+\end{itemize}
+
+This means that there can be four different interfaces, Tightly coupled Hybrid, Loosely coupled Hybrid, Tightly coupled On-device and Loosely coupled On-device.\\
+
+A Tightly coupled Hybrid interface is characterized by having the upper layer where the agent operates running remotely and accessing the lower layer through an Application Programming Interface (API). This API is responsible for translating the instructions given by the agent into commands the hardware can interpret. It is also responsible for the opposite, translating the hardware output, such as error codes or function results into data the agent can use. This approach is limited by the channel through which both layers communicate since both agent and device operate on two different computing platforms. This channel is affected by the amount of traffic in the network, more connections implies a lesser quality of service, namely in response time \cite{8591641}.\\
+
+\begin{figure}
+	\centering
+	\includegraphics{TightlyCoupledHybrid}
+	\caption{Tightly coupled Hybrid interface. Source: Adapted from \cite{8591641}}
+\end{figure}
+
+A Loosely coupled Hybrid interface also sees both agent and device running on different computing entities. The difference is that instead of each agent having a direct connection to the corresponding device, they communicate through a message broker. Since the system still runs on two different computers it still suffers from the quality of the connection between layers, making this somewhat inappropriate for systems highly dependent on real time action. However, this approach sees better results in complex systems, where the agent layer needs to publish information to a large amount of devices at once. It also sees good results when it comes to scaling the system, since both layers are very independent of each other \cite{8591641}.\\
+
+\begin{figure}
+	\centering
+	\includegraphics{LooselyCoupledHybrid}
+	\caption{Loosely coupled Hybrid interface. Source: Adapted from \cite{8591641}}
+\end{figure}
+
+A Tightly coupled On-device interface on the other hand follows an architecture where both devices share the same physical platform and can be done in two different ways. The first one, and far less common, has both agent code and device code compiled into a single binary running in the same computing element. This solution provides far better results in very demanding real time applications, however it also removes some flexibility from the system and is far more complicated to design due to the lack of development tools. The second option has the computational resources shared through a software library, where communication is done through software functions but abstracting some elements. This option still holds good results in real time control, but not as good as the first one \cite{8591641}.\\
+
+\begin{figure}
+	\centering
+	\includegraphics{TightlyCoupledOnDevice}
+	\caption{Tightly coupled On-device interface. Source: Adapted from \cite{8591641}}
+\end{figure}
+
+Finally, a Loosely coupled On-device interface is characterized by having the agent embedded in the device and communication is done through a broker. Both layers share a physical unit but do not share computational resources. The utilization of a broker between the two layers offers some flexibility, since the agent and hardware are less dependent of each other. This comes with the caveat that the real time response of the whole unit is dependent on the performance of the broker \cite{8591641}.
+
+\begin{figure}
+	\centering
+	\includegraphics{LooselyCoupledOnDevice}
+	\caption{Loosely coupled On-device interface. Source: Adapted from \cite{8591641}}
+\end{figure}
+
+
+%Talk about ROS?
+The most common programming language to codify agents is Java, most likely due to JADE, an agent-based framework, followed by C++ \cite{8591641}. This framework helps developers in the implementation of MASs  with the FIPA specifications. It also allows deployment for different machines, due to Java supporting multiple devices \cite{JADE_website}.
+For the device part, preexisting hardware is used in the majority of cases because it can be adapted into a MAS by using protocols such as OPC UA \cite{8591641}, which is a platform independent data exchange standard. It allows for both server-client and publish/subscribe communications \cite{OPCUA_website}.
+
+
+ 
+%As we've seen in Chapter~\ref{cha:introduction}, there are different architectures an industrial MAS can follow, and we've proposed that the . In 
+
+% analysis on the specific interface implementations?
+% I can probably analyze MAS with other objectives in mind to compare them to Industrial Agents?
+\section{Case-Studies}
+
+Adoption of industrial oriented MAS has been slow. According to \cite{karnouskos02}, the technology was still in its infancy almost two decades ago, with an incremental progress at best being made since then. In \cite{Karnouskos2019}, the same authors claim that agent-based applications in the industry is still limited. This is because despite the potential shown, these systems have not been implemented in real-world applications, where they would have the chance to evolve and leave the prototyping phase as new research is being done to make them more suitable for these applications.
+
+There are, although, many research prototypes of MAS used for an industrial applications, and we'll take a look at some of them in this section.
+
+\subsection{Bottling Plant}
+
+In \cite{marschall01}, the authors have created a service oriented bottling plant using only industrial agents, with positive results. This system utilizes a coupled approach, using the Open Platform Communications Unified Architecture (OPC UA) for the data exchange between the MAS and the PLCs of the bottling plant. Each Resource Agent (RA) has a reference to a unique InterfaceAgentConfig. This class holds the configuration for the either the OPC UA or a Database client, which was used to communicate with the part of the system that managed the orders placed by the costumers and services provided. The agent can now start an individual client with the specified communications protocol, in the case of the OPC UA client, this agent can now send instructions to the server running on the resource represented by the agent.
+Whenever a developer wants to create a new agent, they would have to:
+\begin{itemize}
+	\item Specify the communications protocol and the address, ports and authentication
+	\item Describe the way the interactions between the agent and resource should proceed
+	\item Define rules for the interpretation of internal resource states
+\end{itemize}
+
+For this specific project, it was possible to monitor the status of the machine in question by observing specific fields in the OPC UA and it was also possible to issue commands by setting other fields. However, this system is not standardized, therefore new hardware needs to be adapted from the ground up in order to be part of the system.
+ 
+\subsection{Agent-based Plug and Produce CPPS}
+
+The authors of \cite{8972169} have created a Plug and Produce CPPS. It is capable of integrating new agents on the fly, as the system operates. They accomplished this by having an agent detecting whenever a new agent joins the system or an existing one leaves. A java class was implemented using the WS4D-JMEDS framework, which searched for the devices in the network and obtained information about them. It was able to detect all devices connected to the network and add and remove them as needed.
+
+The MAS was developed using the JADE framework, the integration with the hardware done with Device Profile Web Services (DPWS). Whenever a physical action is needed by the system, it sends a SOAP message through DPWS, which is received locally on the device and the corresponding action performed.
+
+This system was used to simulate a simple conveyor belt line with brushing capabilities. A product, represented by a Product Agent (PA) enters the system and asks for the requisite action performed by sending a request to the FIPA Contract Net. All available agents then respond with their availability and the PA selects a Resource Agent to perform the action. If there is no RA available, either because all of them are occupied or there aren't any RAs with the capability to perform the action, the PA waits until one is available.
+To test if the system can handle the dynamic movement of agents in and out of the system, some agents were disconnect from the network. The agent responsible for identifying changes in the network acted as expected, by removing agents that were no longer part of the network from the Contract Net, and by adding new agents to it.
+This is a good example of a system capable of handling changes on the fly, without needing manual action for these changes to happen.
+
+\subsection{Multi-agent Framework for Aircraft Parts}
+
+\citeauthor{6221793} \cite{6221793} created a MAS to manufacture aircraft structural parts. They were trying to optimize the manufacturing processes by integrating the agent-based approach in order to resolve bottlenecks in production. To accomplish this, many different types of agents were created:
+
+\begin{itemize}
+	\item A process planning agent to decide the appropriate tools for the current process.
+	\item A fixture design agent 
+\end{itemize}
