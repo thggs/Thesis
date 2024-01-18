@@ -46,36 +46,40 @@ These layers can also be hosted in different setups \cite{8591641}:
 
 This means that there can be four different interfaces, Tightly coupled Hybrid, Loosely coupled Hybrid, Tightly coupled On-device and Loosely coupled On-device.\\
 
-A Tightly coupled Hybrid interface is characterized by having the upper layer where the agent operates running remotely and accessing the lower layer through an Application Programming Interface (API). This API is responsible for translating the instructions given by the agent into commands the hardware can interpret. It is also responsible for the opposite, translating the hardware output, such as error codes or function results into data the agent can use. This approach is limited by the channel through which both layers communicate since both agent and device operate on two different computing platforms. This channel is affected by the amount of traffic in the network, more connections implies a lesser quality of service, namely in response time \cite{8591641}.\\
+A Tightly coupled Hybrid interface (Fig.~\ref{fig:tightly_coupled_hybrid}) is characterized by having the upper layer where the agent operates running remotely and accessing the lower layer through an Application Programming Interface (API). This API is responsible for translating the instructions given by the agent into commands the hardware can interpret. It is also responsible for the opposite, translating the hardware output, such as error codes or function results into data the agent can use. This approach is limited by the channel through which both layers communicate since both agent and device operate on two different computing platforms. This channel is affected by the amount of traffic in the network, more connections implies a lesser quality of service, namely in response time \cite{8591641}.\\
 
-\begin{figure}
+\begin{figure}[hbt!]
 	\centering
 	\includegraphics{TightlyCoupledHybrid}
-	\caption{Tightly coupled Hybrid interface. Source: Adapted from \cite{8591641}}
+	\caption{Tightly coupled Hybrid interface. Adapted from \cite{8591641}}
+	\label{fig:tightly_coupled_hybrid}
 \end{figure}
 
-A Loosely coupled Hybrid interface also sees both agent and device running on different computing entities. The difference is that instead of each agent having a direct connection to the corresponding device, they communicate through a message broker. Since the system still runs on two different computers it still suffers from the quality of the connection between layers, making this somewhat inappropriate for systems highly dependent on real time action. However, this approach sees better results in complex systems, where the agent layer needs to publish information to a large amount of devices at once. It also sees good results when it comes to scaling the system, since both layers are very independent of each other \cite{8591641}.\\
+A Loosely coupled Hybrid interface (Fig.~\ref{fig:tightly_coupled_hybrid}) also sees both agent and device running on different computing entities. The difference is that instead of each agent having a direct connection to the corresponding device, they communicate through a message broker. Since the system still runs on two different computers it still suffers from the quality of the connection between layers, making this somewhat inappropriate for systems highly dependent on real time action. However, this approach sees better results in complex systems, where the agent layer needs to publish information to a large amount of devices at once. It also sees good results when it comes to scaling the system, since both layers are very independent of each other \cite{8591641}.\\
 
-\begin{figure}
+\begin{figure}[hbt!]
 	\centering
 	\includegraphics{LooselyCoupledHybrid}
-	\caption{Loosely coupled Hybrid interface. Source: Adapted from \cite{8591641}}
+	\caption{Loosely coupled Hybrid interface. Adapted from \cite{8591641}}
+	\label{fig:loosely_coupled_hybrid}
 \end{figure}
 
-A Tightly coupled On-device interface on the other hand follows an architecture where both devices share the same physical platform and can be done in two different ways. The first one, and far less common, has both agent code and device code compiled into a single binary running in the same computing element. This solution provides far better results in very demanding real time applications, however it also removes some flexibility from the system and is far more complicated to design due to the lack of development tools. The second option has the computational resources shared through a software library, where communication is done through software functions but abstracting some elements. This option still holds good results in real time control, but not as good as the first one \cite{8591641}.\\
+A Tightly coupled On-device interface (Fig.~\ref{fig:loosely_coupled_hybrid}) on the other hand follows an architecture where both devices share the same physical platform and can be done in two different ways. The first one, and far less common, has both agent code and device code compiled into a single binary running in the same computing element. This solution provides far better results in very demanding real time applications, however it also removes some flexibility from the system and is far more complicated to design due to the lack of development tools. The second option has the computational resources shared through a software library, where communication is done through software functions but abstracting some elements. This option still holds good results in real time control, but not as good as the first one \cite{8591641}.\\
 
-\begin{figure}
+\begin{figure}[hbt!]
 	\centering
 	\includegraphics{TightlyCoupledOnDevice}
-	\caption{Tightly coupled On-device interface. Source: Adapted from \cite{8591641}}
+	\caption{Tightly coupled On-device interface. Adapted from \cite{8591641}}
+	\label{fig:tightly_coupled_ondevice}
 \end{figure}
 
-Finally, a Loosely coupled On-device interface is characterized by having the agent embedded in the device and communication is done through a broker. Both layers share a physical unit but do not share computational resources. The utilization of a broker between the two layers offers some flexibility, since the agent and hardware are less dependent of each other. This comes with the caveat that the real time response of the whole unit is dependent on the performance of the broker \cite{8591641}.
+Finally, a Loosely coupled On-device interface (Fig.~\ref{fig:tightly_coupled_ondevice}) is characterized by having the agent embedded in the device and communication is done through a broker. Both layers share a physical unit but do not share computational resources. The utilization of a broker between the two layers offers some flexibility, since the agent and hardware are less dependent of each other. This comes with the caveat that the real time response of the whole unit is dependent on the performance of the broker \cite{8591641}.
 
-\begin{figure}
+\begin{figure}[hbt!]
 	\centering
 	\includegraphics{LooselyCoupledOnDevice}
-	\caption{Loosely coupled On-device interface. Source: Adapted from \cite{8591641}}
+	\caption{Loosely coupled On-device interface. Adapted from \cite{8591641}}
+	\label{fig:loosely_coupled_ondevice}
 \end{figure}
 
 

@@ -11,6 +11,7 @@
 \contentsline {chapter}{Acronyms}{vi}{section*.6}%
 \contentsline {chapter}{\chapternumberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Problem and Solution}{2}{subsection.1.1.1}%
 \contentsline {chapter}{\chapternumberline {2}State of the Art}{3}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Best Practices for Industrial Agent Systems}{3}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Base Requirements for a MAS}{3}{subsection.2.1.1}%
