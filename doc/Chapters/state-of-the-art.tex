@@ -120,6 +120,8 @@ There are, although, many research prototypes of MAS used for an industrial appl
 
 \subsection{Bottling Plant}
 
+%TODO add the other study conducted on this to expand this subsection
+
 In \cite{marschall01}, the authors have created a service oriented bottling plant using only industrial agents, with positive results. This system utilizes a coupled approach, using the Open Platform Communications Unified Architecture (OPC UA) for the data exchange between the MAS and the PLCs of the bottling plant. Each Resource Agent (RA) has a reference to a unique InterfaceAgentConfig. This class holds the configuration for the either the OPC UA or a Database client, which was used to communicate with the part of the system that managed the orders placed by the costumers and services provided. The agent can now start an individual client with the specified communications protocol, in the case of the OPC UA client, this agent can now send instructions to the server running on the resource represented by the agent.\\
 
 Whenever a developer wants to create a new agent, they would have to:
