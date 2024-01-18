@@ -1,0 +1,650 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{birgit01}{article}{}
+      \name{author}{2}{}{%
+        {{hash=5d217c5b417c733c101c2ef0d92c458d}{%
+           family={Vogel-Heuser},
+           familyi={V\bibinithyphendelim H\bibinitperiod},
+           given={Birgit},
+           giveni={B\bibinitperiod}}}%
+        {{hash=c96164232e2a444e469615ded9ed3862}{%
+           family={Hess},
+           familyi={H\bibinitperiod},
+           given={Dieter},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Institute of Electrical}%
+        {Electronics Engineers Inc.}%
+      }
+      \strng{namehash}{adf7eeac5938ced924326657f69366a7}
+      \strng{fullhash}{adf7eeac5938ced924326657f69366a7}
+      \strng{bibnamehash}{adf7eeac5938ced924326657f69366a7}
+      \strng{authorbibnamehash}{adf7eeac5938ced924326657f69366a7}
+      \strng{authornamehash}{adf7eeac5938ced924326657f69366a7}
+      \strng{authorfullhash}{adf7eeac5938ced924326657f69366a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{15455955}
+      \field{issue}{2}
+      \field{journaltitle}{IEEE Transactions on Automation Science and Engineering}
+      \field{title}{Guest Editorial Industry 4.0-Prerequisites and Visions}
+      \field{volume}{13}
+      \field{year}{2016}
+      \field{pages}{411\bibrangedash 413}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1109/TASE.2016.2523639
+      \endverb
+    \endentry
+    \entry{rit01}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=2b240171ec00e5bda2275984fa2a52e5}{%
+           family={editors},
+           familyi={e\bibinitperiod},
+           given={RIT},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{2b240171ec00e5bda2275984fa2a52e5}
+      \strng{fullhash}{2b240171ec00e5bda2275984fa2a52e5}
+      \strng{bibnamehash}{2b240171ec00e5bda2275984fa2a52e5}
+      \strng{authorbibnamehash}{2b240171ec00e5bda2275984fa2a52e5}
+      \strng{authornamehash}{2b240171ec00e5bda2275984fa2a52e5}
+      \strng{authorfullhash}{2b240171ec00e5bda2275984fa2a52e5}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Industry 4.0 Case Studies (curated)}
+      \verb{urlraw}
+      \verb https://www.rit.edu/advancedmanufacturing/industry40/course/industry-40-case-studies-curated
+      \endverb
+      \verb{url}
+      \verb https://www.rit.edu/advancedmanufacturing/industry40/course/industry-40-case-studies-curated
+      \endverb
+    \endentry
+    \entry{sakurada01}{article}{}
+      \name{author}{2}{}{%
+        {{hash=9b30035ca0bf2c8f9052348ce9bd89ec}{%
+           family={Sakurada},
+           familyi={S\bibinitperiod},
+           given={Lucas},
+           giveni={L\bibinitperiod}}}%
+        {{hash=d9ca932893ae74db6b035f11d2854da0}{%
+           family={Leitão},
+           familyi={L\bibinitperiod},
+           given={Paulo},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{1cf47319e69385af86db7272eb103c4b}
+      \strng{fullhash}{1cf47319e69385af86db7272eb103c4b}
+      \strng{bibnamehash}{1cf47319e69385af86db7272eb103c4b}
+      \strng{authorbibnamehash}{1cf47319e69385af86db7272eb103c4b}
+      \strng{authornamehash}{1cf47319e69385af86db7272eb103c4b}
+      \strng{authorfullhash}{1cf47319e69385af86db7272eb103c4b}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The fast-changing market conditions, the increased global competition and the rapid technological developments demand flexible, adaptable and reconfigurable manufacturing systems based on Cyber-Physical Systems (CPS). Aligned with CPS, the adoption of production system architectures is suitable to reduce complexity and achieve interoperability in the industrial applications. In this context, the Reference Architecture Model for Industry 4.0 (RAMI4.0) provides the guidelines to develop Industry 4.0 (I4.0) compliant solutions, considering the existing industrial standards. The so-called I4.0 components implement this model in practice, combining the physical asset with its digital representation, named Asset Administration Shell (AAS). This paper explores the use of Multi-Agent Systems (MAS) to implement the AAS functionalities, taking advantage of their inherits characteristics, e.g., autonomy, intelligence, decentralization and reconfigurability. In this context, the mapping between AAS functionalities and MAS characteristics is provided, as well as the challenges for this implementation. The applicability is illustrated by digitalizing an inspection cell comprising an UR3 robot and several console products by using MAS technology.}
+      \field{isbn}{9781728163895}
+      \field{journaltitle}{2020 IEEE Conference on Industrial Cyberphysical Systems (ICPS)}
+      \field{title}{Multi-Agent Systems to Implement Industry 4.0 Components}
+      \field{volume}{1}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.1109/ICPS48405.2020.9274745
+      \endverb
+      \keyw{Asset Administration Shell,I4.0 component,Multi-Agent Systems,RAMI4.0}
+    \endentry
+    \entry{karnouskos01}{article}{}
+      \name{author}{4}{}{%
+        {{hash=2f9c1a8a8f3667184ed88fce2f2e85d9}{%
+           family={Karnouskos},
+           familyi={K\bibinitperiod},
+           given={Stamatis},
+           giveni={S\bibinitperiod}}}%
+        {{hash=d9ca932893ae74db6b035f11d2854da0}{%
+           family={Leitão},
+           familyi={L\bibinitperiod},
+           given={Paulo},
+           giveni={P\bibinitperiod}}}%
+        {{hash=44c044fb0b62cdd9f999d82c61a4bad0}{%
+           family={Ribeiro},
+           familyi={R\bibinitperiod},
+           given={Luis},
+           giveni={L\bibinitperiod}}}%
+        {{hash=ba5476ea5ecff2c2a5ca553ce1d9751e}{%
+           family={Colombo},
+           familyi={C\bibinitperiod},
+           given={Armando\bibnamedelima Walter},
+           giveni={A\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Institute of Electrical}%
+        {Electronics Engineers Inc.}%
+      }
+      \strng{namehash}{ac5961c2133e16e33ef391781d12fa94}
+      \strng{fullhash}{7dffbb9cdcd27d02d5ec79d27f73fe0d}
+      \strng{bibnamehash}{ac5961c2133e16e33ef391781d12fa94}
+      \strng{authorbibnamehash}{ac5961c2133e16e33ef391781d12fa94}
+      \strng{authornamehash}{ac5961c2133e16e33ef391781d12fa94}
+      \strng{authorfullhash}{7dffbb9cdcd27d02d5ec79d27f73fe0d}
+      \field{extraname}{1}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Industrial agents (IAs) [1] are multiagent-based systems (MASs) [2] that, for many years, have been advocated as a promising and realistic solution for an emerging set of industrial challenges. In the past, MASs fell into the scope of enterprise agility [3]-[8], and now, more than ever, pertain to the industrial digital transformation and sustainability spheres. MAS technology is being applied to several industrial applications in the cyber-physical system (CPS) context, namely, in smart production, smart electric grids, smart logistics, and smart health care [9]. To understand the future potential of IAs, one must first have a sufficiently concise view of the past and present efforts, i.e., understand their early applications and current directions. Such a view is necessary because, over the last decades, the concept of the IA has proven to be a bit of a moving target, adjusting to the needs, visions, and technologies of each era.}
+      \field{issn}{19410115}
+      \field{issue}{3}
+      \field{journaltitle}{IEEE Industrial Electronics Magazine}
+      \field{month}{9}
+      \field{title}{Industrial Agents as a Key Enabler for Realizing Industrial Cyber-Physical Systems: Multiagent Systems Entering Industry 4.0}
+      \field{volume}{14}
+      \field{year}{2020}
+      \field{pages}{18\bibrangedash 32}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1109/MIE.2019.2962225
+      \endverb
+    \endentry
+    \entry{paulo02}{book}{}
+      \name{author}{2}{}{%
+        {{hash=d9ca932893ae74db6b035f11d2854da0}{%
+           family={Leitão},
+           familyi={L\bibinitperiod},
+           given={Paulo},
+           giveni={P\bibinitperiod}}}%
+        {{hash=2f9c1a8a8f3667184ed88fce2f2e85d9}{%
+           family={Karnouskos},
+           familyi={K\bibinitperiod},
+           given={Stamatis},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{e635cfe7988fa5ad0d2aa04489052097}
+      \strng{fullhash}{e635cfe7988fa5ad0d2aa04489052097}
+      \strng{bibnamehash}{e635cfe7988fa5ad0d2aa04489052097}
+      \strng{authorbibnamehash}{e635cfe7988fa5ad0d2aa04489052097}
+      \strng{authornamehash}{e635cfe7988fa5ad0d2aa04489052097}
+      \strng{authorfullhash}{e635cfe7988fa5ad0d2aa04489052097}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Industrial Agents explains how multi-agent systems improve collaborative networks to offer dynamic service changes, customization, improved quality and reliability, and flexible infrastructure. Learn how these platforms can offer distributed intelligent management and control functions with communication, cooperation and synchronization capabilities, and also provide for the behavior specifications of the smart components of the system. The book offers not only an introduction to industrial agents, but also clarifies and positions the vision, on-going efforts, example applications, assessment. Front Cover; Industrial Agents: Emerging Applications of Software Agents in Industry; Copyright; Contents; Preface; List of Contributors; Part I: Industrial Agents: Concepts Anddefinitions; Chapter 1:Software Agent Systems; 1.1. Introduction; 1.2. Fundamentals of Agents and Agent-Based Systems; 1.2.1. Agents and Agent Properties; 1.2.2. Types of Agents; 1.2.3. Multi-Agent Systems and Their Properties; 1.2.4. Agent Communication; 1.2.6. Development Support for Agent-Based Systems; 1.2.6.1. Development Toolkits and Frameworks for MASs; 1.2.6.2. Agent-Oriented Programming Languages. 1.2.6.3. Agent-Based Software Development Methodologies1.2.7. MAS-Based Simulation Environments; 1.3. Supporting Technologies and Concepts; 1.3.1. Ontologies; 1.3.2. Self-Organization and Emergence; 1.3.2.1. Self-Organization; 1.3.2.2. Emergence; 1.3.3. Swarm Intelligence and Stigmergy; 1.4. Conclusions; References; Chapter 2:Industrial Agents; 2.1. Introduction; 2.2. Modern Industrial Manufacturing Systems and Their Requirements; 2.3. Architectural Types of Industrial Manufacturing Systems; 2.4. The Holonic Paradigm and MAS-Based Holonic Systems; 2.5. Development Tools for Industrial MASs. 2.6. How MASs Can Nourish Other Industrial Approaches2.7. Industrial MASs: Challenges and Research Areas; 2.8. Conclusions; References; Chapter 3:The Design, Deployment, and Assessment of Industrial Agent Systems; 3.1. Introduction; 3.2. Distributed versus Self-Organizing Design; 3.3. Design Challenges and Directions; 3.3.1. Coupled Design; 3.3.2. Embedded Design; 3.3.3. Design Guidelines; 3.4. Deployment; 3.5. Assessment; 3.6. Conclusions; References; Part: Industrial Agents: Related Concepts and Technologies. Chapter 4:Industrial Agents in the Era of Service-Oriented Architectures and Cloud-Based Industrial Infrastructures4.1. Introduction; 4.2. Technologies; 4.2.1. Toward SOAs; 4.2.2. Toward Web Service-Enabled Devices: DPWS, REST, OPC-UA; 4.2.3. Cloud-Based Industrial Systems; 4.3. Bridging Agents and SOA-Enabled Devices; 4.3.1. Agent and Service Commonalities; 4.3.2. Approaches to Combine Agents and Services; 4.3.3. Enterprise Service Bus-Based Solutions; 4.4. Use Case: Cyber-Physical Infrastructure Simulation by Coupling Software Agents and Physical Devices. 4.5. Use Case: Service-Oriented Industrial Automation System4.6. Conclusions and Future Directions; Acknowledgments; References; Chapter 5:Distributed Real-Time Automation And Control -- Reactive Control Layer For Industrial Agents; 5.1. Introduction/Motivation; 5.2. RCLs for Industrial Agents; 5.3. Standard-Based Realization; 5.3.1. PLC-Based Control with IEC 61131-3; 5.3.1.1. Basic principles; 5.3.1.2. The execution model; 5.3.1.3. Communication interfaces; 5.3.1.4. (Re- )configuration services; 5.3.2. Distributed Control with IEC 61499; 5.3.2.1. Basic principles; 5.3.2.2. The execution model.}
+      \field{isbn}{9780128003411}
+      \field{title}{Industrial Agents}
+      \field{year}{2015}
+      \verb{doi}
+      \verb 10.1016/C2013-0-15269-5
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/C20130152695
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/C20130152695
+      \endverb
+    \endentry
+    \entry{FIPA_website}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{Welcome to the Foundation for Intelligent Physical Agents}
+      \verb{urlraw}
+      \verb http://www.fipa.org/
+      \endverb
+      \verb{url}
+      \verb http://www.fipa.org/
+      \endverb
+    \endentry
+    \entry{marschall01}{article}{}
+      \name{author}{5}{}{%
+        {{hash=af117ac7a4f82a45cead6a536eebf63b}{%
+           family={Marschall},
+           familyi={M\bibinitperiod},
+           given={Benedikt},
+           giveni={B\bibinitperiod}}}%
+        {{hash=ee077c1d74baca65f5cd1d8439fd9bbb}{%
+           family={Schleicher},
+           familyi={S\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod}}}%
+        {{hash=010fc3ece782cc747fbf3011b38871e9}{%
+           family={Sollich},
+           familyi={S\bibinitperiod},
+           given={Axel},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e5077c00808f88cfd2f8fafb34c2fc0a}{%
+           family={Becker},
+           familyi={B\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=a6da9efd849740c4af72fe109afe7b85}{%
+           family={Voigt},
+           familyi={V\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Institute of Electrical}%
+        {Electronics Engineers (IEEE)}%
+      }
+      \strng{namehash}{26a247828bbeb68ca27ab8cd3fa1cacd}
+      \strng{fullhash}{f22b41b9f9a9156b53c27d349cfafe42}
+      \strng{bibnamehash}{26a247828bbeb68ca27ab8cd3fa1cacd}
+      \strng{authorbibnamehash}{26a247828bbeb68ca27ab8cd3fa1cacd}
+      \strng{authornamehash}{26a247828bbeb68ca27ab8cd3fa1cacd}
+      \strng{authorfullhash}{f22b41b9f9a9156b53c27d349cfafe42}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{… IT security since the production system has an openly accessible interface to the Internet. Consequently, in Section III-D, the authors introduce their developed and implemented security …}
+      \field{issn}{2687-9735}
+      \field{issue}{1}
+      \field{journaltitle}{IEEE Journal of Emerging and Selected Topics in Industrial Electronics}
+      \field{month}{8}
+      \field{title}{Design and Installation of an Agent-Controlled Cyber-Physical Production System Using the Example of a Beverage Bottling Plant}
+      \field{volume}{3}
+      \field{year}{2021}
+      \field{pages}{39\bibrangedash 47}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/JESTIE.2021.3097941
+      \endverb
+    \endentry
+    \entry{karnouskos02}{article}{}
+      \name{author}{2}{}{%
+        {{hash=2f9c1a8a8f3667184ed88fce2f2e85d9}{%
+           family={Karnouskos},
+           familyi={K\bibinitperiod},
+           given={Stamatis},
+           giveni={S\bibinitperiod}}}%
+        {{hash=d9ca932893ae74db6b035f11d2854da0}{%
+           family={Leitão},
+           familyi={L\bibinitperiod},
+           given={Paulo},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{0fddc34633467dad9d8f6622e13835ef}
+      \strng{fullhash}{0fddc34633467dad9d8f6622e13835ef}
+      \strng{bibnamehash}{0fddc34633467dad9d8f6622e13835ef}
+      \strng{authorbibnamehash}{0fddc34633467dad9d8f6622e13835ef}
+      \strng{authornamehash}{0fddc34633467dad9d8f6622e13835ef}
+      \strng{authorfullhash}{0fddc34633467dad9d8f6622e13835ef}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Industrial Informatics}
+      \field{number}{2}
+      \field{title}{Key Contributing Factors to the Acceptance of Agents in Industrial Environments}
+      \field{volume}{13}
+      \field{year}{2017}
+      \field{pages}{696\bibrangedash 703}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/TII.2016.2607148
+      \endverb
+    \endentry
+    \entry{Leitao2021}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{hash=d9ca932893ae74db6b035f11d2854da0}{%
+           family={Leitão},
+           familyi={L\bibinitperiod},
+           given={Paulo},
+           giveni={P\bibinitperiod}}}%
+        {{hash=62a44c39ff65f1cbbf4fd2020b13035d}{%
+           family={Strasser},
+           familyi={S\bibinitperiod},
+           given={Thomas\bibnamedelima I.},
+           giveni={T\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=2f9c1a8a8f3667184ed88fce2f2e85d9}{%
+           family={Karnouskos},
+           familyi={K\bibinitperiod},
+           given={Stamatis},
+           giveni={S\bibinitperiod}}}%
+        {{hash=44c044fb0b62cdd9f999d82c61a4bad0}{%
+           family={Ribeiro},
+           familyi={R\bibinitperiod},
+           given={Luis},
+           giveni={L\bibinitperiod}}}%
+        {{hash=64f6b3d4b70326b7eaf1d6e90356c043}{%
+           family={Barbosa},
+           familyi={B\bibinitperiod},
+           given={Jose},
+           giveni={J\bibinitperiod}}}%
+        {{hash=dd952ddd9fba095dd7d3b47918f28c77}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Victor},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Institute of Electrical}%
+        {Electronics Engineers Inc.}%
+      }
+      \strng{namehash}{68e6eb62c820503209ee0df29a91fdd7}
+      \strng{fullhash}{66f12094ea017148c739316b4076ec7a}
+      \strng{bibnamehash}{68e6eb62c820503209ee0df29a91fdd7}
+      \strng{authorbibnamehash}{68e6eb62c820503209ee0df29a91fdd7}
+      \strng{authornamehash}{68e6eb62c820503209ee0df29a91fdd7}
+      \strng{authorfullhash}{66f12094ea017148c739316b4076ec7a}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Cyber-Physical Systems (CPS) is a key concept in Industry 4.0, acting as a backbone to develop smart processes, machines and products. Multi-Agent Systems (MAS) is a suitable paradigm for the realization of such industrial CPS systems, supporting the distribution of intelligence and decision-making capabilities among a network of autonomous and cooperative agents. Standardization is a key factor for the acceptance of industrial CPS and agent-based systems, assuming a critical role in establishing specifications for the hardware integration, which is an important requirement for industrial agents. This paper focuses on the recently established IEEE 2660.1-2020 standard that defines a recommended practice to solve the interface problem when applying industrial agents, namely integrating intelligent software agents with low-level automation devices in the CPS context. The paper illustrates the applicability of the standard in three different application scenarios related to power and energy systems, factory automation and building automation, and discusses future directions in terms of standardization in the field of industrial agents, that are required for its wider adoption in the realization of industrial CPS solutions.}
+      \field{isbn}{9781728157306}
+      \field{journaltitle}{Proceedings of the IEEE International Conference on Industrial Technology}
+      \field{month}{3}
+      \field{title}{Recommendation of Best Practices for Industrial Agent Systems based on the IEEE 2660.1 Standard}
+      \field{volume}{2021-March}
+      \field{year}{2021}
+      \field{pages}{1157\bibrangedash 1162}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ICIT46573.2021.9453511
+      \endverb
+    \endentry
+    \entry{Karnouskos2019}{article}{}
+      \name{author}{5}{}{%
+        {{hash=2f9c1a8a8f3667184ed88fce2f2e85d9}{%
+           family={Karnouskos},
+           familyi={K\bibinitperiod},
+           given={Stamatis},
+           giveni={S\bibinitperiod}}}%
+        {{hash=44c044fb0b62cdd9f999d82c61a4bad0}{%
+           family={Ribeiro},
+           familyi={R\bibinitperiod},
+           given={Luis},
+           giveni={L\bibinitperiod}}}%
+        {{hash=d9ca932893ae74db6b035f11d2854da0}{%
+           family={Leitão},
+           familyi={L\bibinitperiod},
+           given={Paulo},
+           giveni={P\bibinitperiod}}}%
+        {{hash=9b81d84cf2676acf4994a8387e3253e9}{%
+           family={Luder},
+           familyi={L\bibinitperiod},
+           given={Arndt},
+           giveni={A\bibinitperiod}}}%
+        {{hash=5d217c5b417c733c101c2ef0d92c458d}{%
+           family={Vogel-Heuser},
+           familyi={V\bibinithyphendelim H\bibinitperiod},
+           given={Birgit},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Institute of Electrical}%
+        {Electronics Engineers Inc.}%
+      }
+      \strng{namehash}{ac5961c2133e16e33ef391781d12fa94}
+      \strng{fullhash}{154bfc0e7d09633ba9612974bee224d6}
+      \strng{bibnamehash}{ac5961c2133e16e33ef391781d12fa94}
+      \strng{authorbibnamehash}{ac5961c2133e16e33ef391781d12fa94}
+      \strng{authornamehash}{ac5961c2133e16e33ef391781d12fa94}
+      \strng{authorfullhash}{154bfc0e7d09633ba9612974bee224d6}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Rapid technology advances and increasing digitalization bring new opportunities but also put new challenges to modern production systems. Industrial agent concepts and technologies can be used to address the needs of modern Cyber-Physical Production Systems (CPPS). To do so, their interplay, especially in industrial settings, needs to be better understood and assessed. Key directions for investigations that are relevant for industrial agent based CPPS are analyzed in this work, mainly the design patterns, interfaces between agents and CPPS, metrics to evaluate the quality of agent based CPPS, and distributed intelligence implemented in or by agents. Although efforts exist both in agent and CPPS domains, their amalgamation still has several aspects that are under-investigated, especially when considering large-scale systems of CPPS, and the proposed four directions discussed in this work, seem promising to address several of the key underlying challenges.}
+      \field{isbn}{9781538685006}
+      \field{journaltitle}{Proceedings - 2019 IEEE International Conference on Industrial Cyber Physical Systems, ICPS 2019}
+      \field{month}{5}
+      \field{title}{Key directions for industrial agent based cyber-physical production systems}
+      \field{year}{2019}
+      \field{pages}{17\bibrangedash 22}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ICPHYS.2019.8780360
+      \endverb
+    \endentry
+    \entry{8591641}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{hash=d9ca932893ae74db6b035f11d2854da0}{%
+           family={Leitão},
+           familyi={L\bibinitperiod},
+           given={Paulo},
+           giveni={P\bibinitperiod}}}%
+        {{hash=2f9c1a8a8f3667184ed88fce2f2e85d9}{%
+           family={Karnouskos},
+           familyi={K\bibinitperiod},
+           given={Stamatis},
+           giveni={S\bibinitperiod}}}%
+        {{hash=44c044fb0b62cdd9f999d82c61a4bad0}{%
+           family={Ribeiro},
+           familyi={R\bibinitperiod},
+           given={Luis},
+           giveni={L\bibinitperiod}}}%
+        {{hash=5c6475af04d5fed6dd3a17899ff24288}{%
+           family={Moutis},
+           familyi={M\bibinitperiod},
+           given={Panayiotis},
+           giveni={P\bibinitperiod}}}%
+        {{hash=cfa43e6ef5bced49d079ba283225987b}{%
+           family={Barbosa},
+           familyi={B\bibinitperiod},
+           given={José},
+           giveni={J\bibinitperiod}}}%
+        {{hash=62a44c39ff65f1cbbf4fd2020b13035d}{%
+           family={Strasser},
+           familyi={S\bibinitperiod},
+           given={Thomas.\bibnamedelimi I.},
+           giveni={T\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \strng{namehash}{68e6eb62c820503209ee0df29a91fdd7}
+      \strng{fullhash}{9093976068b00620cac9dd37615cb857}
+      \strng{bibnamehash}{68e6eb62c820503209ee0df29a91fdd7}
+      \strng{authorbibnamehash}{68e6eb62c820503209ee0df29a91fdd7}
+      \strng{authornamehash}{68e6eb62c820503209ee0df29a91fdd7}
+      \strng{authorfullhash}{9093976068b00620cac9dd37615cb857}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IECON 2018 - 44th Annual Conference of the IEEE Industrial Electronics Society}
+      \field{title}{Integration Patterns for Interfacing Software Agents with Industrial Automation Systems}
+      \field{year}{2018}
+      \field{pages}{2908\bibrangedash 2913}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/IECON.2018.8591641
+      \endverb
+    \endentry
+    \entry{9340089}{article}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Std 2660.1-2020}
+      \field{title}{IEEE Recommended Practice for Industrial Agents: Integration of Software Agents and Low-Level Automation Functions}
+      \field{year}{2021}
+      \field{pages}{1\bibrangedash 43}
+      \range{pages}{43}
+      \verb{doi}
+      \verb 10.1109/IEEESTD.2021.9340089
+      \endverb
+    \endentry
+    \entry{JADE_website}{misc}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{Jade Site | Java Agent DEvelopment Framework}
+      \verb{urlraw}
+      \verb https://jade.tilab.com/
+      \endverb
+      \verb{url}
+      \verb https://jade.tilab.com/
+      \endverb
+    \endentry
+    \entry{OPCUA_website}{misc}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{title}{Unified Architecture - OPC Foundation}
+      \verb{urlraw}
+      \verb https://opcfoundation.org/about/opc-technologies/opc-ua/
+      \endverb
+      \verb{url}
+      \verb https://opcfoundation.org/about/opc-technologies/opc-ua/
+      \endverb
+    \endentry
+    \entry{8972169}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=88d883774e13ec3e3610bfb6051a8753}{%
+           family={Rocha},
+           familyi={R\bibinitperiod},
+           given={Andre\bibnamedelima Dionisio},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=c6b65ab737ac9ddb9daa5d2ce17f6fa2}{%
+           family={Tripa},
+           familyi={T\bibinitperiod},
+           given={João},
+           giveni={J\bibinitperiod}}}%
+        {{hash=5009c9fe474704758122efa9116adc9e}{%
+           family={Alemão},
+           familyi={A\bibinitperiod},
+           given={Duarte},
+           giveni={D\bibinitperiod}}}%
+        {{hash=f9a78cb8ee448780fa7d6626ebdf41b2}{%
+           family={Peres},
+           familyi={P\bibinitperiod},
+           given={Ricardo\bibnamedelima Silva},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=3d4b600056bb9c2fade064a8e181fbc1}{%
+           family={Barata},
+           familyi={B\bibinitperiod},
+           given={José},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{803f1609508e534af590d0c004aba0e4}
+      \strng{fullhash}{5321ccb55cdc17a1cb561cf4d5322bd1}
+      \strng{bibnamehash}{803f1609508e534af590d0c004aba0e4}
+      \strng{authorbibnamehash}{803f1609508e534af590d0c004aba0e4}
+      \strng{authornamehash}{803f1609508e534af590d0c004aba0e4}
+      \strng{authorfullhash}{5321ccb55cdc17a1cb561cf4d5322bd1}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2019 IEEE 17th International Conference on Industrial Informatics (INDIN)}
+      \field{title}{Agent-based Plug and Produce Cyber-Physical Production System – Test Case}
+      \field{volume}{1}
+      \field{year}{2019}
+      \field{pages}{1545\bibrangedash 1551}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/INDIN41052.2019.8972169
+      \endverb
+    \endentry
+    \entry{6221793}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=a9f780db9a32fbdc4b2e8e744e40aaa4}{%
+           family={Chu},
+           familyi={C\bibinitperiod},
+           given={Wangwei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=ebdd70eedda3ca4e1accef8b48bdac73}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yingguang},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=50cc8251589b9736abcef99db9aef21b}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Changqing},
+           giveni={C\bibinitperiod}}}%
+        {{hash=4c1d6642ddae05934a10c7ba2899eee0}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Limin},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{668ff0e7939be01036a142e75cc82f51}
+      \strng{fullhash}{1b08b8aa607c343367051559c0a9846c}
+      \strng{bibnamehash}{668ff0e7939be01036a142e75cc82f51}
+      \strng{authorbibnamehash}{668ff0e7939be01036a142e75cc82f51}
+      \strng{authornamehash}{668ff0e7939be01036a142e75cc82f51}
+      \strng{authorfullhash}{1b08b8aa607c343367051559c0a9846c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2012 IEEE 16th International Conference on Computer Supported Cooperative Work in Design (CSCWD)}
+      \field{title}{A feature-based and multi-agents-based collaborative manufacturing framework for aircraft structural parts}
+      \field{year}{2012}
+      \field{pages}{30\bibrangedash 36}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/CSCWD.2012.6221793
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+
+\refsection{1}
+  \datalist[entry]{none/global//global/global}
+    \entry{novathesis-manual}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=419e7851ce9e726652864635d63207af}{%
+           family={Lourenço},
+           familyi={L\bibinitperiod},
+           given={João\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {NOVA University Lisbon}%
+      }
+      \strng{namehash}{419e7851ce9e726652864635d63207af}
+      \strng{fullhash}{419e7851ce9e726652864635d63207af}
+      \strng{bibnamehash}{419e7851ce9e726652864635d63207af}
+      \strng{authorbibnamehash}{419e7851ce9e726652864635d63207af}
+      \strng{authornamehash}{419e7851ce9e726652864635d63207af}
+      \strng{authorfullhash}{419e7851ce9e726652864635d63207af}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{The NOVAthesis \LaTeX{} Template User's Manual}}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://github.com/joaomlourenco/novathesis/raw/main/template.pdf
+      \endverb
+      \verb{url}
+      \verb https://github.com/joaomlourenco/novathesis/raw/main/template.pdf
+      \endverb
+      \keyw{novathesis-manual}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
