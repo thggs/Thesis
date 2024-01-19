@@ -31,10 +31,17 @@ A Cyber-Physical Production System (CPPS) is, as the name implies, a CPS that op
 %If I need more content I can probably expand this section
 
 % Industrial Agents {paulo02}
-To understand what should be the best practices in an MAS based CPPS, we first need to understand its base characteristics. A Multi-Agent System is, in essence a system composed by many entities called agents that have their own capabilities. These agents communicate and collaborate together by exchanging data among themselves and acting on that data to achieve a common goal. They are capable of adapting their behavior and of autonomous decision-making to determine the best course of action. This system is by nature decentralized and has no hierarchy, making it highly flexible and modular. At any point an agent can leave or join the system, without many changes in architecture \cite{paulo02}.\\
+To understand what should be the best practices in an MAS based CPPS, we first need to understand its base characteristics. A Multi-Agent System is, in essence a system composed by many entities called agents that have their own capabilities. These agents communicate and collaborate together by exchanging data among themselves and acting on that data to achieve a common goal. They are capable of adapting their behavior and of autonomous decision-making to determine the best course of action. This system is by nature decentralized and has no hierarchy, making it highly flexible and modular. At any point an agent can leave or join the system, without significant changes in architecture \cite{paulo02}.\\
 
 % Recommendation of Best Practices for Industrial Agent Systems based on the IEEE 2660.1 Standard {Leitao2021};
-Industrial agents inherit all the qualities of software agents, like the intelligence, autonomy and cooperation abilities, but in addition are also designed to operate in industrial settings, and need to satisfy certain industrial requirements such as reliability, scalability, resilience, manageability, maintainability and most important of all, hardware integration \cite{Leitao2021}.\\
+Industrial agents inherit all the qualities of software agents, like the intelligence, autonomy and cooperation abilities, but in addition are also designed to operate in industrial settings, and need to satisfy certain industrial requirements such as reliability, scalability, resilience, manageability, maintainability and most important of all, hardware integration \cite{Leitao2021}. An example of a base architecture for an MAS can be seen in Figure~\ref{fig:MAS_Architecture}. \\
+
+\begin{figure}[hbt!]
+	\centering
+	\includegraphics{MAS_Architecture}
+	\caption{Industrial Multi-Agent System}
+	\label{fig:MAS_Architecture}
+\end{figure}
 
 % Key directions for industrial agent based cyber-physical production systems {Karnouskos2019}
 These requirements are generally tough to fulfill, especially so because despite the theoretical potential MAS have shown in supporting them, there aren't a lot of agent-based production systems outside the prototyping phase. This has stopped the growth of Industrial MAS due to the lack of practical knowledge in this field \cite{Karnouskos2019}. Another problem seen in Industrial MAS is the lack of models that can represent these systems. One of the key elements of an MAS are the changes made in structure and logic as the system operates. Thanks to the decentralized nature of the system, it is possible to add, remove or reconfigure modules freely to better adjust to the systems needs \cite{Karnouskos2019}.\\
@@ -88,7 +95,7 @@ A Loosely coupled Hybrid interface (Fig.~\ref{fig:loosely_coupled_hybrid}) also 
 	\label{fig:loosely_coupled_hybrid}
 \end{figure}
 
-A Tightly coupled On-device interface (Fig.~\ref{fig:tightly_coupled_ondevice}) on the other hand follows an architecture where both devices share the same physical platform and can be done in two different ways. The first one, and far less common, has both agent code and device code compiled into a single binary running in the same computing element. This solution provides far better results in very demanding real time applications, however it also removes some flexibility from the system and is far more complicated to design due to the lack of development tools. The second option has the computational resources shared through a software library, where communication is done through software functions but abstracting some elements. This option still holds good results in real time control, but not as good as the first one \cite{8591641}.\\
+A Tightly coupled On-device interface (Fig.~\ref{fig:tightly_coupled_ondevice}) on the other hand follows an architecture where both devices share the same physical platform and can be done in two different ways. The first one, and far less common, has both agent code and device code compiled into a single binary running in the same computing element. This solution provides far better results in very demanding real time applications, however it also removes some flexibility from the system and is far more complicated to design due to the lack of development tools. The second option has the computational resources shared through a software library, where communication is done through software functions but abstracting some elements. This option still holds good results in real time control, but not as good as the first one \cite{8591641}.\\\\
 
 \begin{figure}[hbt!]
 	\centering
@@ -108,7 +115,7 @@ Finally, a Loosely coupled On-device interface (Fig.~\ref{fig:loosely_coupled_on
 
 %Talk about ROS?
 The most common programming language to codify agents is Java, most likely due to JADE, an agent-based framework, followed by C++ \cite{8591641}. This framework helps developers in the implementation of MASs  with the FIPA specifications. It also allows deployment for different machines, due to Java supporting multiple devices \cite{JADE_website}.
-For the device part, preexisting hardware is used in the majority of cases because it can be adapted into a MAS by using protocols such as OPC UA \cite{8591641}, which is a platform independent data exchange standard. It allows for both server-client and publish/subscribe communications \cite{OPCUA_website}.
+For the device part, preexisting hardware is used in the majority of cases because it can be integrated into an MAS by using protocols such as OPC UA \cite{8591641}, which is a platform independent data exchange standard. It allows for both server-client and publish/subscribe communications \cite{OPCUA_website}.
 
 % analysis on the specific interface implementations?
 % I can probably analyze MAS with other objectives in mind to compare them to Industrial Agents?
