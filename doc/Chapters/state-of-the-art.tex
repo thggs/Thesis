@@ -115,17 +115,28 @@ Finally, a Loosely coupled On-device interface (Fig.~\ref{fig:loosely_coupled_on
 
 %Talk about ROS?
 The most common programming language to codify agents is Java, most likely due to JADE, an agent-based framework, followed by C++ \cite{8591641}. This framework helps developers in the implementation of MASs  with the FIPA specifications. It also allows deployment for different machines, due to Java supporting multiple devices \cite{JADE_website}.
-For the device part, preexisting hardware is used in the majority of cases because it can be integrated into an MAS by using protocols such as OPC UA \cite{8591641}, which is a platform independent data exchange standard. It allows for both server-client and publish/subscribe communications \cite{OPCUA_website}.
+For the device part, preexisting hardware is used in the majority of cases because it can be integrated into an MAS by using protocols such as OPC UA \cite{8591641}, which is a platform independent data exchange standard. It allows for both server-client and publish/subscribe communications as well see in Section~\ref{subsec:opcua} \cite{OPCUA_website}.
+
+\subsection{OPC UA}
+\label{subsec:opcua}
+
+% Explain OPC UA, maybe change the location of this subsection in the text to give more context to other subsections?
+
+Another way to integrate hardware into an MAS it through the use of already made libraries. Open Platform Communications Unified Architecture (OPC UA) was created based on Open Platform Communications Classic (OPC Classic), which in turn is based on the Microsoft Windows Distributed Component Object Model (COM/DCOM) for the exchange of data. OPC UA is an evolution of OPC Classic but with extra functionalities, like added security, extensibility and platform independence. This last feature allowed it to run on many more platforms such as cloud-based servers, micro-controllers and PLCs \cite{OPCUA_website}. As mentioned in Section~\ref{subsec:best_practices_and_common_architectures}, it is a recommended way to implement an interface for an MAS. OPC UA can be used with as a tightly coupled or loosely coupled interface, because it supports both direct clien-server connections and pub/sub message transmissions, making it a strong option to integrate hardware into an MAS.\\
+
+Because OPC UA already implements communication protocols and communication infrastructure, as well as an information model, all participants in the network know how to communicate. This means that the MAS can be running on any kind of platform or be programmed in any kind of language, increasing system flexibility. Many modern PLCs already provide an embedded OPC UA server facilitating their integration into a new system \cite{Seitz2021}.
 
 % analysis on the specific interface implementations?
 % I can probably analyze MAS with other objectives in mind to compare them to Industrial Agents?
 \section{Practical Uses}
+\label{sec:practical_uses}
 
 Adoption of industrial oriented MAS has been slow. According to \citeauthor{karnouskos02} \cite{karnouskos02}, the technology was still in its infancy almost two decades ago, with an incremental progress at best being made since then. In \cite{Karnouskos2019}, \citeauthor{Karnouskos2019} claim that agent-based applications in the industry is still limited. This is because despite the potential shown, these systems have not been implemented in real-world applications, where they would have the chance to evolve and leave the prototyping phase as new research is being done to make them more suitable for these applications.\\
 
 There are, although, many research prototypes of MAS used for an industrial applications, and we'll take a look at some of them in this section.
 
 \subsection{Bottling Plant}
+\label{subsec:bottling_plant}
 
 %TODO add the other study conducted on this to expand this subsection
 
@@ -156,6 +167,7 @@ Communication between the PLCLingAgent and the machine is done through simple co
 Nevertheless this system performed as intended, producing customized beverage bottles according the customers specifications.
  
 \subsection{Agent-based Plug and Produce CPPS}
+\label{agent_plug_and_produce}
 
 \citeauthor{8972169} \cite{8972169} have created a Plug and Produce CPPS. It is capable of integrating new agents on the fly, as the system operates. They accomplished this by having an agent detecting whenever a new agent joins the system or an existing one leaves. A java class was implemented using the Web Services 4 Devices - Java Multi Edition DPWS Stack (WS4D-JMEDS) framework, which searched for the devices in the network and obtained information about them. It was able to detect all devices connected to the network and add and remove them as needed.\\
 
@@ -171,6 +183,8 @@ The MAS was developed using the JADE framework, the integration with the hardwar
 	\caption{Plug and Produce Resource Agent. Adapted from \cite{8972169}}
 	\label{fig:plug_and_play_device_architecture}
 \end{figure}
+
+
 %\subsection{Multi-agent Framework for Aircraft Parts}
 %
 %\citeauthor{6221793} \cite{6221793} created an MAS to manufacture aircraft structural parts. They were trying to optimize the manufacturing processes by integrating the agent-based approach in order to resolve bottlenecks in production. To accomplish this, many different types of agents were created:
