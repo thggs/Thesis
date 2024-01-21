@@ -82,7 +82,7 @@ A Tightly coupled Hybrid interface (Fig.~\ref{fig:tightly_coupled_hybrid}) is ch
 \begin{figure}[hbt!]
 	\centering
 	\includegraphics{TightlyCoupledHybrid}
-	\caption{Tightly coupled Hybrid interface. Adapted from \cite{8591641}}
+	\caption{Tightly coupled Hybrid interface. Source: Adapted from \cite{8591641}}
 	\label{fig:tightly_coupled_hybrid}
 \end{figure}
 
@@ -91,7 +91,7 @@ A Loosely coupled Hybrid interface (Fig.~\ref{fig:loosely_coupled_hybrid}) also 
 \begin{figure}[hbt!]
 	\centering
 	\includegraphics{LooselyCoupledHybrid}
-	\caption{Loosely coupled Hybrid interface. Adapted from \cite{8591641}}
+	\caption{Loosely coupled Hybrid interface. Source: Adapted from \cite{8591641}}
 	\label{fig:loosely_coupled_hybrid}
 \end{figure}
 
@@ -100,7 +100,7 @@ A Tightly coupled On-device interface (Fig.~\ref{fig:tightly_coupled_ondevice}) 
 \begin{figure}[hbt!]
 	\centering
 	\includegraphics{TightlyCoupledOnDevice}
-	\caption{Tightly coupled On-device interface. Adapted from \cite{8591641}}
+	\caption{Tightly coupled On-device interface. Source: Adapted from \cite{8591641}}
 	\label{fig:tightly_coupled_ondevice}
 \end{figure}
 
@@ -109,11 +109,11 @@ Finally, a Loosely coupled On-device interface (Fig.~\ref{fig:loosely_coupled_on
 \begin{figure}[hbt!]
 	\centering
 	\includegraphics{LooselyCoupledOnDevice}
-	\caption{Loosely coupled On-device interface. Adapted from \cite{8591641}}
+	\caption{Loosely coupled On-device interface. Source: Adapted from \cite{8591641}}
 	\label{fig:loosely_coupled_ondevice}
 \end{figure}
 
-%Talk about ROS?
+%Expand on JADE
 The most common programming language to codify agents is Java, most likely due to JADE, an agent-based framework, followed by C++ \cite{8591641}. This framework helps developers in the implementation of MASs  with the FIPA specifications. It also allows deployment for different machines, due to Java supporting multiple devices \cite{JADE_website}.
 For the device part, preexisting hardware is used in the majority of cases because it can be integrated into an MAS by using protocols such as OPC UA \cite{8591641}, which is a platform independent data exchange standard. It allows for both server-client and publish/subscribe communications as well see in Section~\ref{subsec:opcua} \cite{OPCUA_website}.
 
@@ -122,10 +122,13 @@ For the device part, preexisting hardware is used in the majority of cases becau
 
 % Explain OPC UA, maybe change the location of this subsection in the text to give more context to other subsections?
 
-Another way to integrate hardware into an MAS it through the use of already made libraries. Open Platform Communications Unified Architecture (OPC UA) was created based on Open Platform Communications Classic (OPC Classic), which in turn is based on the Microsoft Windows Distributed Component Object Model (COM/DCOM) for the exchange of data. OPC UA is an evolution of OPC Classic but with extra functionalities, like added security, extensibility and platform independence. This last feature allowed it to run on many more platforms such as cloud-based servers, micro-controllers and PLCs \cite{OPCUA_website}. As mentioned in Section~\ref{subsec:best_practices_and_common_architectures}, it is a recommended way to implement an interface for an MAS. OPC UA can be used with as a tightly coupled or loosely coupled interface, because it supports both direct clien-server connections and pub/sub message transmissions, making it a strong option to integrate hardware into an MAS.\\
+Another way to integrate hardware into an MAS it through the use of already made libraries. Open Platform Communications Unified Architecture (OPC UA) was created based on Open Platform Communications Classic (OPC Classic), which in turn is based on the Microsoft Windows Distributed Component Object Model (COM/DCOM) for the exchange of data. OPC UA is an evolution of OPC Classic but with extra functionalities, like added security, extensibility and platform independence. This last feature allowed it to run on many more platforms such as cloud-based servers, micro-controllers and PLCs \cite{OPCUA_website}. As mentioned in Section~\ref{subsec:best_practices_and_common_architectures}, it is a recommended way to implement an interface for an MAS. OPC UA can be used with as a tightly coupled or loosely coupled interface, because it supports both direct client-server connections and pub/sub message transmissions, making it a strong option to integrate hardware into an MAS.\\
 
 Because OPC UA already implements communication protocols and communication infrastructure, as well as an information model, all participants in the network know how to communicate. This means that the MAS can be running on any kind of platform or be programmed in any kind of language, increasing system flexibility. Many modern PLCs already provide an embedded OPC UA server facilitating their integration into a new system \cite{Seitz2021}.
 
+\subsection{Modbus}
+
+Another way to integrate hardware into an MAS is by using Modbus. Modbus is an industrial communications system that has been around since 1979. It follows a master/slave architecture, where the master is usually an application capable of acquiring data and the slave a PLC. This master application can be substituted for an agent from an MAS, integrating it with the slave hardware. Modbus supports standard Transfer Control Protocol - Internet Protocol (TCP-IP) and User Datagram Protocol (UDP). It is simple, has high levels of compatibility and is decentralized due to the use of master/slave communications, making it flexible. Modbus could be integrated with any programming language of choice, by using software libraries to interpret and send commands to the Modbus layer \cite{10084891}.
 % analysis on the specific interface implementations?
 % I can probably analyze MAS with other objectives in mind to compare them to Industrial Agents?
 \section{Practical Uses}
@@ -138,9 +141,7 @@ There are, although, many research prototypes of MAS used for an industrial appl
 \subsection{Bottling Plant}
 \label{subsec:bottling_plant}
 
-%TODO add the other study conducted on this to expand this subsection
-
-For the design of the bottling plant in \cite{bottling_plant_part2}, a research paper \cite{bottling_plant_part1} was first done by \citeauthor{bottling_plant_part2}, with the collaboration of multiple partners from different backgrounds. This was done to define the base requirements for project, which are:
+For the design of the bottling plant in \cite{bottling_plant_part2}, a research paper \cite{bottling_plant_part1} was first done by \citeauthor{bottling_plant_part1}, with the collaboration of multiple partners from different backgrounds. This was done to define the base requirements for the CPPS as well as the associated MAS. These requirements are:
 
 \begin{itemize}
 	\item Easy Scalability and Functional Expansion
@@ -149,11 +150,21 @@ For the design of the bottling plant in \cite{bottling_plant_part2}, a research 
 	\item Lot Size One without Identification
 \end{itemize}
 
-In addition to the requirements, \citeauthor{bottling_plant_part1} also designed a base solution approach. It consists of two generic agents, a Product Agent (PA) that represents individual products being manufactured, in this case the beverage bottles, and a Resource Agent (RA) that represents the resources used to manufacture the beverage bottles.\\
+Summarizing, the system needed to be easily scalable and it must be able to expand its functions to handle changes in production, it must be able to represent the resources in the CPPS as a generic and manufacturer independent representation, products must be able to handle their own production steps, handling errors and reacting robustly to those errors and finally be able to produce lot sizes of one without needing an identification system for each individual product. 
 
-Since our main focus is on the interface between agent and hardware, we'll mainly focus on the RA. This agent must be generic in order to be implemented on multiple resources, so for each ResourceType there exists a ResourceConfig file which is loaded onto the RA in order to implement its interface. To give an example, if the resource has the ResourceType Machine, the ResourceConfig file MachineConfig must be read. The authors identified five different ResourceTypes and recognize that not all types have been considered. This means that for every new resource type that needs to be added to the system, a new ResourceConfig must be created in order to integrate the new RA into the system. In addition, a new resource that communicates differently from the ones already in the system would need a new interface, and thus a new ResourceConfig would also need to be created, even if the new resource performs similar functions in the manufacturing plant.\\
+In consequence of these requirements, \citeauthor{bottling_plant_part1} designed a base solution consisting of two generic agents, a Product Agent (PA) that represents individual products being manufactured, in this case the beverage bottles, and a Resource Agent (RA) that represents the resources used to manufacture the beverage bottles.\\
 
-In \cite{bottling_plant_part2}, \citeauthor{bottling_plant_part2} created a service oriented bottling plant using the industrial agent system designed in \cite{bottling_plant_part1}, with positive results. To allow for extensibility of the system by additional resources a new agent class was created called InterfaceAgent (IntA). The ResourceConfig files for each type of RA now have a new field which contains an InterfaceAgentConfig. This new IntA is instantiated by the RAs following the configurations of their respective InterfaceAgentConfig and it extends either a DBLinkAgent, used to connect to a database, and a PLCLinkAgent, used to connect to a PLC UA client. All the information, like server address, port and authentication, is stored in the InterfaceAgentConfig file. By using OPC UA, the system can now interface with the hardware in the manufacturing plant, through a Loosely Coupled Hybrid interface. The authors recognize that according to the IEEE P2660.1 Working Group the scalability is considered weak, although they claim the flexibility is worth this loss in scalability.\\
+The MAS was made using JADE, and as such all agents in this system are FIPA compliant and communicate through the FIPA Contract Net.\\
+
+Each agent inherits from a generic class called Agent. The RA and PA then inherit from this class, with added functionalities and variable fields. The PA is an agent with the capabilities of performing autonomous and goal-driven behaviors. The RA is an agent capable of controlling the resources by using sensor data and messages with hardware instructions.\\
+
+A PA differs from the generic Agent by implementing a configuration file ProductConfig. This file is in the Extensible Markup Language (XML) format and has information on the product represented by it. It also has a PlanningModule, which is essential a StateMachine with all the products processing instructions.\\
+
+Like the PA, the RA also mirrors the Agent class. It must be generic in order to be implemented on multiple resources, so for each ResourceType there exists a ResourceConfig file which is loaded onto the RA in order to implement its interface. To give an example, if the resource has the ResourceType Machine, the ResourceConfig file MachineConfig must be read.
+
+The authors identified five different ResourceTypes by classifying many resources from renowned machine manufacturers. RAs not only include robots, transport systems and stations but also database, as a data acquisition method. The authors recognize that not all types of possible resources for a CPPS have been considered. This means that for every new resource type that needs to be added to the system, a new ResourceConfig must be created in order to integrate the new RA into the system. In addition, a new resource that communicates differently from the ones already in the system would need a new interface, and thus a new ResourceConfig would also need to be created, even if the new resource performs similar functions in the manufacturing plant.\\
+
+In \cite{bottling_plant_part2}, \citeauthor{bottling_plant_part2} created the service oriented bottling plant using the industrial agent system designed in \cite{bottling_plant_part1}, with positive results. To allow for extensibility of the system by additional resources a new agent class was created called InterfaceAgent (IntA). The ResourceConfig files for each type of RA now have a new field which contains an InterfaceAgentConfig. This new IntA is instantiated by the RAs following the configurations of their respective InterfaceAgentConfig and it extends either a DBLinkAgent, used to connect to a database, and a PLCLinkAgent, used to connect to a PLC UA client. All the information, like server address, port and authentication, is stored in the InterfaceAgentConfig file. By using OPC UA, the system can now interface with the hardware in the manufacturing plant, through a Loosely Coupled Hybrid interface. The authors recognize that according to the IEEE P2660.1 Working Group the scalability is considered weak, although they claim the flexibility is worth this loss in scalability.\\
 
 To implement a new IntA, the following must be provided:
 \begin{itemize}
@@ -162,28 +173,54 @@ To implement a new IntA, the following must be provided:
 	\item The rules for the interpretation of internal resource states
 \end{itemize}
 
-Communication between the PLCLingAgent and the machine is done through simple commands that specify the type of program to use, depending on the size of the bottle, and the action to perform. However these commands need to be mapped to the manufacturer specific states through the PLCLinkAgent, making the system less scalable by default.\\
+Communication between the PLCLinkAgent and the machine is done through the use of simple commands. They specify the command to perform and the program type to use and must also include a unique name, the NodeID which identifies the type of the given input on the OPC UA server, the data type, all possible values, the read/write direction and the description. The program type is chosen based on the size of the bottle and the command has to be one of the five commands already defined:
 
-Nevertheless this system performed as intended, producing customized beverage bottles according the customers specifications.
+\begin{itemize}
+	\item NoCommand, in case no action is needed
+	\item ProductInPosition, in case the product is in position and ready
+	\item ExecuteProcess, in case the process should start
+	\item ProductRemoved, in case the product needs to be removed from the machine/station
+	\item PrepareMachine, in case the machine needs to be prepared for a process to start
+\end{itemize}
+
+All commands have a number code associated to them to facilitate communications and at any time the PLCLinkAgent can retrieve the state of a machine by observing a NodeID with the machine state code. In Figure~\ref{fig:bottling_plant_state_achine} we can see the state machine representing the interactions between the PLCLinkAgent and a machine. To handle manufacturer specific machine state codes, the authors mapped said codes onto generic MAS states, with the possibility of having multiple codes mapped to a single state. This was done to make the system capable of handling machines from different manufacturers without sacrificing flexibility in the MAS.
+
+\begin{figure}[hbt!]
+	\centering
+	\includegraphics{BottlingPlantStateMachine}
+	\caption{Interactions between PLCLinkAgent and PLC. Source: Adapted from \cite{bottling_plant_part2}}
+	\label{fig:bottling_plant_state_achine}
+\end{figure}
+
+The use of OPC UA makes this system very flexible. New hardware that needs to be implemented in the system can be configured to use these commands through the use of a PLC. The use of generic states make it scalable and configuration files also help fulfilling this necessity. However, it is still dependent on these files, with individual configurations needed for different manufacturers and machine types. The system also needs to be adapted to recognize the machine states from the new implemented hardware.
+
+Nevertheless this system performed as intended, producing customized beverage bottles according the customers specifications. It is a good example of an MAS based CPPS, flexible, scalable, robust, with decentralized control and autonomous intelligent agents.
  
 \subsection{Agent-based Plug and Produce CPPS}
 \label{agent_plug_and_produce}
 
-\citeauthor{8972169} \cite{8972169} have created a Plug and Produce CPPS. It is capable of integrating new agents on the fly, as the system operates. They accomplished this by having an agent detecting whenever a new agent joins the system or an existing one leaves. A java class was implemented using the Web Services 4 Devices - Java Multi Edition DPWS Stack (WS4D-JMEDS) framework, which searched for the devices in the network and obtained information about them. It was able to detect all devices connected to the network and add and remove them as needed.\\
+\citeauthor{8972169} \cite{8972169} have created a Plug and Produce CPPS. It is capable of integrating new agents on the fly, as the system operates. First, the authors divided the systme into three layers. The upper layer is where the MAS operates, called the fog layer. The middle layer is where the interface between the MAS and the hardware is, called the edge layer. And finally, the lower layer is where the hardware components of the CPPS are, called the physical layer.\\
 
-This system was used to simulate a simple conveyor belt line with brushing capabilities. A product, represented by a PA enters the system and asks for the requisite action performed by sending a request to the FIPA Contract Net. All available agents then respond with their availability and the PA selects a Resource Agent to perform the action. If there is no RA available, either because all of them are occupied or there aren't any RAs with the capability to perform the action, the PA waits until one is available.
-To test if the system can handle the dynamic movement of agents in and out of the system, some agents were disconnect from the network. The agent responsible for identifying changes in the network acted as expected, by removing agents that were no longer part of the network from the Contract Net, and by adding new agents to it.
-This is a good example of a system capable of handling changes on the fly, without needing manual action for these changes to happen.\\
+The agents were also categorized into Product Agent (PA) and Resource Agent (RA), performing similar functions to the ones in Section~\ref{subsec:bottling_plant} and in addition the authors also considered Transport Agents (TA) which abstract all resources whose function is to move a product from point A to point B. They also considered a Deployment Agent (DA) tasked with managing the existence of all other agents. This DA should create a new agent or remove an existing one whenever a physical resource is plugged into or unplugged from the system.\\
 
-The MAS was developed using the JADE framework, the integration with the hardware done with Device Profile Web Services (DPWS). Whenever a physical action is needed by the system, the agent sends a SOAP message through DPWS to a PLC which in turn activates the corresponding action on the physical component. Although flexible and potentially scalable, this system still requires the individual programming of the PLCs according to the hardware they're integrated with.
+To accomplish this the authors considered the grouping of a physical resource with its agent a Module. Modules are the components of the whole production system, and they can be plugged and unplugged at any time. The system need to be able to operate to the best of its abilities at all times. In Figure~\ref{fig:plug_and_play_device_architecture} we can see an example of one of these Modules.\\
 
-\begin{figure}
+\begin{figure}[hbt!]
 	\centering
 	\includegraphics{PlugAndPlayDiagram}
-	\caption{Plug and Produce Resource Agent. Adapted from \cite{8972169}}
+	\caption{Plug and Produce Resource Agent. Source: Adapted from \cite{8972169}}
 	\label{fig:plug_and_play_device_architecture}
 \end{figure}
 
+For the interface between hardware and agent, a PLC was chosen. This PLC is able to communicate using Device Profile Web Services (DWPS). For the DA, a java class was implemented using the Web Services 4 Devices - Java Multi Edition DPWS Stack (WS4D-JMEDS) framework, which searched for the devices in the network and obtained information about them. It was able to detect all devices connected to the network and add and remove them as needed.\\
+
+Each resource is able to perform certain procedures on the products, represented in the MAS as skill which RAs perform on to PAs. This is how the authors simulate the system virtually, whenever a product needs a certain procedure to be performed on itself, the corresponding PA asks an RA for that skill. This is relevant because the system may or may not have a resource able to perform a specific skill. In the case of a PA that needs an non-existing skill to be performed, it waits until an RA capable of performing the needed skill to be plugged into the system.\\
+
+The MAS was developed in the JADE framework, all agents are therefore FIPA compliant and communicate through FIPA Requests and FIPA Contract Net. More precisely, the FIPA Requests are used for PA-TA communications and the FIPA Contract Net used for PA-RA communications. Whenever a new PA enters the system, it asks through the FIPA Contract Net which RAs are can perform the needed skill. After getting responses from all the RAs, the PA picks the best one and receives its location. It then sends a FIPA Request to the TA to transport it to this location. After arriving, it then requests that the skill be performed to the RA.\\
+
+This system was used to simulate a simple conveyor belt line with brushing capabilities. The authors where able to successfully plug and unplugged Modules from the system during its operation. The DA correctly connected and disconnected hardware components from the system and deployed and kicked agents from the system accordingly. This shows that an MAS built from the ground up with these functionalities is very powerful in its scalability, and although this was only a prototype it shows a lot of promise for a dynamic system.
+
+%\citeauthor \cite have suggested the 
 
 %\subsection{Multi-agent Framework for Aircraft Parts}
 %
