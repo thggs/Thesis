@@ -154,15 +154,15 @@ Summarizing, the system needed to be easily scalable and it must be able to expa
 
 In consequence of these requirements, \citeauthor{bottling_plant_part1} designed a base solution consisting of two generic agents, a Product Agent (PA) that represents individual products being manufactured, in this case the beverage bottles, and a Resource Agent (RA) that represents the resources used to manufacture the beverage bottles.\\
 
-The MAS was made using JADE, and as such all agents in this system are FIPA compliant and communicate through the FIPA Contract Net.\\
+The MAS was made using JADE, and as such all agents in this system are FIPA compliant and communicate through FIPA Requests and the FIPA Contract Net.\\
 
-Each agent inherits from a generic class called Agent. The RA and PA then inherit from this class, with added functionalities and variable fields. The PA is an agent with the capabilities of performing autonomous and goal-driven behaviors. The RA is an agent capable of controlling the resources by using sensor data and messages with hardware instructions.\\
+Each agent inherits from a generic class called Agent. The RA and PA then inherit from this class, with added functionalities and variable fields. The PA is an agent with the capabilities of performing autonomous and goal-driven behaviors. The RA is an agent capable of controlling the physical resources by using sensor data and messages with hardware instructions.\\
 
-A PA differs from the generic Agent by implementing a configuration file ProductConfig. This file is in the Extensible Markup Language (XML) format and has information on the product represented by it. It also has a PlanningModule, which is essential a StateMachine with all the products processing instructions.\\
+A PA differs from the generic Agent by implementing a configuration file ProductConfig. This file is in the Extensible Markup Language (XML) format and has information on the product represented by it. It also has a PlanningModule, which is essentially a StateMachine with all the products processing instructions.\\
 
-Like the PA, the RA also mirrors the Agent class. It must be generic in order to be implemented on multiple resources, so for each ResourceType there exists a ResourceConfig file which is loaded onto the RA in order to implement its interface. To give an example, if the resource has the ResourceType Machine, the ResourceConfig file MachineConfig must be read.
+Like the PA, the RA also mirrors the Agent class. It must be generic in order to be implemented on multiple resources, so for each ResourceType there exists a ResourceConfig file which is loaded onto the RA in order to implement its interface. To give an example, if the resource has the ResourceType Machine, the ResourceConfig file MachineConfig must be loaded.
 
-The authors identified five different ResourceTypes by classifying many resources from renowned machine manufacturers. RAs not only include robots, transport systems and stations but also database, as a data acquisition method. The authors recognize that not all types of possible resources for a CPPS have been considered. This means that for every new resource type that needs to be added to the system, a new ResourceConfig must be created in order to integrate the new RA into the system. In addition, a new resource that communicates differently from the ones already in the system would need a new interface, and thus a new ResourceConfig would also need to be created, even if the new resource performs similar functions in the manufacturing plant.\\
+The authors identified five different ResourceTypes by classifying many resources from renowned machine manufacturers. RAs not only include robots, transport systems and stations but also databases, as a data acquisition method. The authors recognize that not all types of possible resources for a CPPS have been considered. This means that for every new resource type that needs to be added to the system, a new ResourceConfig must be created in order to integrate the new RA into the system. In addition, a new resource that communicates differently from the ones already in the system would need a new interface, and thus a new ResourceConfig would also need to be created, even if the new resource performs similar functions in the manufacturing plant.\\
 
 In \cite{bottling_plant_part2}, \citeauthor{bottling_plant_part2} created the service oriented bottling plant using the industrial agent system designed in \cite{bottling_plant_part1}, with positive results. To allow for extensibility of the system by additional resources a new agent class was created called InterfaceAgent (IntA). The ResourceConfig files for each type of RA now have a new field which contains an InterfaceAgentConfig. This new IntA is instantiated by the RAs following the configurations of their respective InterfaceAgentConfig and it extends either a DBLinkAgent, used to connect to a database, and a PLCLinkAgent, used to connect to a PLC UA client. All the information, like server address, port and authentication, is stored in the InterfaceAgentConfig file. By using OPC UA, the system can now interface with the hardware in the manufacturing plant, through a Loosely Coupled Hybrid interface. The authors recognize that according to the IEEE P2660.1 Working Group the scalability is considered weak, although they claim the flexibility is worth this loss in scalability.\\
 
@@ -199,7 +199,7 @@ Nevertheless this system performed as intended, producing customized beverage bo
 \subsection{Agent-based Plug and Produce CPPS}
 \label{agent_plug_and_produce}
 
-\citeauthor{8972169} \cite{8972169} have created a Plug and Produce CPPS. It is capable of integrating new agents on the fly, as the system operates. First, the authors divided the systme into three layers. The upper layer is where the MAS operates, called the fog layer. The middle layer is where the interface between the MAS and the hardware is, called the edge layer. And finally, the lower layer is where the hardware components of the CPPS are, called the physical layer.\\
+\citeauthor{8972169} \cite{8972169} have created a Plug and Produce CPPS. It is capable of integrating new agents on the fly, as the system operates. First, the authors divided the system into three layers. The upper layer is where the MAS operates, called the fog layer. The middle layer is where the interface between the MAS and the hardware is, called the edge layer. And finally, the lower layer is where the hardware components of the CPPS are, called the physical layer.\\
 
 The agents were also categorized into Product Agent (PA) and Resource Agent (RA), performing similar functions to the ones in Section~\ref{subsec:bottling_plant} and in addition the authors also considered Transport Agents (TA) which abstract all resources whose function is to move a product from point A to point B. They also considered a Deployment Agent (DA) tasked with managing the existence of all other agents. This DA should create a new agent or remove an existing one whenever a physical resource is plugged into or unplugged from the system.\\
 
@@ -212,7 +212,7 @@ To accomplish this the authors considered the grouping of a physical resource wi
 	\label{fig:plug_and_play_device_architecture}
 \end{figure}
 
-For the interface between hardware and agent, a PLC was chosen. This PLC is able to communicate using Device Profile Web Services (DWPS). For the DA, a java class was implemented using the Web Services 4 Devices - Java Multi Edition DPWS Stack (WS4D-JMEDS) framework, which searched for the devices in the network and obtained information about them. It was able to detect all devices connected to the network and add and remove them as needed.\\
+For the interface between hardware and agent, PLCs were chosen. These PLCs are able to communicate using Device Profile Web Services (DWPS). For the DA, a Java class was implemented using the Web Services 4 Devices - Java Multi Edition DPWS Stack (WS4D-JMEDS) framework, which searched for the devices in the network and obtained information about them. It was able to detect all devices connected to the network and add and remove them as needed.\\
 
 Each resource is able to perform certain procedures on the products, represented in the MAS as skill which RAs perform on to PAs. This is how the authors simulate the system virtually, whenever a product needs a certain procedure to be performed on itself, the corresponding PA asks an RA for that skill. This is relevant because the system may or may not have a resource able to perform a specific skill. In the case of a PA that needs an non-existing skill to be performed, it waits until an RA capable of performing the needed skill to be plugged into the system.\\
 
@@ -220,13 +220,28 @@ The MAS was developed in the JADE framework, all agents are therefore FIPA compl
 
 This system was used to simulate a simple conveyor belt line with brushing capabilities. The authors where able to successfully plug and unplugged Modules from the system during its operation. The DA correctly connected and disconnected hardware components from the system and deployed and kicked agents from the system accordingly. This shows that an MAS built from the ground up with these functionalities is very powerful in its scalability, and although this was only a prototype it shows a lot of promise for a dynamic system.
 
-%\citeauthor \cite have suggested the 
+\subsection{PRIME}
 
-%\subsection{Multi-agent Framework for Aircraft Parts}
-%
-%\citeauthor{6221793} \cite{6221793} created an MAS to manufacture aircraft structural parts. They were trying to optimize the manufacturing processes by integrating the agent-based approach in order to resolve bottlenecks in production. To accomplish this, many different types of agents were created:
-%
-%\begin{itemize}
-%	\item A process planning agent to decide the appropriate tools for the current process.
-%	\item A fixture design agent 
-%\end{itemize}
+\citeauthor{PRIME_plug_and_produce} \cite{PRIME_plug_and_produce} have done a demonstration on the PRIME architecture as an agent based framework with plug and produce functionalities. PRIME is a project developed thanks to the European FP7 program, and it proposes a solution to allow plug and produce using any kind of computational devices. This means that it is no longer needed to restrict a manufacturing plant to specific controllers to provide to it some sort of reconfigurability and flexibility. It allows any kind of controller or to be integrated into the system while still using the same framework.\\
+
+All agents in this framework were developed using JADE, therefore all agents are FIPA compliant. This adds to the plug and produce functionality of the system. The PRIME agent system is composed of eight different agents:
+\begin{itemize}
+	\item Prime System Agent (PSA) is the highest level agent in the framework. It manages the current state of the system.
+	\item Production Management Agent (PMA) is responsible to combine all resources and tasks in the same space to abstract certain functionalities
+	\item Skill Management Agent (SMA) works in tandem with a PMA, combining the lower-level skills into higher-level ones according to pre-defined rules, that the associated PMA then provides to the system
+	\item Component Agent (CA) is the agent that abstracts the hardware in the CPPS. It is able to read and write data to and from the hardware
+	\item Local Monitoring and Data Analyses
+\end{itemize}
+
+All devices to be integrated into the system were categorized into three groups according to their characteristics:
+\begin{itemize}
+	\item Fully intelligent resources, capable of running the necessary agents locally, typically a machine with the ability to run the Java environment, setup in a Tightly or Loosely Coupled On-device architecture
+	\item Semi-intelligent resources, capable of announcing their existence to the system and of reconfiguring themselves but without the ability to run the Java environment, setup in a Tightly or Loosely Coupled hybrid architecture
+	\item Passive resources, without any computational abilities and dependent on a controller to connect them to the main system  
+\end{itemize}
+
+For the first type of device, PRIME was able to very easily connect to it. The device ran all the necessary components to enable communications and to expose itself to the network. It ran the necessary agents related to the hardware locally and the main framework was able to configure the hardware by interacting with the local agents, which in turn interfaced with the device. This is the type of architecture preferred by PRIME, since it provides all services autonomously \cite{PRIME_plug_and_produce}.\\
+
+For second category of devices an INICO PLC capable of running DWPS was needed to connect the device to the framework since they can't run the agents locally. An auxiliary computer running the DWPS software was responsible for detecting the PLC and connecting to it. The necessary agents running on this computer launched the hardware related agents whenever they detected a new device running DWPS, and these local agents were able to connect to the main PRIME network \cite{PRIME_plug_and_produce}.\\
+
+The last category of devices is the most complicated one because they have no easy way to interface with the main system. In this case a more primitive PLC was used to simulate this limitation. An auxiliary computer running the JADE framework with all necessary agents is needed to create this interface and the system communicates with the PLC on a case-by-case scenario, with each PLC possibly needing different configurations. When the relevant agent detect a new device, it launches a new agent to interface with this device. The new agent then uses a case specific library to interface the PLC using standard protocols \cite{PRIME_plug_and_produce}. This last option is not flexible and uses a case-by-case configuration, making it the least desirable in a system.
