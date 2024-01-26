@@ -8,44 +8,36 @@
 
 \typeout{NT FILE abstrac-pt.tex}%
 
-Independentemente da língua em que a dissertação está escrita, geralmente esta contém pelo menos dois resumos: um resumo na mesma língua do texto principal e outro resumo numa outra língua.
+O conceito de Indústria 4.0 revolucionou o setor de manufatura. Uma das características deste conceito é o uso de Sistemas de Produção Ciberfísicos e a digitalização de processos de manufatura. Apesar da implementação de Sistemas Industriais Multi-agente como Sistemas de Produção Ciberfísicos trazer várias vantagens, não tem sido muito adotada por parte da indústria.
 
-A ordem dos resumos varia de acordo com a escola. Se a sua escola tiver regulamentos específicos sobre a ordem dos resumos, o template (\LaTeX) \gls{novathesis} irá respeitá-los. Caso contrário, a regra padrão no template \gls{novathesis} é ter em primeiro lugar o resumo \emph{no mesmo idioma do texto principal} e depois o resumo \emph{no outro idioma}. Por exemplo, se a dissertação for escrita em português, a ordem dos resumos será primeiro o português e depois o inglês, seguido do texto principal em português. Se a dissertação for escrita em inglês, a ordem dos resumos será primeiro em inglês e depois em português, seguida do texto principal em inglês.
+Como consequência, Sistemas Multi-agente não passaram da sua fase inicial e não evoluíram através do seu uso prático como outras tecnologias. Isto pode ser atribuído ao ceticismo do qual o conceito de Sistemas Multi-agente ainda sofre, e à incerteza sobre se estes conseguem operar com a mesma eficácia quando comparado com sistemas já existentes.
+
+Neste trabalho, é proposta uma arquitetura que poderá ajudar a atenuar este problema. Mais precisamente, esta plataforma permite a integração flexível de agentes com o seu respetivo hardware, propondo um método que seleciona uma ou mais bibliotecas genéricas baseadas no tipo de hardware que está a ser integrado no Sistema Multi-agente industrial. Com isto, mais dispositivos são capazes de ser integrados em menos tempo e com menos trabalho, contribuindo para a flexibilidade e escalabilidade que é característico dos Sistemas Multi-agente.
+
+Esta plataforma facilitaria a adoção de Sistemas Multi-agente industriais, porque não só faria a sua integração mais simples, mas também permitia que qualquer desenvolvedor pudesse criar uma destas bibliotecas, tornando o sistema adaptável a sistemas já existentes, reduzindo custos na adoção de Sistemas Multi-agente para aplicações industriais.
+
 %
-No entanto, esse pedido pode ser personalizado adicionando um dos seguintes ao arquivo \verb+5_packages.tex+.
-
-\begin{verbatim}
-    \abstractorder(<MAIN_LANG>):={<LANG_1>,...,<LANG_N>}
-\end{verbatim}
-
-Por exemplo, para um documento escrito em Alemão com resumos em Alemão, Inglês e Italiano (por esta ordem), pode usar-se:
-\begin{verbatim}
-    \ntsetup{abstractorder={de={de,en,it}}}
-\end{verbatim}
-
-Relativamente ao seu conteúdo, os resumos não devem ultrapassar uma página e frequentemente tentam responder às seguintes questões (é imprescindível a adaptação às práticas habituais da sua área científica):
-
-\begin{enumerate}
-  \item Qual é o problema?
-  \item Porque é que é um problema interessante/desafiante?
-  \item Qual é a proposta de abordagem/solução?
-  \item Quais são as consequências/resultados da solução proposta?
-\end{enumerate}
-
-% E agora vamos fazer um teste com uma quebra de linha no hífen a ver se a \LaTeX\ duplica o hífen na linha seguinte se usarmos \verb+"-+… em vez de \verb+-+.
+%The abstracts' order varies with the school.  If your school has specific regulations concerning the abstracts' order, the \gls{novathesis} (\LaTeX) template will respect them.  Otherwise, the default rule in the \gls{novathesis} template is to have in first place the abstract in \emph{the same language as main text}, and then the abstract in \emph{the other language}. For example, if the dissertation is written in Portuguese, the abstracts' order will be first Portuguese and then English, followed by the main text in Portuguese. If the dissertation is written in English, the abstracts' order will be first English and then Portuguese, followed by the main text in English.
 %
-% zzzz zzz zzzz zzz zzzz zzz zzzz zzz zzzz zzz zzzz zzz zzzz zzz zzzz zzz zzzz comentar"-lhe zzz zzzz zzz zzzz
-%
-% Sim!  Funciona! :)
+%However, this order can be customized by adding one of the following to the file \verb+5_packages.tex+.
 
-% Palavras-chave do resumo em Português
+%\begin{verbatim}
+%    \ntsetup{abstractorder={<LANG_1>,...,<LANG_N>}}
+%    \ntsetup{abstractorder={<MAIN_LANG>={<LANG_1>,...,<LANG_N>}}}
+%\end{verbatim}
+%
+%For example, for a main document written in German with abstracts written in German, English and Italian (by this order) use:
+%\begin{verbatim}
+%    \ntsetup{abstractorder={de={de,en,it}}}
+%\end{verbatim}
+% Palavras-chave do resumo em Inglês
 % \begin{keywords}
-% Palavra-chave 1, Palavra-chave 2, Palavra-chave 3, Palavra-chave 4
-% \end{keywords}
+	% Keyword 1, Keyword 2, Keyword 3, Keyword 4, Keyword 5, Keyword 6, Keyword 7, Keyword 8, Keyword 9
+	% \end{keywords}
 \keywords{
-  Primeira palavra-chave \and
-  Outra palavra-chave \and
-  Mais uma palavra-chave \and
-  A última palavra-chave
+	Indústria 4.0 \and
+	Sistemas de Produção Ciberfísicos \and
+	Sistemas Multi-agente \and
+	Sistemas de Manufatura \and
+	Integração de Hardware
 }
-% to add an extra black line
