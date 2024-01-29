@@ -26,7 +26,7 @@ In this work we propose a marketplace framework capable of integrating any kind 
 
 In both Figure~\ref{fig:example_architecture} and Figure~\ref{fig:bonus_architecture}, the Module Library is the part of the system that selects the correct libraries to use. It then implements them as a Modular Library, that then interfaces with the hardware. Since this systems work from a high layer to a lower layer, it could also work in the opposite direction. The Module Engine could also pick libraries to interface with the agent above and implement them as a Link Library. This would allow the system to integrate any kind of agent with any kind of hardware.\\\\\\
 
-The project development plan follows this order, and in Table~\ref{tbl:timeline} the development timeline is shown:
+The project development plan follows this order, and in Table~\ref{tab:timeline} the development timeline is shown:
 \begin{enumerate}
 	\item Design the system architecture
 	\item Implement the platform
@@ -39,21 +39,23 @@ The project development plan follows this order, and in Table~\ref{tbl:timeline}
 	\centering
 	\caption{Project timeline}
 	\begin{tabular}{||l||c|c|c|c|c|c|c|c||}
+		\toprule
 		\hline
-		\ & February & March & April & May & June & July & August & September\\
+		{} 				         & February 		 & March 			 & April             & May               & June              & July              & August            & September\\
 		\hline
-		Design architecture & \cellcolor{green} & \cellcolor{green} & & & & & & \\
+		Design architecture 	 & \cellcolor{green} & \cellcolor{green} & 		             &                   &                   &                   &                   & \\
 		\hline
-		Implement platform & & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & & & & \\
+		Implement platform 		 & 					 & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} &                   &                   &                   & \\
 		\hline
-		Implement test Libraries & & & & \cellcolor{green} & \cellcolor{green} & & & \\
+		Implement test Libraries & 					 &                   &                   & \cellcolor{green} & \cellcolor{green} &                   &                   & \\
 		\hline
-		Testing and validation & & & & & \cellcolor{green} & \cellcolor{green} & &  \\
+		Testing and validation 	 & 					 &                   &                   &                   & \cellcolor{green} & \cellcolor{green} &                   &  \\
 		\hline
-		Writing Dissertation & & & & & & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} \\
+		Writing Dissertation     & 					 &                   &                   &                   &                   & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} \\
 		\hline
+		\bottomrule
 	\end{tabular}
-	\label{tbl:timeline}
+	\label{tab:timeline}
 \end{table}
 
 \subsection{Design}

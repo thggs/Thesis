@@ -12,7 +12,7 @@ In this chapter we'll explore how researchers have dealt with the challenges of 
 \section{Cyber-Physical Production Systems}
 \label{sec:cyber-physical_production_systems}
 
-As stated before, a \Gls{CPS} is a system composed of two main entities, the physical system that contains all the hardware and resources and the cyber system that represents the physical system in the digital world. These two systems work together, the physical system sends data from the environment to the digital system and the digital system processes this data and instructs the physical system on what actions to perform. As such, this system works in a loop, constantly exchanging data and instructions to achieve a common goal.\\
+As stated before, a \Gls{CPS} is a system composed of two main entities, the physical system that contains all the hardware and resources and the cyber system that represents the physical system in the digital world. These two systems work together, the physical system sends data taken from sensors from the environment to the digital system and the digital system processes and stores this data and instructs the physical system on what actions to perform through the use of actuators. As such, this system works in a loop, constantly exchanging data and instructions to achieve a set goal.\\
 
 A \Gls{CPPS} is, as the name implies, a \gls{CPS} that operates in a manufacturing setting. The physical system is composed of hardware like robot arms, \gls{AGV}s, conveyor belts and specialized machinery for manufacturing. The cyber system might be as simple as a computer program or as complex as a full-on three dimensional model of the physical system. \citeauthor{birgit01} \cite{birgit01} proposed that a \gls{CPPS} should:
 \begin{itemize}
@@ -27,12 +27,67 @@ A \Gls{CPPS} is, as the name implies, a \gls{CPS} that operates in a manufacturi
 	\item Be capable of storing and accessing data in the Cloud
 \end{itemize}
 
+In summary, these \gls{CPPS}s abstract the hardware resources in the physical environment into their digital counterparts, giving them a measure of autonomy and intelligence, which in turn allows for the fulfillment of most requirements. The remaining requirements are fulfilled by integrating the \gls{CPPS} with other existing tools such as Big Data processing platforms, Cloud storage services and data-sharing services. \\
+
+These systems have a virtual representation of the physical system, that updates in real-time according to the information received from the physical world. This virtualization allows for a more efficient and realistic analysis of the real world, enabling more complex behaviors, better error correction and the optimization of industrial processes.\\
+
+Although advantageous in comparison to existing industrial systems, \gls{CPPS}s are still fairly recent and therefore creating one of these systems from the ground up still has its challenges. \citeauthor{LEITAO201611} \cite{LEITAO201611} have compiled key challenges, as well as their difficulty and priority.\\ %These results are shown in Table~\ref{tab:cpps_challenges}.\\
+
+For these reasons, companies have not made a huge push to create \gls{CPPS}s from the ground up, instead opting to adapt their already existing systems to integrate \gls{CPPS} elements and characteristics. This is essentially an integration of a \gls{CPS} in an already existing production line. many of these adaptations depend on creating interfaces capable of interacting with many types of hardware, to allow an easier and more streamlined integration of new entities into the system.\\
+
+Some examples of \gls{CPPS} retrofitting can be seen in \citeauthor{CARDIN201911} \cite{CARDIN201911} and \citeauthor{8328326} \cite{8328326}. \citeauthor{CARDIN201911} \cite{CARDIN201911} have done an analysis on the whole process of retrofitting a robotic arm. Before the retrofit, this arm was controlled through a remote controller or a serial interface. After the retrofit, the arm was able to receive commands through a new interface, which was able to communicate through standard Wi-Fi and Ethernet protocols, sending sensor data and receiving commands to and from the network. This network also integrated a cloud service to allow for the storage and access of information. Performance-wise, the arm showed better energy efficiency and less operation latency after the retrofit and all values were below the thresholds for an Industry 4.0 \gls{CPPS}.\\
+
+\citeauthor{8328326} \cite{8328326} created a small manufacturing plant using old devices. They consisted of two robotic arm, a CNC machine and a welder arm. All three devices communicate through different protocols, but by using off-the-shelves hardware like an Arduino UNO and a Raspberry Pi 3, \citeauthor{8328326} were able to give these devices the ability to be integrated into a more complex system. Although they recognize the system could still be optimized, they considered the result promising in the retrofit of old devices into a \gls{CPPS}.
+
+%As we can see from these works, one of the main aspects of retrofitting hardware into a \gls{CPPS} is the interface between the physical and virtual environment. A good interface does a lot of the heavy-lifting, by permitting real-time communications between the two layers of the \gls{CPPS}.
+
+%\begin{table}[h!]
+%	\centering
+%	\caption{\gls{CPPS}s Key Challenges. Source: Adapted from \cite{LEITAO201611}}
+%	\begin{tabular}{l|l|l|l}
+%		\toprule
+%		Area & Challenge & Difficulty & Priority\\
+%		\hline
+%		\multirow{6}{*}{\gls{CPS} Capabilities}	& Real-time control of \gls{CPS} systems          										& High   & High   \\ \cline{2-4}
+%						      					& Real-time \gls{CPS} \gls{SoS}                  								 		& High   & Medium \\ \cline{2-4}
+%						      					& Optimization in \gls{CPS} and their application									 	& High   & Medium \\ \cline{2-4}
+%						      					& On-\gls{CPS} advanced analytics                 										& Medium & High   \\ \cline{2-4}
+%						      					& Modularization and servification of \gls{CPS}  										& Low    & High   \\ \cline{2-4} 
+%						      					& Energy efficient \gls{CPS}                      										& Medium & Medium \\ \cline{2-4}
+%		\hline
+%		\multirow{3}{*}{CPS Management}			& Lifecycle management of \gls{CPS}                                  					& Medium & Medium \\ \cline{2-4}
+%					   			& Management of (very) large scale \gls{CPS} and \gls{CPS}-\gls{SoS} 					& High   & High   \\ \cline{2-4}
+%		               			& Security and trust management for heterogeneous \gls{CPS}          					& High   & High   \\ \cline{2-4}
+%		\hline
+%		\multirow{5}{*}{CPS Engineering} 		& Safe programming and validation of \gls{CPS} \gls{SoS}                                & High   & High \\ \cline{2-4}
+%								& Resilient risk-mitigating \gls{CPS}                                       	        & High   & High \\ \cline{2-4}
+%								& Methods and tools for \gls{CPS} lifecycle support                                     & High   & High \\ \cline{2-4}
+%								& New operating systems and programming languages for \gls{CPS} and \gls{CPS} \gls{SoS} & Medium & Low  \\ \cline{2-4}
+%								& Simulation of CPS and of \gls{CPS}-\gls{SoS}                                          & Medium & High \\ \cline{2-4}
+%		\hline
+%		\multirow{5}{*}{CPS Infrastructures} 	& Interoperable \gls{CPS} services                                                    	& Medium & High   \\ \cline{2-4}
+%												& Migration solutions to emerging \gls{CPS} infrastructures                          	& Medium & High   \\ \cline{2-4}
+%												& Integration of heterogeneous/mobile \\ hardware and software technologies in \gls{CPS} 	& Low    & Medium \\ \cline{2-4}
+%												& Provision of ubiquitous \gls{CPS} services                                         	& Medium & Medium \\ \cline{2-4}
+%												& Economic impact of \gls{CPS} Infrastructure                                        	& High   & High   \\ \cline{2-4}
+%		\hline
+%		\multirow{3}{*}{CPS Ecosystems} 			& Emergent behavior of \gls{CPS}    													& High   & Medium \\ \cline{2-4}
+%			          			& \gls{CPS} with humans in the loop 													& High   & High   \\ \cline{2-4}
+%		               			& Collaborative \gls{CPS}          														& Medium & Medium \\ \cline{2-4}
+%		\hline
+%		\multirow{4}{*}{CPS Information Systems} & Artificial intelligence in \gls{CPS} 										 	     	& High   & High   \\ \cline{2-4}
+%								& Cross-domain large-scale information integration to \gls{CPS} infrastructures	     	& Medium & Low    \\ \cline{2-4}
+%								& Transformation of \gls{CPS} data and information analytics to actionable knowledge 	& High   & High   \\ \cline{2-4}
+%								& Knowledge-driven decision making/management 								         	& High   & Medium \\ \cline{2-4}
+%		\bottomrule
+%	\end{tabular}
+%	\label{tab:cpps_challenges}
+%\end{table}
+
 \section{Multi-Agent Systems}
 \label{sec:multi-agent_systems}
 
 \glsreset{MAS}
-
-%If I need more content I can probably expand this section
 
 % Industrial Agents {paulo02}
 To understand what should be the best practices in an \gls{MAS} based \gls{CPPS}, we first need to understand its base characteristics. An \Gls{MAS} is, in essence a system composed by many entities called agents that have their own capabilities. These agents communicate and collaborate together by exchanging data among themselves and acting on that data to achieve a common goal. They are capable of adapting their behavior and of autonomous decision-making to determine the best course of action. This system is by nature decentralized and has no hierarchy, making it highly flexible and modular. At any point an agent can leave or join the system, without significant changes in architecture \cite{paulo02}.\\
@@ -57,7 +112,7 @@ Now that we have an idea of the characteristics and requirements for Industrial 
 
 % Integration patterns for interfacing software agents with industrial automation systems {8591641}
 % IEEE Recommended Practice for Industrial Agents: Integration of Software Agents and Low-Level Automation Functions {9340089}
-\citeauthor{Leitao2021} \cite{Leitao2021} analyzed the IEEE 2660.1 Standard for the recommended practices in integrating software agents and low-level automation functions. They described the use of an MAS as a CPPS, where control is decentralized, emerging from the interactions of agents that are part of the system. And as we've discussed before, one of the biggest problems is creating an interface between the agent and the device associated with it. Because of this, the IEEE 2660.1 Standard was created, defining the best practices in designing one an appropriate interface.\\
+\citeauthor{Leitao2021} \cite{Leitao2021} analyzed the IEEE 2660.1 Standard for the recommended practices in integrating software agents and low-level automation functions. They described the use of an \gls{MAS} as a \gls{CPPS}, where control is decentralized, emerging from the interactions of agents that are part of the system. And as we've discussed before, one of the biggest problems is creating an interface between the agent and the device associated with it. Because of this, the IEEE 2660.1 Standard was created, defining the best practices in designing one an appropriate interface.\\
 
 As an example, the authors mention three main types of interfaces. An interface for a smart sensor, to acquire measurements. An interface for a \gls{PLC}, to control simple devices like conveyor systems. And finally, an interface for a robot controller to control more complex functions in the \gls{CPPS}. These three interfaces present different challenges on a development level, because each requires consideration on which architecture to follow, with different consequences to the evolution of the manufacturing plant over time.\\
 
