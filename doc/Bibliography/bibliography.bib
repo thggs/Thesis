@@ -5,51 +5,42 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % This paper explains the concept of industry 4.0. I use it to give examples some characteristics of i4.0
-@article{birgit01,
-	author = {Birgit Vogel-Heuser and Dieter Hess},
-	doi = {10.1109/TASE.2016.2523639},
-	issn = {15455955},
-	issue = {2},
-	journal = {IEEE Transactions on Automation Science and Engineering},
-	pages = {411-413},
-	publisher = {Institute of Electrical and Electronics Engineers Inc.},
-	title = {Guest Editorial Industry 4.0-Prerequisites and Visions},
-	volume = {13},
-	year = {2016}
-}
-
-% This website has a few examples of the model of Industry 4.0 being used by various companies, with some levels of succes
-@misc{rit01,
-	title = {Industry 4.0 Case Studies (curated)},
-	url = {https://www.rit.edu/advancedmanufacturing/industry40/course/industry-40-case-studies-curated},
-	author = {RIT editors}
+@ARTICLE{birgit01,
+	author={Vogel-Heuser, Birgit and Hess, Dieter},
+	journal={IEEE Transactions on Automation Science and Engineering}, 
+	title={Guest Editorial Industry 4.0–Prerequisites and Visions}, 
+	year={2016},
+	volume={13},
+	number={2},
+	pages={411-413},
+	keywords={Special issues and sections;Cyber-physical systems;Industries;Automation;Real-time systems},
+	doi={10.1109/TASE.2016.2523639}
 }
 
 % This paper talks about how the use of multiagent systems is relevant to implement components of Industry 4.0, as well as some challenges in its implementation
-@article{sakurada01,
-	author = {Lucas Sakurada and Paulo Leitão},
-	doi = {10.1109/ICPS48405.2020.9274745},
-	isbn = {9781728163895},
-	journal = {2020 IEEE Conference on Industrial Cyberphysical Systems (ICPS)},
-	keywords = {Asset Administration Shell,I4.0 component,Multi-Agent Systems,RAMI4.0},
-	title = {Multi-Agent Systems to Implement Industry 4.0 Components},
-	volume = {1},
-	year = {2020},
+@INPROCEEDINGS{sakurada01,
+	author={Sakurada, Lucas and Leitão, Paulo},
+	booktitle={2020 IEEE Conference on Industrial Cyberphysical Systems (ICPS)}, 
+	title={Multi-Agent Systems to Implement Industry 4.0 Components}, 
+	year={2020},
+	volume={1},
+	number={},
+	pages={21-26},
+	keywords={Computer architecture;Standards;Industries;Interoperability;Business;IEC Standards;Digital representation;Asset Administration Shell;I4.0 component;Multi-Agent Systems;RAMI4.0},
+	doi={10.1109/ICPS48405.2020.9274745}
 }
 
 % This also talks about how some of the commercial use os MASs has never took off
-@article{karnouskos01,
-	author = {Stamatis Karnouskos and Paulo Leitão and Luis Ribeiro and Armando Walter Colombo},
-	doi = {10.1109/MIE.2019.2962225},
-	issn = {19410115},
-	issue = {3},
-	journal = {IEEE Industrial Electronics Magazine},
-	month = {9},
-	pages = {18-32},
-	publisher = {Institute of Electrical and Electronics Engineers Inc.},
-	title = {Industrial Agents as a Key Enabler for Realizing Industrial Cyber-Physical Systems: Multiagent Systems Entering Industry 4.0},
-	volume = {14},
-	year = {2020}
+@ARTICLE{karnouskos01,
+	author={Karnouskos, Stamatis and Leitao, Paulo and Ribeiro, Luis and Colombo, Armando Walter},
+	journal={IEEE Industrial Electronics Magazine}, 
+	title={Industrial Agents as a Key Enabler for Realizing Industrial Cyber-Physical Systems: Multiagent Systems Entering Industry 4.0}, 
+	year={2020},
+	volume={14},
+	number={3},
+	pages={18-32},
+	keywords={Production;Unified modeling language;Software;Real-time systems;Context modeling;Data models;Multi-agent systems},
+	doi={10.1109/MIE.2019.2962225}
 }
 
 @INPROCEEDINGS{paulo01,
@@ -60,34 +51,37 @@
 	volume={},
 	number={},
 	pages={6665-6670},
-	doi={10.1109/IECON.2017.8217164}
-}
+	keywords={Manufacturing automation;Java;Software agents;Building automation;Protocols;Electronic mail},
+	doi={10.1109/IECON.2017.8217164}}
+
 
 % I can use this one to introduce the topic of software agents and explain how they work and their uses [state of the art]
-@book{paulo02,
-	author = {Paulo Leitão and Stamatis Karnouskos},
-	doi = {10.1016/C2013-0-15269-5},
-	isbn = {9780128003411},
-	publisher = {Elsevier},
-	title = {Industrial Agents},
-	url = {https://linkinghub.elsevier.com/retrieve/pii/C20130152695},
+@incollection{paulo02,
+	title = {Chapter 1 - Software Agent Systems},
+	editor = {Paulo Leitão and Stamatis Karnouskos},
+	booktitle = {Industrial Agents},
+	publisher = {Morgan Kaufmann},
+	address = {Boston},
+	pages = {3-22},
 	year = {2015},
+	isbn = {978-0-12-800341-1},
+	doi = {10.1016/B978-0-12-800341-1.00001-2},
+	author = {Rainer Unland},
+	keywords = {Software agents, Multi-agent systems, Ontologies, Self-organization, Emergence, Swarm intelligence, Stigmergy}
 }
 
 % Has guidelines on how to integrate an intelligent system (MAS) with "low-level automation devices"
-@inproceedings{Leitao2021,
-	abstract = {Cyber-Physical Systems (CPS) is a key concept in Industry 4.0, acting as a backbone to develop smart processes, machines and products. Multi-Agent Systems (MAS) is a suitable paradigm for the realization of such industrial CPS systems, supporting the distribution of intelligence and decision-making capabilities among a network of autonomous and cooperative agents. Standardization is a key factor for the acceptance of industrial CPS and agent-based systems, assuming a critical role in establishing specifications for the hardware integration, which is an important requirement for industrial agents. This paper focuses on the recently established IEEE 2660.1-2020 standard that defines a recommended practice to solve the interface problem when applying industrial agents, namely integrating intelligent software agents with low-level automation devices in the CPS context. The paper illustrates the applicability of the standard in three different application scenarios related to power and energy systems, factory automation and building automation, and discusses future directions in terms of standardization in the field of industrial agents, that are required for its wider adoption in the realization of industrial CPS solutions.},
-	author = {Paulo Leitão and Thomas I. Strasser and Stamatis Karnouskos and Luis Ribeiro and Jose Barbosa and Victor Huang},
-	doi = {10.1109/ICIT46573.2021.9453511},
-	isbn = {9781728157306},
-	journal = {Proceedings of the IEEE International Conference on Industrial Technology},
-	month = {3},
-	pages = {1157-1162},
-	publisher = {Institute of Electrical and Electronics Engineers Inc.},
-	title = {Recommendation of Best Practices for Industrial Agent Systems based on the IEEE 2660.1 Standard},
-	volume = {2021-March},
-	year = {2021},
-}
+@INPROCEEDINGS{Leitao2021,
+	author={Leitão, Paulo and Strasser, Thomas I. and Karnouskos, Stamatis and Ribeiro, Luis and Barbosa, José and Huang, Victor},
+	booktitle={2021 22nd IEEE International Conference on Industrial Technology (ICIT)}, 
+	title={Recommendation of Best Practices for Industrial Agent Systems based on the IEEE 2660.1 Standard}, 
+	year={2021},
+	volume={1},
+	number={},
+	pages={1157-1162},
+	keywords={Conferences;Decision making;Cyber-physical systems;Software agents;Hardware;Standards;Manufacturing automation},
+	doi={10.1109/ICIT46573.2021.9453511}}
+
 
 @ARTICLE{karnouskos02,
 	author={Karnouskos, Stamatis and Leitão, Paulo},
@@ -97,11 +91,11 @@
 	volume={13},
 	number={2},
 	pages={696-703},
-	doi={10.1109/TII.2016.2607148}
-}
+	keywords={Industries;Hardware;Robustness;Standardization;Software agents;Automation;Cyber-physical systems;industrial agents;industrial acceptance;multiagent systems (MAS);survey},
+	doi={10.1109/TII.2016.2607148}}
+
 
 @article{Karnouskos2019,
-	abstract = {Rapid technology advances and increasing digitalization bring new opportunities but also put new challenges to modern production systems. Industrial agent concepts and technologies can be used to address the needs of modern Cyber-Physical Production Systems (CPPS). To do so, their interplay, especially in industrial settings, needs to be better understood and assessed. Key directions for investigations that are relevant for industrial agent based CPPS are analyzed in this work, mainly the design patterns, interfaces between agents and CPPS, metrics to evaluate the quality of agent based CPPS, and distributed intelligence implemented in or by agents. Although efforts exist both in agent and CPPS domains, their amalgamation still has several aspects that are under-investigated, especially when considering large-scale systems of CPPS, and the proposed four directions discussed in this work, seem promising to address several of the key underlying challenges.},
 	author = {Stamatis Karnouskos and Luis Ribeiro and Paulo Leitão and Arndt Luder and Birgit Vogel-Heuser},
 	doi = {10.1109/ICPHYS.2019.8780360},
 	isbn = {9781538685006},
@@ -121,7 +115,10 @@
 	volume={},
 	number={},
 	pages={624-629},
-	doi={10.1109/INDIN51773.2022.9976160}}
+	keywords={Service robots;Statistical analysis;Publishing;Computational modeling;Computer architecture;Aging;Computer crashes;Multi-agent robot system;ROS2;Scalability;Autonomous Transport Robots},
+	doi={10.1109/INDIN51773.2022.9976160}
+}
+
 
 @INPROCEEDINGS{8972169,
 	author={Rocha, Andre Dionisio and Tripa, João and Alemão, Duarte and Peres, Ricardo Silva and Barata, José},
@@ -173,7 +170,8 @@
 	number={1},
 	pages={48-56},
 	doi={10.1109/JESTIE.2021.3117121}}
-	
+
+
 %Bottling plant part2
 @ARTICLE{bottling_plant_part2,
 	author={Marschall, Benedikt and Schleicher, Markus and Sollich, Axel and Becker, Thomas and Voigt, Tobias},
@@ -186,28 +184,22 @@
 	doi={10.1109/JESTIE.2021.3097941}}
 
 @InProceedings{PRIME_plug_and_produce,
-	author="Rocha, Andr{\'e} Dion{\'i}sio
-	and Barata, Diogo
-	and Di Orio, Giovanni
-	and Santos, Tiago
-	and Barata, Jos{\'e}",
-	editor="Camarinha-Matos, Luis M.
-	and Baldissera, Thais A.
-	and Di Orio, Giovanni
-	and Marques, Francisco",
-	title="PRIME as a Generic Agent Based Framework to Support Pluggability and Reconfigurability Using Different Technologies",
-	booktitle="Technological Innovation for Cloud-Based Engineering Systems",
-	year="2015",
-	publisher="Springer International Publishing",
-	address="Cham",
-	pages="101--110",
-	abstract="Presently the manufacturers are facing a challenging and important period. The markets are very different comparatively to the past, with constant changes and facing a big crisis. Hence, with these new characteristics is very important for the companies quick adaptations in order to take advantage of new business opportunities. However on the shop floor is not easy reconfigure the production lines to perform new tasks. The PRIME framework presents an agent based solution capable to rapidly reconfigure and readapt the production line using standard technology. In this paper is demonstrated the usability of this framework with three completely different technologies. With this flexibility, using PRIME it is possible perform plug and produce, reconfigurability and monitoring for all kind of technologies, not obligating the companies to reform all components in the line, avoiding external costs and stoppages.",
-	isbn="978-3-319-16766-4"
+	author={Rocha, André Dionísio and Barata, Diogo	and Di Orio, Giovanni and Santos, Tiago	and Barata, José},
+	editor={Camarinha-Matos, Luis M. and Baldissera, Thais A. and Di Orio, Giovanni	and Marques, Francisco},
+	title={PRIME as a Generic Agent Based Framework to Support Pluggability and Reconfigurability Using Different Technologies},
+	booktitle={Technological Innovation for Cloud-Based Engineering Systems},
+	year={2015},
+	publisher={Springer International Publishing},
+	address={Cham},
+	pages={101-110},
+	isbn={978-3-319-16766-4},
+	volume={450},
+	doi={10.1007/978-3-319-16766-4_11}
 }
 
 @article{Seitz2021,
 	author = {Matthias Seitz and Felix Gehlhoff and Luis Alberto Cruz Salazar and Alexander Fay and Birgit Vogel-Heuser},
-	doi = {10.1007/S10845-021-01759-2/FIGURES/10},
+	doi = {10.1007/S10845-021-01759-2},
 	issn = {15728145},
 	issue = {7},
 	journal = {Journal of Intelligent Manufacturing},
@@ -217,7 +209,6 @@
 	publisher = {Springer},
 	title = {Automation platform independent multi-agent system for robust networks of production resources in industry 4.0},
 	volume = {32},
-	url = {https://link.springer.com/article/10.1007/s10845-021-01759-2},
 	year = {2021},
 }
 
@@ -240,11 +231,9 @@
 	year = {2016},
 	note = {Emerging ICT concepts for smart, safe and sustainable industrial systems},
 	issn = {0166-3615},
-	doi = {https://doi.org/10.1016/j.compind.2015.08.004},
-	url = {https://www.sciencedirect.com/science/article/pii/S0166361515300348},
+	doi = {10.1016/j.compind.2015.08.004},
 	author = {Paulo Leitão and Armando Walter Colombo and Stamatis Karnouskos},
-	keywords = {Collaborative automation, Cyber-physical systems, Multi-agent systems, Service-oriented architectures, Self-organization, Next generation of industrial systems},
-	abstract = {Cyber-Physical Systems (CPS) is an emergent approach that focuses on the integration of computational applications with physical devices, being designed as a network of interacting cyber and physical elements. CPS control and monitor real-world physical infrastructures and thus is starting having a high impact in industrial automation. As such design, implementation and operation of CPS and management of the resulting automation infrastructure is of key importance for the industry. In this work, an overview of key aspects of industrial CPS, their technologies and emerging directions, as well as challenges for their implementation is presented. Based on the hands-on experiences gathered from four European innovation projects over the last decade (i.e. SOCRADES, IMC-AESOP, GRACE and ARUM), a key challenges have been identified and a prioritization and timeline are pointed out with the aim to increase Technology Readiness Levels and lead to their usage in industrial automation environments.}
+	keywords = {Collaborative automation, Cyber-physical systems, Multi-agent systems, Service-oriented architectures, Self-organization, Next generation of industrial systems}
 }
 
 @article{CARDIN201911,
@@ -254,11 +243,9 @@
 	pages = {11-21},
 	year = {2019},
 	issn = {0166-3615},
-	doi = {https://doi.org/10.1016/j.compind.2018.10.002},
-	url = {https://www.sciencedirect.com/science/article/pii/S0166361517306231},
+	doi = {10.1016/j.compind.2018.10.002},
 	author = {Olivier Cardin},
-	keywords = {Cyber-physical production systems, Classification, Cognition, Framework, Human factor, Manufacturing control},
-	abstract = {Cyber-physical systems have encountered a huge success in the past decade in several scientific communities, and specifically in production topics. The main attraction of the concept relies in the fact that it encompasses many scientific topics that were distinct before. The downside is the lack of readability of the current developments about cyber-physical production systems (CPPS). Indeed, the large scientific area of CPPS makes it difficult to identify clearly and rapidly, in the various applications that were made of CPPS, what are the choices, best practices and methodology that are suggested and that could be used for a new application. This work intends to introduce an analysis framework able to classify those developments. An extensive study of literature enabled to extract the major criteria that are to be used in the framework, namely: Development Extent; Research Axis; Instrumenting; Communication standards; Intelligence deposit; Cognition level; Human factor. Several recent examples of CPPS developments in literature are used to illustrate the use of the framework and brief conclusions are drawn from the comparative analysis of those examples.}
+	keywords = {Cyber-physical production systems, Classification, Cognition, Framework, Human factor, Manufacturing control}
 }
 
 @INPROCEEDINGS{8328326,
@@ -273,6 +260,13 @@
 	doi={10.1109/CRC.2017.46}}
 
 
+% This website has a few examples of the model of Industry 4.0 being used by various companies, with some levels of succes
+@misc{rit01,
+	title = {Industry 4.0 Case Studies (curated)},
+	url = {https://www.rit.edu/advancedmanufacturing/industry40/course/industry-40-case-studies-curated},
+	author = {RIT editors}
+}
+
 @misc{JADE_website,
 	title = {Jade Site | Java Agent DEvelopment Framework},
 	url = {https://jade.tilab.com/},
@@ -281,9 +275,11 @@
 @misc{OPCUA_website,
 	title = {Unified Architecture - OPC Foundation},
 	url = {https://opcfoundation.org/about/opc-technologies/opc-ua/},
+	author = {The OPC Foundation}
 }
 
 @misc{FIPA_website,
 	title = {Welcome to the Foundation for Intelligent Physical Agents},
 	url = {http://www.fipa.org/},
+	author = {The Foundation for Intelligent Physical Agents}
 }
