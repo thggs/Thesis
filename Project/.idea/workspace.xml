@@ -10,20 +10,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93bb5eed-7652-453a-a570-681efe72eb4b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Test.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modularLibraries_ModularLibrary.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Test.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/linkLibraries/LinkLibrary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modularLibraries/ModularLibrary.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modularLibraries/ModularLibrary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modularLibraries/native.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/moduleEngine/ModuleEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/jade.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7ff45c1f-6af4-4cfe-8a70-c6da014cac90/.lck" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoadClassTest.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/a6b99148-f47b-42e6-bb41-7ccef6081b16/.lck" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/a7522537-110f-45c6-8261-cb4e2be8bba3/.lck" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/d119663a-ca12-4be2-ac98-946b8bc10c1a/.lck" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/d1e14021-34c0-4562-9c7d-92e05db93d62/.lck" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/d842bde5-96b0-4196-b001-ea82018f4806/.lck" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/f8cee368-b484-4b88-a960-991aa5812691/.lck" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibraryHTTP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibraryMQTT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/modularLibraries/helloworld.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/modularLibraries/helloworld.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/moduleEngine/ModuleEngine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/testJNI/modularLibraries_Test.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APDescription.txt" beforeDir="false" afterPath="$PROJECT_DIR$/APDescription.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestAgent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modularLibraries_ModularLibrary.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modularLibraries/modularLibraries_ModularLibrary.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/testJNI/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/testJNI/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TestAgent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/linkLibraries/LinkLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/linkLibraries/LinkLibrary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modularLibraries/ModularLibrary.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibrary.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modularLibraries/ModularLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibraryC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modularLibraries/native.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modularLibraries/native.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/moduleEngine/ModuleEngine.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,22 +84,33 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.Boot.executor": "Run",
     "Application.Main.executor": "Run",
+    "Application.Test.executor": "Run",
     "Application.Unnamed.executor": "Run",
+    "Application.modularLibraries.Test.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ddrod/Documents/Projects/C/helloworld/native.dll",
-    "project.structure.last.edited": "Libraries",
+    "last_opened_file_path": "C:/Users/ddrod/Documents/GitHub/Thesis/Project/src",
+    "project.structure.last.edited": "Global Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.1908046",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ddrod\Documents\GitHub\Thesis\Project\src" />
+      <recent name="C:\Users\ddrod\Documents\GitHub\Thesis\Project\resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ddrod\Documents\GitHub\Thesis\Project\src\testJNI" />
       <recent name="C:\Users\ddrod\Documents\GitHub\Thesis\Project\src\modularLibraries" />
       <recent name="C:\Users\ddrod\Documents\GitHub\Thesis\Project\resources" />
     </key>
@@ -95,14 +128,8 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="linklibraries.Main" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="moduleEngine.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -130,6 +157,17 @@
       <updated>1709057264428</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

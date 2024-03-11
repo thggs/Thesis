@@ -1,6 +1,8 @@
+package testJNI;
+
 public class Test {
     static {
-        System.loadLibrary("native");
+        System.load("C:\\Users\\ddrod\\Documents\\GitHub\\Thesis\\Project\\src\\modularLibraries\\native.dll");
     }
 
     public static void main(String[] args) {
