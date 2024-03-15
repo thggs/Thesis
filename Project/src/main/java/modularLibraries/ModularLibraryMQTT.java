@@ -5,37 +5,47 @@ import org.eclipse.paho.mqttv5.client.MqttClient;
 import org.eclipse.paho.mqttv5.client.MqttConnectionOptions;
 import org.eclipse.paho.mqttv5.common.MqttException;
 import org.eclipse.paho.mqttv5.common.MqttMessage;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 
-import java.util.UUID;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.File;
 
 public class ModularLibraryMQTT {
 
     String broker;
     String publisherId;
     IMqttClient publisher;
+    Integer qos;
+    String topic;
 
-    public ModularLibraryMQTT(String broker){
-        this.publisherId = UUID.randomUUID().toString();
-        this.broker = broker;
+    public ModularLibraryMQTT(File xmlFile){
+
+        Document xml = null;
+
+        try {
+            DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+            xml = builder.parse(xmlFile);
+            xml.getDocumentElement().normalize();
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+
+        assert xml != null;
+        Element configElement = xml.getDocumentElement();
+        NodeList brokerNode = configElement.getElementsByTagName("broker");
+        NodeList publisherIdNode = configElement.getElementsByTagName("publisher_id");
+        NodeList qosNode = configElement.getElementsByTagName("quality_of_service");
+        NodeList topicNode = configElement.getElementsByTagName("topic");
+
+        this.broker = brokerNode.item(0).getTextContent();
+        this.publisherId = publisherIdNode.item(0).getTextContent();
+        this.qos = Integer.valueOf(qosNode.item(0).getTextContent());
+        this.topic = topicNode.item(0).getTextContent();
+
         connectToBroker();
-    }
-
-    public void setPublisherId(String publisherId){
-        this.publisherId = publisherId;
-        connectToBroker();
-    }
-
-    public String getPublisherId() {
-        return publisherId;
-    }
-
-    public void setBroker(String broker){
-        this.broker = broker;
-        connectToBroker();
-    }
-
-    public String getBroker(){
-        return broker;
     }
 
     private void connectToBroker(){
@@ -58,10 +68,10 @@ public class ModularLibraryMQTT {
         }
     }
 
-    public void sendMessage(String content, int qos, String topic){
+    public void executeSkill(String skill){
         try {
-            System.out.println("Publishing message: " + content + " in Topic: " + topic);
-            MqttMessage message = new MqttMessage(content.getBytes());
+            System.out.println("Publishing message: " + skill + " in Topic: " + topic);
+            MqttMessage message = new MqttMessage(skill.getBytes());
             message.setQos(qos);
             publisher.publish(topic, message);
             System.out.println("Message Published");

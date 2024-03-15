@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<marketplace>
+    <class className="modularLibraries.ModularLibraryMQTT" name="MQTT">
+        <constructor>
+            <param type="String"/>
+        </constructor>
+
+        <method name="executeSkill">
+            <param type="String"/>
+            <param type="Integer"/>
+            <param type="String"/>
+        </method>
+
+        <method name="setPublisherId">
+            <param type="String"/>
+        </method>
+
+        <method name="setBroker">
+            <param type="String"/>
+        </method>
+
+        <method name="getPublisherId"/>
+
+        <method name="getBroker"/>
+    </class>
+    <class className="modularLibraries.ModularLibraryHTTP" name="HTTP">
+        <constructor>
+            <param_type>String</param_type>
+        </constructor>
+
+        <method name="sendMessage">
+            <param_type>String</param_type>
+            <param_type>Integer</param_type>
+            <param_type>String</param_type>
+        </method>
+
+        <method name="setPublisherId">
+            <param_type>String</param_type>
+        </method>
+
+        <method name="setBroker">
+            <param_type>String</param_type>
+        </method>
+
+        <method name="getPublisherId"/>
+
+        <method name="getBroker"/>
+    </class>
+    <class className="modularLibraries.ModularLibraryC" name="C">
+        <constructor>
+            <param_type>String</param_type>
+        </constructor>
+
+        <method name="sendMessage">
+            <param_type>String</param_type>
+            <param_type>Integer</param_type>
+            <param_type>String</param_type>
+        </method>
+
+        <method name="setPublisherId">
+            <param_type>String</param_type>
+        </method>
+
+        <method name="setBroker">
+            <param_type>String</param_type>
+        </method>
+
+        <method name="getPublisherId"/>
+
+        <method name="getBroker"/>
+    </class>
+</marketplace>
