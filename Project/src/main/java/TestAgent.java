@@ -2,15 +2,20 @@ import jade.core.Agent;
 import jade.core.behaviours.TickerBehaviour;
 import moduleEngine.ModuleEngine;
 
+import java.io.File;
+
 public class TestAgent extends Agent {
 
-    String xmlPath = "C:\\Users\\ddrod\\Documents\\GitHub\\Thesis\\Project\\mqttConfig.xml";
-    String xmlPath2 = "C:\\Users\\ddrod\\Documents\\GitHub\\Thesis\\Project\\config2.xml";
-
+    File xmlConfigFile;
+    String libType;
     @Override
     protected void setup() {
-        System.out.println("Hello World!");
-        System.out.println("My name is " +  getLocalName());
+        System.out.println("Agent " +  getLocalName() + " started");
+        Object[] params = this.getArguments();
+        if(params.length == 2) {
+            libType = (String) params[0];
+            xmlConfigFile = new File((String) params[1]);
+        }
 
         this.addBehaviour(new behaviour(this, 2000));
     }
@@ -21,12 +26,12 @@ public class TestAgent extends Agent {
 
         public behaviour(Agent a, long period) {
             super(a, period);
-            moduleEngine = new ModuleEngine("MQTT", xmlPath);
+            moduleEngine = new ModuleEngine(libType, xmlConfigFile);
         }
 
         @Override
         protected void onTick() {
-            System.out.println("New Tick");
+            System.out.println("New "+ getLocalName() +" Tick");
             moduleEngine.executeSkill("Skill_A");
         }
     }

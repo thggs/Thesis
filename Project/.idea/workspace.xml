@@ -10,24 +10,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93bb5eed-7652-453a-a570-681efe72eb4b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/685ef52e-7c57-4094-9a33-ee103931bea1/.lck" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/685ef52e-7c57-4094-9a33-ee103931bea2/.lck" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/9e40df5b-fa07-4ee9-83eb-028bafadb772/.lck" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/a7efec8e-07c8-44d4-aa75-05c5aa39d3d7/.lck" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deff1c47-30a6-4c01-a9de-4966dec7150e/.lck" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/marketplace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mqttConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/httpConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AgentManagerUI.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AgentManagerUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DeploymentAgent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APDescription.txt" beforeDir="false" afterPath="$PROJECT_DIR$/APDescription.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/685ef52e-7c57-4094-9a33-ee103931bea2/.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/7ff45c1f-6af4-4cfe-8a70-c6da014cac90/.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9e40df5b-fa07-4ee9-83eb-028bafadb772/.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a6b99148-f47b-42e6-bb41-7ccef6081b16/.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a7522537-110f-45c6-8261-cb4e2be8bba3/.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a7efec8e-07c8-44d4-aa75-05c5aa39d3d7/.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/d119663a-ca12-4be2-ac98-946b8bc10c1a/.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1e14021-34c0-4562-9c7d-92e05db93d62/.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d842bde5-96b0-4196-b001-ea82018f4806/.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/deff1c47-30a6-4c01-a9de-4966dec7150e/.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/f8cee368-b484-4b88-a960-991aa5812691/.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/marketplace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/marketplace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TestAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TestAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/linkLibraries/LinkLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/linkLibraries/LinkLibrary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibraryMQTT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibraryMQTT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibraryC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibraryC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibraryHTTP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibraryHTTP.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/moduleEngine/ModuleEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moduleEngine/ModuleEngine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/TestAgent$behaviour.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TestAgent$behaviour.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/TestAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TestAgent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/linkLibraries/LinkLibrary.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/linkLibraries/LinkLibrary.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/modularLibraries/ModularLibraryC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/modularLibraries/ModularLibraryC.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/modularLibraries/ModularLibraryHTTP.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/modularLibraries/ModularLibraryHTTP.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/modularLibraries/ModularLibraryMQTT.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/modularLibraries/ModularLibraryMQTT.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/moduleEngine/ModuleEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/moduleEngine/ModuleEngine.class" afterDir="false" />
@@ -79,6 +86,8 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;382&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
@@ -107,7 +116,7 @@
     <configuration name="Boot" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="jade.Boot" />
       <module name="Project" />
-      <option name="PROGRAM_PARAMETERS" value="-gui testAgent:TestAgent()" />
+      <option name="PROGRAM_PARAMETERS" value="-gui deploymentAgent:DeploymentAgent()" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -119,6 +128,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Boot" />
+      <item itemvalue="Application.Main" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />

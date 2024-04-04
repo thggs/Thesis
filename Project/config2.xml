@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<config>
-    <broker>tcp://broker.hivemq.com:1883</broker>
-    <quality_of_service>2</quality_of_service>
-    <topic>moduleEngine2</topic>
-    <publisher_id>685ef52e-7c57-4094-9a33-ee103931bea2</publisher_id>
-</config>

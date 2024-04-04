@@ -13,14 +13,14 @@ import java.util.*;
 
 public class ModuleEngine {
 
-    Object obj;
-    String marketplaceXMLPath = "C:\\Users\\ddrod\\Documents\\GitHub\\Thesis\\Project\\marketplace.xml";
+    Object modularLibrary;
+    String marketplaceXMLPath    = "C:\\Users\\ddrod\\Documents\\GitHub\\Thesis\\Project\\marketplace.xml";
     HashMap<String, Class<?>> classesToLoad = new HashMap<>();
 
     // Constructor
-    public ModuleEngine(String libType, String configXMLPath){
+    public ModuleEngine(String libType, File configXMLFile){
         parseMarketplaceXML();
-        createObject(libType, configXMLPath);
+        createObject(libType, configXMLFile);
     }
 
     public void parseMarketplaceXML() {
@@ -29,7 +29,7 @@ public class ModuleEngine {
             Document marketplaceXML = builder.parse(new File(marketplaceXMLPath));
             marketplaceXML.getDocumentElement().normalize();
 
-            // Get first node, in this case "config"
+            // Get first node, in this case "marketplace"
             Element marketplaceElement = marketplaceXML.getDocumentElement();
 
             // Get first child node of first node, in this case "class"
@@ -53,24 +53,23 @@ public class ModuleEngine {
         }
     }
 
-    public void createObject(String libType, String xmlConfigPath){
+    public void createObject(String libType, File xmlConfigFile){
         try{
             // Find class in hashmap
             Class<?> classToLoad = classesToLoad.get(libType);
 
            // Create object
-            File file = new File(xmlConfigPath);
-            obj = classToLoad.getConstructor(File.class).newInstance(file);
+            modularLibrary = classToLoad.getConstructor(File.class).newInstance(xmlConfigFile);
         }catch(Exception e){
             e.printStackTrace();
         }
     }
 
-    public void executeSkill(String skill) {
+    public void executeSkill(Object skill) {
         try {
-            Class<?> objectClass = obj.getClass();
+            Class<?> objectClass = modularLibrary.getClass();
 
-            objectClass.getMethod("executeSkill", String.class).invoke(obj, skill);
+            objectClass.getMethod("executeSkill", skill.getClass()).invoke(modularLibrary, skill);
         } catch (Exception e){
             e.printStackTrace();
         }
