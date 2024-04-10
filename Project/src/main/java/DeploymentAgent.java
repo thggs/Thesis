@@ -28,19 +28,21 @@ public class DeploymentAgent extends Agent {
     private JList availableLibrariesList;
 
 
-    String marketplaceXMLPath = "C:\\Users\\ddrod\\Documents\\GitHub\\Thesis\\Project\\marketplace.xml";
-
+    String marketplaceXMLPath = "C:\\Users\\David\\Documents\\FCT\\Thesis\\Thesis\\Project\\marketplace.xml";
+    File xmlMarktetplace;
     ContainerController agentContainer;
 
     String xmlConfigPath;
 
     public DeploymentAgent(){
 
+        xmlMarktetplace = new File(marketplaceXMLPath);
+
         availableLibrariesList.setListData(getMarketplaceLibraries());
 
         openButton.addActionListener(e -> {
             JFileChooser fileChooser = new JFileChooser();
-            fileChooser.setCurrentDirectory(new File("C:\\Users\\ddrod\\Documents\\GitHub\\Thesis\\Project"));
+            fileChooser.setCurrentDirectory(new File("C:\\Users\\David\\Documents\\FCT\\Thesis\\Thesis\\Project"));
             int result = fileChooser.showOpenDialog(rootPanel);
 
             if(result == JFileChooser.APPROVE_OPTION) {
@@ -74,7 +76,7 @@ public class DeploymentAgent extends Agent {
                 else {
                         list.add(agentName);
                         runningAgentsList.setListData(list.toArray());
-                        AgentController ag = agentContainer.createNewAgent(agentName, "TestAgent", new Object[]{availableLibrariesList.getSelectedValue(), xmlConfigPath});
+                        AgentController ag = agentContainer.createNewAgent(agentName, "TestAgent", new Object[]{availableLibrariesList.getSelectedValue(), xmlConfigPath, marketplaceXMLPath});
                         ag.start();
                 }
             } catch(StaleProxyException ex){
@@ -90,6 +92,7 @@ public class DeploymentAgent extends Agent {
                     for(int i = 0; i < runningAgentsList.getModel().getSize(); i++){
                         list.add(runningAgentsList.getModel().getElementAt(i).toString());
                     }
+                    System.out.println("Stopping agent: " + agentName);
                     list.remove(agentName);
                     runningAgentsList.setListData(list.toArray());
                     agentContainer.getAgent(agentName).kill();
@@ -104,7 +107,7 @@ public class DeploymentAgent extends Agent {
     public String[] getMarketplaceLibraries() {
         try{
             DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-            Document marketplaceXML = builder.parse(new File(marketplaceXMLPath));
+            Document marketplaceXML = builder.parse(xmlMarktetplace);
             marketplaceXML.getDocumentElement().normalize();
 
             // Get first node, in this case "marketplace"
@@ -143,23 +146,5 @@ public class DeploymentAgent extends Agent {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
-
-        //this.addBehaviour(new behaviour(this, 2000));
     }
-
-//    class behaviour extends TickerBehaviour {
-//
-//        ModuleEngine moduleEngine;
-//
-//        public behaviour(Agent a, long period) {
-//            super(a, period);
-//            moduleEngine = new ModuleEngine("MQTT", xmlPathMQTT);
-//        }
-//
-//        @Override
-//        protected void onTick() {
-//            System.out.println("New Tick");
-//            moduleEngine.executeSkill("Skill_A");
-//        }
-//    }
 }
