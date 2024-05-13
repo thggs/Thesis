@@ -1,0 +1,963 @@
+{
+  "computercraft:recipes/computercraft/printer": {
+    "criteria": {
+      "has_computer": "2024-04-20 13:25:22 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/shaft": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/clutch": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "computercraft:recipes/computercraft/monitor_advanced": {
+    "criteria": {
+      "has_computer": "2024-04-20 13:25:22 +0100"
+    },
+    "done": true
+  },
+  "chisel:recipes/chisel/futura/screen_metallic": {
+    "criteria": {
+      "has_redstone": "2024-04-20 13:35:25 +0100"
+    },
+    "done": true
+  },
+  "create:deployer": {
+    "criteria": {
+      "0": "2024-04-30 15:45:22 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/mechanical_bearing": {
+    "criteria": {
+      "has_item": "2024-04-20 15:02:31 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/mechanical_drill": {
+    "criteria": {
+      "has_item": "2024-04-20 15:02:31 +0100"
+    },
+    "done": true
+  },
+  "computercraft:recipes/computercraft/disk_1": {
+    "criteria": {
+      "has_drive": "2024-04-20 14:48:05 +0100"
+    },
+    "done": true
+  },
+  "computercraft:recipes/computercraft/disk_2": {
+    "criteria": {
+      "has_drive": "2024-04-20 14:48:05 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_bricks": {
+    "criteria": {
+      "has_stone": "2024-04-21 19:20:50 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_bricks_from_stone_stonecutting": {
+    "criteria": {
+      "has_stone": "2024-04-21 19:20:50 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/goggles": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "naturescompass:natures_compass": {
+    "criteria": {
+      "has_recipe": "2024-04-30 16:06:10 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/logistics/powered_latch": {
+    "criteria": {
+      "has_item": "2024-04-20 13:35:25 +0100"
+    },
+    "done": true
+  },
+  "create:andesite_alloy": {
+    "criteria": {
+      "0": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/gantry_carriage": {
+    "criteria": {
+      "has_item": "2024-04-20 15:02:31 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/gearbox": {
+    "criteria": {
+      "has_item": "2024-04-20 13:41:15 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/gearshift": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cut_sandstone_from_sandstone_stonecutting": {
+    "criteria": {
+      "has_sandstone": "2024-04-20 13:39:25 +0100"
+    },
+    "done": true
+  },
+  "computercraft:recipes/computercraft/pocket_computer_normal": {
+    "criteria": {
+      "has_computer": "2024-04-20 13:25:22 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/mechanical_piston": {
+    "criteria": {
+      "has_item": "2024-04-20 15:02:31 +0100"
+    },
+    "done": true
+  },
+  "computercraft:recipes/computercraft/pocket_computer_advanced": {
+    "criteria": {
+      "has_computer": "2024-04-20 13:25:22 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/smooth_stone": {
+    "criteria": {
+      "has_stone": "2024-04-21 19:20:50 +0100"
+    },
+    "done": true
+  },
+  "decorative_blocks:recipes/decorations/jungle_palisade": {
+    "criteria": {
+      "has_log": "2024-04-30 16:39:53 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2024-04-20 14:47:55 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_slab_from_stone_stonecutting": {
+    "criteria": {
+      "has_stone": "2024-04-21 19:20:50 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/chiseled_stone_bricks_stone_from_stonecutting": {
+    "criteria": {
+      "has_stone": "2024-04-21 19:20:50 +0100"
+    },
+    "done": true
+  },
+  "create:belt_funnel": {
+    "criteria": {
+      "0": "2024-04-20 13:40:18 +0100"
+    },
+    "done": true
+  },
+  "computercraft:recipes/computercraft/disk_7": {
+    "criteria": {
+      "has_drive": "2024-04-20 14:48:05 +0100"
+    },
+    "done": true
+  },
+  "computercraft:recipes/computercraft/disk_8": {
+    "criteria": {
+      "has_drive": "2024-04-20 14:48:05 +0100"
+    },
+    "done": true
+  },
+  "computercraft:recipes/computercraft/disk_9": {
+    "criteria": {
+      "has_drive": "2024-04-20 14:48:05 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/weighted_ejector": {
+    "criteria": {
+      "has_item": "2024-04-20 15:02:31 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/jungle_wood": {
+    "criteria": {
+      "has_log": "2024-04-30 16:39:53 +0100"
+    },
+    "done": true
+  },
+  "computercraft:recipes/computercraft/disk_3": {
+    "criteria": {
+      "has_drive": "2024-04-20 14:48:05 +0100"
+    },
+    "done": true
+  },
+  "computercraft:recipes/computercraft/disk_4": {
+    "criteria": {
+      "has_drive": "2024-04-20 14:48:05 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/analog_lever": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "computercraft:recipes/computercraft/disk_5": {
+    "criteria": {
+      "has_drive": "2024-04-20 14:48:05 +0100"
+    },
+    "done": true
+  },
+  "computercraft:recipes/computercraft/disk_6": {
+    "criteria": {
+      "has_drive": "2024-04-20 14:48:05 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_slab": {
+    "criteria": {
+      "has_stone": "2024-04-21 19:20:50 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/logistics/adjustable_repeater": {
+    "criteria": {
+      "has_item": "2024-04-20 13:35:25 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_brick_slab_from_stone_stonecutting": {
+    "criteria": {
+      "has_stone": "2024-04-21 19:20:50 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/cuckoo_clock": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "computercraft:recipes/computercraft/disk_drive": {
+    "criteria": {
+      "has_computer": "2024-04-20 13:25:22 +0100"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/wind_vane": {
+    "criteria": {
+      "has_item": "2024-04-20 13:35:25 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/sticky_mechanical_piston": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/mechanical_plough": {
+    "criteria": {
+      "has_item": "2024-04-20 15:02:31 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/large_cogwheel": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_planks": {
+    "criteria": {
+      "has_logs": "2024-04-30 16:06:10 +0100"
+    },
+    "done": true
+  },
+  "decorative_blocks:recipes/decorations/oak_palisade": {
+    "criteria": {
+      "has_log": "2024-04-30 16:06:10 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.palettes/ornate_iron_window": {
+    "criteria": {
+      "has_ingredient": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/cog_block": {
+    "criteria": {
+      "has_item": "2024-04-20 13:35:25 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/sandstone_stairs": {
+    "criteria": {
+      "has_sandstone": "2024-04-20 13:39:25 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/millstone": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "extcaves:recipes/pebble_stone": {
+    "criteria": {
+      "has_item": "2024-04-21 19:20:50 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/jungle_planks": {
+    "criteria": {
+      "has_logs": "2024-04-30 16:39:53 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cut_sandstone_slab_from_sandstone_stonecutting": {
+    "criteria": {
+      "has_sandstone": "2024-04-20 13:39:25 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/metal_bracket": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "chisel:recipes/chisel/futura/controller_purple": {
+    "criteria": {
+      "has_redstone": "2024-04-20 13:35:25 +0100"
+    },
+    "done": true
+  },
+  "create:reinforced": {
+    "criteria": {
+      "0": "2024-04-20 15:02:31 +0100"
+    },
+    "done": false
+  },
+  "create:recipes/create.base/crafting/logistics/content_observer": {
+    "criteria": {
+      "has_item": "2024-04-20 13:39:16 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/sail_frame": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cut_sandstone": {
+    "criteria": {
+      "has_sandstone": "2024-04-20 13:39:25 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/chiseled_sandstone_from_sandstone_stonecutting": {
+    "criteria": {
+      "has_sandstone": "2024-04-20 13:39:25 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/logistics/powered_toggle_latch": {
+    "criteria": {
+      "has_item": "2024-04-20 13:35:25 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/encased_chain_drive": {
+    "criteria": {
+      "has_item": "2024-04-20 15:02:31 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/note_block": {
+    "criteria": {
+      "has_redstone": "2024-04-20 13:35:25 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/turntable": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/sandstone_stairs_from_sandstone_stonecutting": {
+    "criteria": {
+      "has_sandstone": "2024-04-20 13:39:25 +0100"
+    },
+    "done": true
+  },
+  "naturescompass:natures_compass_sapling": {
+    "criteria": {
+      "has_recipe": "2024-04-30 16:06:10 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/logistics/andesite_tunnel": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "computercraft:recipes/computercraft/speaker": {
+    "criteria": {
+      "has_computer": "2024-04-20 13:25:22 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_wood": {
+    "criteria": {
+      "has_log": "2024-04-30 16:06:10 +0100"
+    },
+    "done": true
+  },
+  "computercraft:recipes/computercraft/monitor_normal": {
+    "criteria": {
+      "has_computer": "2024-04-20 13:25:22 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/stone_button": {
+    "criteria": {
+      "has_stone": "2024-04-21 19:20:50 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/dropper": {
+    "criteria": {
+      "has_redstone": "2024-04-20 13:35:25 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/sandstone_slab_from_sandstone_stonecutting": {
+    "criteria": {
+      "has_sandstone": "2024-04-20 13:39:25 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/basin": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/wrench": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "create:wrench": {
+    "criteria": {
+      "0": "2024-04-30 15:45:28 +0100"
+    },
+    "done": true
+  },
+  "occultism:occultism/root": {
+    "criteria": {
+      "occultism_present": "2024-04-20 13:24:42 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/mechanical_mixer": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/mechanical_saw": {
+    "criteria": {
+      "has_item": "2024-04-20 15:02:31 +0100"
+    },
+    "done": true
+  },
+  "chisel:recipes/chisel/futura/screen_cyan": {
+    "criteria": {
+      "has_redstone": "2024-04-20 13:35:25 +0100"
+    },
+    "done": true
+  },
+  "create:its_alive": {
+    "criteria": {
+      "0": "2024-04-20 14:45:39 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/sandstone_slab": {
+    "criteria": {
+      "has_sandstone": "2024-04-20 13:39:25 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/smooth_sandstone": {
+    "criteria": {
+      "has_sandstone": "2024-04-20 13:39:25 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/sticker": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/chute": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/compass": {
+    "criteria": {
+      "has_redstone": "2024-04-20 13:35:25 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cut_sandstone_slab_from_cut_sandstone_stonecutting": {
+    "criteria": {
+      "has_cut_sandstone": "2024-04-20 13:39:25 +0100"
+    },
+    "done": true
+  },
+  "computercraft:recipes/computercraft/disk_16": {
+    "criteria": {
+      "has_drive": "2024-04-20 14:48:05 +0100"
+    },
+    "done": true
+  },
+  "lootr:root": {
+    "criteria": {
+      "always_true": "2024-04-20 13:24:42 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_stairs_from_stone_stonecutting": {
+    "criteria": {
+      "has_stone": "2024-04-21 19:20:50 +0100"
+    },
+    "done": true
+  },
+  "computercraft:recipes/computercraft/disk_14": {
+    "criteria": {
+      "has_drive": "2024-04-20 14:48:05 +0100"
+    },
+    "done": true
+  },
+  "computercraft:recipes/computercraft/disk_15": {
+    "criteria": {
+      "has_drive": "2024-04-20 14:48:05 +0100"
+    },
+    "done": true
+  },
+  "computercraft:recipes/computercraft/disk_12": {
+    "criteria": {
+      "has_drive": "2024-04-20 14:48:05 +0100"
+    },
+    "done": true
+  },
+  "computercraft:recipes/computercraft/disk_13": {
+    "criteria": {
+      "has_drive": "2024-04-20 14:48:05 +0100"
+    },
+    "done": true
+  },
+  "computercraft:recipes/computercraft/disk_10": {
+    "criteria": {
+      "has_drive": "2024-04-20 14:48:05 +0100"
+    },
+    "done": true
+  },
+  "computercraft:recipes/computercraft/disk_11": {
+    "criteria": {
+      "has_drive": "2024-04-20 14:48:05 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/gantry_shaft": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "exoticbirds:default/root": {
+    "criteria": {
+      "launch_mod": "2024-04-20 13:24:42 +0100"
+    },
+    "done": true
+  },
+  "computercraft:recipes/computercraft/cable": {
+    "criteria": {
+      "has_computer": "2024-04-20 13:25:22 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/rope_pulley": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/depot": {
+    "criteria": {
+      "has_item": "2024-04-20 15:02:31 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/target": {
+    "criteria": {
+      "has_redstone": "2024-04-20 13:35:25 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/logistics/pulse_repeater": {
+    "criteria": {
+      "has_item": "2024-04-20 13:35:25 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/stonecutter": {
+    "criteria": {
+      "has_stone": "2024-04-21 19:20:50 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/logistics/andesite_funnel": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:desert": "2024-04-20 13:24:42 +0100"
+    },
+    "done": false
+  },
+  "create:andesite_casing": {
+    "criteria": {
+      "0": "2024-04-20 15:02:31 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/charcoal": {
+    "criteria": {
+      "has_log": "2024-04-30 16:06:10 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/mechanical_harvester": {
+    "criteria": {
+      "has_item": "2024-04-20 15:02:31 +0100"
+    },
+    "done": true
+  },
+  "computercraft:recipes/computercraft/computer_normal": {
+    "criteria": {
+      "has_redstone": "2024-04-20 13:35:25 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/redstone_torch": {
+    "criteria": {
+      "has_redstone": "2024-04-20 13:35:25 +0100"
+    },
+    "done": true
+  },
+  "decorative_blocks:recipes/decorations/stone_pillar": {
+    "criteria": {
+      "has_stone": "2024-04-21 19:20:50 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/filter": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/pedestal": {
+    "criteria": {
+      "has_item": "2024-04-21 19:20:50 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/stone_pressure_plate": {
+    "criteria": {
+      "has_stone": "2024-04-21 19:20:50 +0100"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/spring_launcher": {
+    "criteria": {
+      "has_item": "2024-04-20 16:33:37 +0100"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/sconce_lever": {
+    "criteria": {
+      "has_item": "2024-04-20 13:35:25 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/materials/andesite_casing": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/stone_brick_walls_from_stone_stonecutting": {
+    "criteria": {
+      "has_stone": "2024-04-21 19:20:50 +0100"
+    },
+    "done": true
+  },
+  "farmersdelight:main/root": {
+    "criteria": {
+      "seeds": "2024-04-20 13:25:22 +0100"
+    },
+    "done": true
+  },
+  "computercraft:recipes/computercraft/wired_modem": {
+    "criteria": {
+      "has_computer": "2024-04-20 13:25:22 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_brick_stairs_from_stone_stonecutting": {
+    "criteria": {
+      "has_stone": "2024-04-21 19:20:50 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/cogwheel": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/clock": {
+    "criteria": {
+      "has_redstone": "2024-04-20 13:35:25 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/logistics/adjustable_pulse_repeater": {
+    "criteria": {
+      "has_item": "2024-04-20 13:35:25 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/windmill_bearing": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/piston_extension_pole": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "architects_palette:main/root": {
+    "criteria": {
+      "craftingtable": "2024-04-20 13:25:22 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/water_wheel": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/wooden_bracket": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "computercraft:recipes/computercraft/wireless_modem_normal": {
+    "criteria": {
+      "has_computer": "2024-04-20 13:25:22 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/redstone_block": {
+    "criteria": {
+      "has_redstone": "2024-04-20 13:35:25 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/speedometer": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "computercraft:recipes/computercraft/wireless_modem_advanced": {
+    "criteria": {
+      "has_computer": "2024-04-20 13:25:22 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/piston": {
+    "criteria": {
+      "has_redstone": "2024-04-20 13:35:25 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/belt_connector": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/radial_chassis": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "computercraft:recipes/turtle_advanced": {
+    "criteria": {
+      "has_advanced": "2024-04-20 13:25:22 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/mechanical_press": {
+    "criteria": {
+      "has_item": "2024-04-20 15:02:31 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_stairs": {
+    "criteria": {
+      "has_stone": "2024-04-21 19:20:50 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/cart_assembler": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/materials/rose_quartz": {
+    "criteria": {
+      "has_item": "2024-04-20 13:35:25 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/sandstone_wall": {
+    "criteria": {
+      "has_sandstone": "2024-04-20 13:39:25 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/hand_crank": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "chisel:recipes/chisel/futura/controller": {
+    "criteria": {
+      "has_redstone": "2024-04-20 13:35:25 +0100"
+    },
+    "done": true
+  },
+  "create:root": {
+    "criteria": {
+      "0": "2024-04-20 13:25:22 +0100"
+    },
+    "done": true
+  },
+  "naturescompass:natures_compass_log": {
+    "criteria": {
+      "has_log": "2024-04-30 16:06:10 +0100"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/turn_table": {
+    "criteria": {
+      "has_item": "2024-04-20 13:35:25 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/curiosities/minecart_coupling": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "create:belt": {
+    "criteria": {
+      "0": "2024-04-20 13:39:17 +0100"
+    },
+    "done": true
+  },
+  "chisel:recipes/chisel/futura/uber_wavy": {
+    "criteria": {
+      "has_redstone": "2024-04-20 13:35:25 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/sandstone_wall_from_sandstone_stonecutting": {
+    "criteria": {
+      "has_sandstone": "2024-04-20 13:39:25 +0100"
+    },
+    "done": true
+  },
+  "repurposed_structures:root": {
+    "criteria": {
+      "always": "2024-04-20 13:24:42 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/create.base/crafting/kinetics/linear_chassis": {
+    "criteria": {
+      "has_item": "2024-04-30 16:06:02 +0100"
+    },
+    "done": true
+  },
+  "computercraft:recipes/decorations/skull_dan200": {
+    "criteria": {
+      "has_computer": "2024-04-20 13:25:22 +0100"
+    },
+    "done": true
+  },
+  "chisel:recipes/chisel/futura/wavy": {
+    "criteria": {
+      "has_redstone": "2024-04-20 13:35:25 +0100"
+    },
+    "done": true
+  },
+  "DataVersion": 2586
+}

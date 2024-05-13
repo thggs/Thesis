@@ -1,0 +1,19 @@
+{
+	id: "6ad3b6a4-6964-463f-a263-600a5f7639b7"
+	type: "player"
+	player_name: "thggs77"
+	ranks: {
+		6ad3b6a4-6964-463f-a263-600a5f7639b7: "owner"
+	}
+	properties: {
+		"ftbteams:display_name": "thggs77"
+		"ftbteams:color": "#FF7859"
+		"ftbchunks:block_edit_mode": "allies"
+		"ftbchunks:block_interact_mode": "allies"
+		"ftbteams:description": ""
+		"ftbteams:free_to_join": 0b
+		"ftbchunks:allow_fake_players": 1b
+	}
+	message_history: [ ]
+	extra: { }
+}
