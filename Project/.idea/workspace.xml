@@ -10,20 +10,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93bb5eed-7652-453a-a570-681efe72eb4b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/685ef52e-7c57-4094-9a33-ee103931bea1-tcp1921682502011883/.lck" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/c0fbbc3c-ceaf-42b3-afaa-ade58b7ab678-ws19216812079001mqtt/.lck" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configFiles/configConveyor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configFiles/configStation3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configFiles/configStation4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ProductManagerAgent.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ProductManagerAgent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/agents/ProductAgent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/agents/ResourceAgent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/agents/TransportAgent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/examples/ClientExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/examples/ClientExampleRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/examples/ReadExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibrary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibraryOPCUA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/DFInteraction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/685ef52e-7c57-4094-9a33-ee103931bea1/.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/685ef52e-7c57-4094-9a33-ee103931bea1-tcp1921682502011883/.lck" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/APDescription.txt" beforeDir="false" afterPath="$PROJECT_DIR$/APDescription.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MTPs-Main-Container.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MTPs-Main-Container.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mqttConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mqttConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/httpConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/httpConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marketplace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/marketplace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mqttConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/configFiles/mqttNodeRedConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AgentManagerUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AgentManagerUI.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AgentManagerUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AgentManagerUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AgentManagerUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AgentManagerUI.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DeploymentAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DeploymentAgent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TestAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TestAgent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibraryC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibraryC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibraryHTTP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibraryHTTP.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibraryMQTT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibraryMQTT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/moduleEngine/ModuleEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moduleEngine/ModuleEngine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/AgentManagerUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AgentManagerUI.class" afterDir="false" />
@@ -36,6 +54,7 @@
       <change beforePath="$PROJECT_DIR$/target/classes/linkLibraries/LinkLibrary.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/linkLibraries/LinkLibrary.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/modularLibraries/ModularLibraryC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/modularLibraries/ModularLibraryC.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/modularLibraries/ModularLibraryHTTP.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/modularLibraries/ModularLibraryHTTP.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/modularLibraries/ModularLibraryMQTT$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/modularLibraries/ModularLibraryMQTT$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/modularLibraries/ModularLibraryMQTT.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/modularLibraries/ModularLibraryMQTT.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/moduleEngine/ModuleEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/moduleEngine/ModuleEngine.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/testJNI/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/testJNI/Test.class" afterDir="false" />
@@ -90,12 +109,13 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;382&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;false&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH&quot;: &quot;206&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;304&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ddrod/Documents/GitHub/Thesis/Project/src&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ddrod/Documents/GitHub/Thesis/Project/mqttFiles&quot;,
     &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.40952381&quot;,
@@ -104,14 +124,17 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ddrod\Documents\GitHub\Thesis\Project\mqttFiles" />
+      <recent name="C:\Users\ddrod\Documents\GitHub\Thesis\Project" />
       <recent name="C:\Users\ddrod\Documents\GitHub\Thesis\Project\src" />
       <recent name="C:\Users\ddrod\Documents\GitHub\Thesis\Project\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ddrod\Documents\GitHub\Thesis\Project\mqttFiles" />
+      <recent name="C:\Users\ddrod\Documents\GitHub\Thesis\Project\src\main\java\agents" />
       <recent name="C:\Users\David\Documents\FCT\Thesis\Thesis\Project\src\main\java" />
       <recent name="C:\Users\ddrod\Documents\GitHub\Thesis\Project\src\testJNI" />
       <recent name="C:\Users\ddrod\Documents\GitHub\Thesis\Project\src\modularLibraries" />
-      <recent name="C:\Users\ddrod\Documents\GitHub\Thesis\Project\resources" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -124,7 +147,7 @@
     <configuration name="Boot" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="jade.Boot" />
       <module name="Project" />
-      <option name="PROGRAM_PARAMETERS" value="-gui deploymentAgent:DeploymentAgent()" />
+      <option name="PROGRAM_PARAMETERS" value="-gui deploymentAgent:DeploymentAgent();productManagerAgent:ProductManagerAgent();" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -177,5 +200,19 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.net.SocketException" package="java.net" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.concurrent.ExecutionException" package="java.util.concurrent" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -38,7 +38,7 @@ public class ModularLibraryC {
 //        System.load(libraryPath);
 //    }
 
-    public void executeSkill(String skill){
+    public void ExecuteSkill(String skill){
         new ModularLibraryC(xmlFile).helloWorld();
     }
 

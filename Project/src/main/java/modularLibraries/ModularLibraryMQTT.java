@@ -15,6 +15,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.util.Arrays;
+import java.util.UUID;
 
 public class ModularLibraryMQTT {
 
@@ -22,9 +23,10 @@ public class ModularLibraryMQTT {
     String publisherId;
     IMqttClient client;
     Integer qos;
-    String topic;
-    Boolean requestSent = false;
-    Boolean responseReceived = false;
+    String request_topic;
+    String response_topic;
+    String skill;
+    volatile Boolean responseReceived = false;
     String skillResult;
 
     public ModularLibraryMQTT(File xmlFile){
@@ -42,25 +44,31 @@ public class ModularLibraryMQTT {
         assert xml != null;
         Element configElement = xml.getDocumentElement();
         NodeList brokerNode = configElement.getElementsByTagName("broker");
-        NodeList publisherIdNode = configElement.getElementsByTagName("publisher_id");
         NodeList qosNode = configElement.getElementsByTagName("quality_of_service");
-        NodeList topicNode = configElement.getElementsByTagName("topic");
+        NodeList topicReqNode = configElement.getElementsByTagName("request_topic");
+        NodeList topicResNode = configElement.getElementsByTagName("response_topic");
+        NodeList publisherIdNode = configElement.getElementsByTagName("publisher_id");
 
         this.broker = brokerNode.item(0).getTextContent();
-        this.publisherId = publisherIdNode.item(0).getTextContent();
         this.qos = Integer.valueOf(qosNode.item(0).getTextContent());
-        this.topic = topicNode.item(0).getTextContent();
+        this.request_topic = topicReqNode.item(0).getTextContent();
+        this.response_topic = topicResNode.item(0).getTextContent();
+        if(publisherIdNode.getLength() == 0){
+            this.publisherId = UUID.randomUUID().toString();
+        }else{
+            this.publisherId = publisherIdNode.item(0).getTextContent();
+        }
 
-        connectToBroker();
+        ConnectToBroker();
     }
 
-    private void connectToBroker(){
+    private void ConnectToBroker(){
         try {
             client = new MqttClient(broker, publisherId);
             MqttConnectOptions options = new MqttConnectOptions();
             options.setAutomaticReconnect(true);
             options.setConnectionTimeout(10);
-            System.out.println("Connecting to broker: " + broker);
+            System.out.println("MQTTLib: Connecting to broker: " + broker);
 
             client.setCallback(new MqttCallback() {
                 @Override
@@ -69,10 +77,11 @@ public class ModularLibraryMQTT {
                 }
 
                 @Override
-                public void messageArrived(String topic, MqttMessage mqttMessage) throws Exception {
+                public void messageArrived(String msgTopic, MqttMessage mqttMessage) {
+                    String msg = new String(mqttMessage.getPayload());
+                    System.out.println("MQTT Library message received: " + msg);
                     responseReceived = true;
-
-                    skillResult = Arrays.toString(mqttMessage.getPayload());
+                    skillResult = msg;
                 }
 
                 @Override
@@ -82,8 +91,8 @@ public class ModularLibraryMQTT {
             });
 
             client.connect(options);
-            client.subscribe(topic);
-            System.out.println("Connected");
+            client.subscribe(response_topic);
+            System.out.println("MQTTLib: Connected");
         } catch(MqttException ex) {
             System.out.println("reason "+ex.getReasonCode());
             System.out.println("msg "+ex.getMessage());
@@ -94,19 +103,22 @@ public class ModularLibraryMQTT {
         }
     }
 
-    public String executeSkill(String skill){
+    public String ExecuteSkill(String skill){
         try {
             if(!client.isConnected()){
-                connectToBroker();
+                ConnectToBroker();
             }
-            System.out.println("Publishing message: " + skill + " in Topic: " + topic);
+            this.skill = skill;
+            System.out.println("MQTTLib: Publishing message: " + skill + " in Topic: " + request_topic);
             MqttMessage message = new MqttMessage(skill.getBytes());
             message.setQos(qos);
-            client.publish(topic, message);
-            requestSent = true;
-            System.out.println("Message Published");
+            message.setId(0);
+            client.publish(request_topic, message);
+            System.out.println("MQTTLib: Message Published");
 
-            while(!responseReceived){}
+            while (!responseReceived) {
+                Thread.onSpinWait();
+            }
             responseReceived = false;
             return skillResult;
 
@@ -118,6 +130,11 @@ public class ModularLibraryMQTT {
             System.out.println("excep "+ex);
             ex.printStackTrace();
         }
-        return "Error";
+        return "error";
+    }
+
+    public void Stop() throws MqttException {
+        System.out.println("MQTTLib: Disconnecting...");
+        client.disconnect();
     }
 }

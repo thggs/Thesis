@@ -1,6 +1,7 @@
 import jade.core.Agent;
 import jade.core.Profile;
 import jade.core.ProfileImpl;
+import jade.util.Logger;
 import jade.wrapper.AgentController;
 import jade.wrapper.ContainerController;
 import jade.wrapper.ControllerException;
@@ -8,27 +9,31 @@ import jade.wrapper.StaleProxyException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
+import utilities.Constants;
 
 import javax.swing.*;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.logging.Level;
 
 public class DeploymentAgent extends Agent {
 
-    public JPanel rootPanel;
-    private JButton stopAgentButton;
-    private JButton startAgentButton;
-    private JFormattedTextField formattedTextField1;
-    private JButton openButton;
-    private JTextField agentNameTextField;
-    private JList runningAgentsList;
-    private JList availableLibrariesList;
+    JPanel rootPanel;
+    JButton stopAgentButton;
+    JButton startAgentButton;
+    JFormattedTextField formattedTextField1;
+    JButton openButton;
+    JTextField agentNameTextField;
+    JList<String> runningAgentsList;
+    JList<String> availableLibrariesList;
+    JRadioButton resourceAgentRadioButton;
+    JRadioButton transportAgentRadioButton;
 
-
-    String marketplaceXMLPath = "C:\\Users\\David\\Documents\\FCT\\Thesis\\Thesis\\Project\\marketplace.xml";
+    String selectedAgentType = "agents.ResourceAgent";
+    String marketplaceXMLPath = "C:\\Users\\ddrod\\Documents\\GitHub\\Thesis\\Project\\marketplace.xml";
     File xmlMarktetplace;
     ContainerController agentContainer;
 
@@ -42,7 +47,7 @@ public class DeploymentAgent extends Agent {
 
         openButton.addActionListener(e -> {
             JFileChooser fileChooser = new JFileChooser();
-            fileChooser.setCurrentDirectory(new File("C:\\Users\\David\\Documents\\FCT\\Thesis\\Thesis\\Project"));
+            fileChooser.setCurrentDirectory(new File("C:\\Users\\ddrod\\Documents\\GitHub\\Thesis\\Project\\configFiles"));
             int result = fileChooser.showOpenDialog(rootPanel);
 
             if(result == JFileChooser.APPROVE_OPTION) {
@@ -52,15 +57,29 @@ public class DeploymentAgent extends Agent {
             }
         });
 
+        resourceAgentRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                selectedAgentType = "agents.ResourceAgent";
+            }
+        });
+
+        transportAgentRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                selectedAgentType = "agents.TransportAgent";
+            }
+        });
+
         startAgentButton.addActionListener(e ->  {
             try{
                 // Get agentName from textField
                 String agentName = agentNameTextField.getText();
 
                 // Create List with already created agent names
-                List<String> list = new ArrayList<>();
+                DefaultListModel<String> list = new DefaultListModel<>();
                 for(int i = 0; i < runningAgentsList.getModel().getSize(); i++){
-                    list.add(runningAgentsList.getModel().getElementAt(i).toString());
+                    list.addElement(runningAgentsList.getModel().getElementAt(i));
                 }
 
 
@@ -74,13 +93,13 @@ public class DeploymentAgent extends Agent {
                     JOptionPane.showMessageDialog(rootPanel, "No library selected!", "Error", JOptionPane.WARNING_MESSAGE);
                 }
                 else {
-                        list.add(agentName);
-                        runningAgentsList.setListData(list.toArray());
-                        AgentController ag = agentContainer.createNewAgent(agentName, "TestAgent", new Object[]{availableLibrariesList.getSelectedValue(), xmlConfigPath, marketplaceXMLPath});
+                        list.addElement(agentName);
+                        runningAgentsList.setModel(list);
+                        AgentController ag = agentContainer.createNewAgent(agentName, selectedAgentType, new Object[]{Constants.getStationTransportSkills(agentName), Constants.getStationLocation(agentName), availableLibrariesList.getSelectedValue(), xmlConfigPath, marketplaceXMLPath});
                         ag.start();
                 }
             } catch(StaleProxyException ex){
-                ex.printStackTrace();
+                Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, null, ex);
             }
         });
 
@@ -88,13 +107,13 @@ public class DeploymentAgent extends Agent {
             try {
                 if(!runningAgentsList.isSelectionEmpty()){
                     String agentName = (String) runningAgentsList.getSelectedValue();
-                    List<String> list = new ArrayList<>();
+                    DefaultListModel<String> list = new DefaultListModel<>();
                     for(int i = 0; i < runningAgentsList.getModel().getSize(); i++){
-                        list.add(runningAgentsList.getModel().getElementAt(i).toString());
+                        list.addElement(runningAgentsList.getModel().getElementAt(i));
                     }
                     System.out.println("Stopping agent: " + agentName);
-                    list.remove(agentName);
-                    runningAgentsList.setListData(list.toArray());
+                    list.removeElement(agentName);
+                    runningAgentsList.setModel(list);
                     agentContainer.getAgent(agentName).kill();
                 }
             } catch (ControllerException ex) {
@@ -125,15 +144,15 @@ public class DeploymentAgent extends Agent {
                 libList[i]  = classElement.getAttribute("name");
             }
             return libList;
-        } catch(Exception e) {
-            e.printStackTrace();
+        } catch(Exception ex) {
+            Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, null, ex);
         }
         return null;
     }
 
     @Override
     protected void setup() {
-        System.out.println("AgentManager has been launched");
+        System.out.println("DeploymentAgent has been launched");
 
         jade.core.Runtime runtime = jade.core.Runtime.instance();
         Profile profile = new ProfileImpl();

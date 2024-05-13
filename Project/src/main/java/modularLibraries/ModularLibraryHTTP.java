@@ -34,11 +34,20 @@ public class ModularLibraryHTTP {
         }
     }
 
-    public void executeSkill(String skill) throws IOException {
+    public String ExecuteSkill(String skill) throws IOException {
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-        connection.setRequestMethod("GET");
+        connection.setRequestMethod("POST");
+
+        connection.setDoOutput(true);
+        OutputStream os = connection.getOutputStream();
+        String payload = "payload=" + skill;
+        os.write(payload.getBytes());
+        os.flush();
+        os.close();
+
         int responseCode = connection.getResponseCode();
-        System.out.println("GET response Code: " + responseCode);
+        System.out.println("HTTPLib: Post response Code " + responseCode);
+
         if(responseCode == HttpURLConnection.HTTP_OK){
             BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
             String inputLine;
@@ -48,7 +57,12 @@ public class ModularLibraryHTTP {
                 response.append(inputLine);
             }
             in.close();
-            System.out.println(response);
+            return response.toString();
         }
+        return "error";
+    }
+
+    public void Stop(){
+
     }
 }

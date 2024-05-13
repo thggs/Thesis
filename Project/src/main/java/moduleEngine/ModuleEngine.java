@@ -4,6 +4,7 @@ package moduleEngine;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import jade.util.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -11,6 +12,7 @@ import org.w3c.dom.NodeList;
 import java.io.File;
 import java.lang.reflect.Method;
 import java.util.*;
+import java.util.logging.Level;
 
 public class ModuleEngine {
 
@@ -18,7 +20,7 @@ public class ModuleEngine {
     HashMap<String, Class<?>> classesToLoad = new HashMap<>();
 
     // Constructor
-    public ModuleEngine(File marketplaceXML, String libType, File configXMLFile){
+    public ModuleEngine(String libType, File configXMLFile, File marketplaceXML){
         parseMarketplaceXML(marketplaceXML);
         createObject(libType, configXMLFile);
     }
@@ -48,8 +50,8 @@ public class ModuleEngine {
                 currentClass = Class.forName(className);
                 classesToLoad.put(name ,currentClass);
             }
-        } catch(Exception e) {
-            e.printStackTrace();
+        } catch(Exception ex) {
+            Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -60,8 +62,8 @@ public class ModuleEngine {
 
            // Create object
             modularLibrary = classToLoad.getConstructor(File.class).newInstance(xmlConfigFile);
-        }catch(Exception e){
-            e.printStackTrace();
+        }catch(Exception ex){
+            Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -69,13 +71,24 @@ public class ModuleEngine {
         Class<?> objectClass = modularLibrary.getClass();
 
         try {
-            Method method = objectClass.getMethod("executeSkill", skill.getClass());
+            Method method = objectClass.getMethod("ExecuteSkill", skill.getClass());
 
-            String result = (String) method.invoke(modularLibrary, skill);
-            return result;
-        } catch (Exception e){
-            e.printStackTrace();
+            return (String) method.invoke(modularLibrary, skill);
+        } catch (Exception ex){
+            Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, null, ex);
         }
-        return "Error";
+        return "error";
+    }
+
+    public void shutdown(){
+        Class<?> objectClass = modularLibrary.getClass();
+
+        try {
+            Method method = objectClass.getMethod("Stop");
+
+            method.invoke(modularLibrary);
+        } catch (Exception ex){
+            Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }
