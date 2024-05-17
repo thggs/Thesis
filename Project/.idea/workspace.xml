@@ -10,54 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93bb5eed-7652-453a-a570-681efe72eb4b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/c0fbbc3c-ceaf-42b3-afaa-ade58b7ab678-ws19216812079001mqtt/.lck" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configFiles/configConveyor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configFiles/configStation3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configFiles/configStation4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ProductManagerAgent.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ProductManagerAgent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/agents/ProductAgent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/agents/ResourceAgent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/agents/TransportAgent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/examples/ClientExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/examples/ClientExampleRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/examples/ReadExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibrary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibraryOPCUA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/DFInteraction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/685ef52e-7c57-4094-9a33-ee103931bea1-tcp1921682502011883/.lck" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/APDescription.txt" beforeDir="false" afterPath="$PROJECT_DIR$/APDescription.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MTPs-Main-Container.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MTPs-Main-Container.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/httpConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/httpConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/marketplace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/marketplace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mqttConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/configFiles/mqttNodeRedConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AgentManagerUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AgentManagerUI.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DeploymentAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DeploymentAgent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TestAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TestAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibraryC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibraryC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibraryHTTP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibraryHTTP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibraryMQTT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibraryMQTT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/moduleEngine/ModuleEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moduleEngine/ModuleEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/AgentManagerUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AgentManagerUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DeploymentAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DeploymentAgent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TestAgent$behaviour.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TestAgent$behaviour.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TestAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TestAgent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/GridConstraints.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/linkLibraries/LinkLibrary.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/linkLibraries/LinkLibrary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/modularLibraries/ModularLibraryC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/modularLibraries/ModularLibraryC.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/modularLibraries/ModularLibraryHTTP.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/modularLibraries/ModularLibraryHTTP.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/modularLibraries/ModularLibraryMQTT$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/modularLibraries/ModularLibraryMQTT$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/modularLibraries/ModularLibraryMQTT.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/modularLibraries/ModularLibraryMQTT.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/moduleEngine/ModuleEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/moduleEngine/ModuleEngine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/testJNI/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/testJNI/Test.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +97,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Boot">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Boot" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="jade.Boot" />
       <module name="Project" />
