@@ -461,7 +461,8 @@
         "z": "79192bd522869024",
         "name": "Conveyor_1_stop",
         "links": [
-            "733fdfa6d9ad85cd"
+            "733fdfa6d9ad85cd",
+            "22c0522ffbfab314"
         ],
         "x": 170,
         "y": 1420,
@@ -522,7 +523,8 @@
         "z": "79192bd522869024",
         "name": "Conveyor_3_stop",
         "links": [
-            "733fdfa6d9ad85cd"
+            "733fdfa6d9ad85cd",
+            "22c0522ffbfab314"
         ],
         "x": 170,
         "y": 1820,
@@ -683,7 +685,8 @@
         "z": "79192bd522869024",
         "name": "Conveyor_4_stop",
         "links": [
-            "733fdfa6d9ad85cd"
+            "733fdfa6d9ad85cd",
+            "22c0522ffbfab314"
         ],
         "x": 810,
         "y": 1820,
@@ -768,7 +771,8 @@
         "z": "79192bd522869024",
         "name": "Conveyor_2_stop",
         "links": [
-            "733fdfa6d9ad85cd"
+            "733fdfa6d9ad85cd",
+            "22c0522ffbfab314"
         ],
         "x": 810,
         "y": 1420,
@@ -1225,9 +1229,9 @@
         "wires": [
             [
                 "368c7164e85d84e3",
-                "58564c22681053f0",
                 "8847c7f18b816263",
-                "9936dc23abd9539b"
+                "9936dc23abd9539b",
+                "c57dafc3a5b6398b"
             ]
         ]
     },
@@ -1244,27 +1248,8 @@
         "wires": [
             [
                 "368c7164e85d84e3",
-                "58564c22681053f0",
-                "8847c7f18b816263"
-            ]
-        ]
-    },
-    {
-        "id": "58564c22681053f0",
-        "type": "function",
-        "z": "79192bd522869024",
-        "name": "Filter",
-        "func": "if(msg.payload == 0)\n{\n    msg.payload = \"done\"\n    return msg\n}",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1590,
-        "y": 480,
-        "wires": [
-            [
-                "88310ddca243025d"
+                "8847c7f18b816263",
+                "c57dafc3a5b6398b"
             ]
         ]
     },
@@ -1404,7 +1389,7 @@
         "type": "function",
         "z": "79192bd522869024",
         "name": "Filter",
-        "func": "if(msg.payload == 0)\n{\n    msg.payload = \"done\"\n    return msg\n}",
+        "func": "if(msg.payload === \"0\")\n{\n    msg.payload = \"done\"\n    return msg\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1554,7 +1539,7 @@
         "type": "function",
         "z": "79192bd522869024",
         "name": "Filter",
-        "func": "if(msg.payload == 0)\n{\n    msg.payload = \"done\"\n    return msg\n}",
+        "func": "if(msg.payload === \"0\")\n{\n    msg.payload = \"done\"\n    return msg\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1675,9 +1660,9 @@
         "wires": [
             [
                 "204f5473064fef6e",
-                "b02674d579b1e9cd",
                 "7929e70c23cad1ae",
-                "aef09fcd940291b8"
+                "aef09fcd940291b8",
+                "afeb357b67d97769"
             ]
         ]
     },
@@ -1694,8 +1679,8 @@
         "wires": [
             [
                 "204f5473064fef6e",
-                "b02674d579b1e9cd",
-                "7929e70c23cad1ae"
+                "7929e70c23cad1ae",
+                "afeb357b67d97769"
             ]
         ]
     },
@@ -2988,6 +2973,142 @@
         "x": 1450,
         "y": 240,
         "wires": []
+    },
+    {
+        "id": "697a373d094d5cc6",
+        "type": "function",
+        "z": "79192bd522869024",
+        "name": "Filter",
+        "func": "if(msg.payload.localeCompare(\"0\") == 0)\n{\n    msg.payload = \"done\"\n    return msg\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1590,
+        "y": 480,
+        "wires": [
+            [
+                "88310ddca243025d"
+            ]
+        ]
+    },
+    {
+        "id": "c57dafc3a5b6398b",
+        "type": "rbe",
+        "z": "79192bd522869024",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1490,
+        "y": 480,
+        "wires": [
+            [
+                "697a373d094d5cc6"
+            ]
+        ]
+    },
+    {
+        "id": "d934721654c6902e",
+        "type": "inject",
+        "z": "79192bd522869024",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1020,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9c56b2a69a1f2706",
+        "type": "revpi-output",
+        "z": "79192bd522869024",
+        "server": "881e060a.9b5288",
+        "outputpin": "O_1_i04",
+        "overwritevalue": false,
+        "outputvalue": "",
+        "x": 1570,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "07d2ca10dcb53dfe",
+        "type": "revpi-output",
+        "z": "79192bd522869024",
+        "server": "881e060a.9b5288",
+        "outputpin": "O_4_i04",
+        "overwritevalue": false,
+        "outputvalue": "",
+        "x": 1570,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "a3bb6c9dfaa80a81",
+        "type": "inject",
+        "z": "79192bd522869024",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "str",
+        "x": 1410,
+        "y": 1200,
+        "wires": [
+            [
+                "07d2ca10dcb53dfe",
+                "9c56b2a69a1f2706"
+            ]
+        ]
+    },
+    {
+        "id": "afeb357b67d97769",
+        "type": "rbe",
+        "z": "79192bd522869024",
+        "name": "",
+        "func": "rbei",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1490,
+        "y": 960,
+        "wires": [
+            [
+                "b02674d579b1e9cd"
+            ]
+        ]
     },
     {
         "id": "881e060a.9b5288",

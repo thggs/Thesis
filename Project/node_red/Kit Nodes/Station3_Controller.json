@@ -1,0 +1,766 @@
+[
+    {
+        "id": "37c4daa8aceb3f4d",
+        "type": "subflow",
+        "name": "Station3_Controller",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "4418c62d570eb35d"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 920,
+                "y": 1040,
+                "wires": [
+                    {
+                        "id": "edfdd95c247a5fd9",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "83d705e2f3163a8f",
+        "type": "revpi-output",
+        "z": "37c4daa8aceb3f4d",
+        "server": "881e060a.9b5288",
+        "outputpin": "O_1_i03",
+        "overwritevalue": false,
+        "outputvalue": "",
+        "x": 790,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "d4642b13bd1f349f",
+        "type": "revpi-output",
+        "z": "37c4daa8aceb3f4d",
+        "server": "881e060a.9b5288",
+        "outputpin": "O_2_i04",
+        "overwritevalue": false,
+        "outputvalue": "",
+        "x": 670,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "8ee5d7ebfe151a01",
+        "type": "template",
+        "z": "37c4daa8aceb3f4d",
+        "name": "Stop",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "0",
+        "output": "str",
+        "x": 650,
+        "y": 740,
+        "wires": [
+            [
+                "4f6f3a39ecd880d2"
+            ]
+        ]
+    },
+    {
+        "id": "4f6f3a39ecd880d2",
+        "type": "revpi-output",
+        "z": "37c4daa8aceb3f4d",
+        "server": "881e060a.9b5288",
+        "outputpin": "O_2_i03",
+        "overwritevalue": false,
+        "outputvalue": "",
+        "x": 790,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "2f36bef56b046a39",
+        "type": "delay",
+        "z": "37c4daa8aceb3f4d",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 280,
+        "y": 580,
+        "wires": [
+            [
+                "426247ba61a36aec"
+            ]
+        ]
+    },
+    {
+        "id": "426247ba61a36aec",
+        "type": "template",
+        "z": "37c4daa8aceb3f4d",
+        "name": "Stop",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "0",
+        "output": "str",
+        "x": 450,
+        "y": 580,
+        "wires": [
+            [
+                "2d14b3cc0deeba86",
+                "d4642b13bd1f349f"
+            ]
+        ]
+    },
+    {
+        "id": "2d14b3cc0deeba86",
+        "type": "template",
+        "z": "37c4daa8aceb3f4d",
+        "name": "Finished",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "done",
+        "output": "str",
+        "x": 620,
+        "y": 580,
+        "wires": [
+            [
+                "9926b2d5112b25d8"
+            ]
+        ]
+    },
+    {
+        "id": "4fa8faa944f71cbe",
+        "type": "trigger",
+        "z": "37c4daa8aceb3f4d",
+        "name": "",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "-100",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "0",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 180,
+        "y": 760,
+        "wires": [
+            [
+                "583188e783f4bca9"
+            ]
+        ]
+    },
+    {
+        "id": "9926b2d5112b25d8",
+        "type": "revpi-getpin",
+        "z": "37c4daa8aceb3f4d",
+        "server": "881e060a.9b5288",
+        "getoverwritevalue": false,
+        "inputpin": "I_3_i04",
+        "topic": "",
+        "x": 390,
+        "y": 680,
+        "wires": [
+            [
+                "4fa8faa944f71cbe",
+                "83d705e2f3163a8f",
+                "8ee5d7ebfe151a01",
+                "0d82d4d6f45c8013"
+            ]
+        ]
+    },
+    {
+        "id": "583188e783f4bca9",
+        "type": "revpi-getpin",
+        "z": "37c4daa8aceb3f4d",
+        "server": "881e060a.9b5288",
+        "getoverwritevalue": false,
+        "inputpin": "I_3_i04",
+        "topic": "",
+        "x": 390,
+        "y": 760,
+        "wires": [
+            [
+                "4fa8faa944f71cbe",
+                "83d705e2f3163a8f",
+                "0d82d4d6f45c8013"
+            ]
+        ]
+    },
+    {
+        "id": "a2376153d6208824",
+        "type": "revpi-output",
+        "z": "37c4daa8aceb3f4d",
+        "server": "881e060a.9b5288",
+        "outputpin": "O_2_i03",
+        "overwritevalue": false,
+        "outputvalue": "",
+        "x": 790,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "5b7b1470b4c9d9bc",
+        "type": "template",
+        "z": "37c4daa8aceb3f4d",
+        "name": "Stop",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "0",
+        "output": "str",
+        "x": 650,
+        "y": 360,
+        "wires": [
+            [
+                "ec768b559e6fef99"
+            ]
+        ]
+    },
+    {
+        "id": "ec768b559e6fef99",
+        "type": "revpi-output",
+        "z": "37c4daa8aceb3f4d",
+        "server": "881e060a.9b5288",
+        "outputpin": "O_1_i03",
+        "overwritevalue": false,
+        "outputvalue": "",
+        "x": 790,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "c2dcfaa9a02c6b25",
+        "type": "trigger",
+        "z": "37c4daa8aceb3f4d",
+        "name": "",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "-100",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "0",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 180,
+        "y": 380,
+        "wires": [
+            [
+                "aea1d67f9625d20f"
+            ]
+        ]
+    },
+    {
+        "id": "83c57eb6ff49c1b7",
+        "type": "revpi-getpin",
+        "z": "37c4daa8aceb3f4d",
+        "server": "881e060a.9b5288",
+        "getoverwritevalue": false,
+        "inputpin": "I_1_i04",
+        "topic": "",
+        "x": 390,
+        "y": 300,
+        "wires": [
+            [
+                "c2dcfaa9a02c6b25",
+                "a2376153d6208824",
+                "5b7b1470b4c9d9bc",
+                "e18a3a7a361b549d"
+            ]
+        ]
+    },
+    {
+        "id": "aea1d67f9625d20f",
+        "type": "revpi-getpin",
+        "z": "37c4daa8aceb3f4d",
+        "server": "881e060a.9b5288",
+        "getoverwritevalue": false,
+        "inputpin": "I_1_i04",
+        "topic": "",
+        "x": 390,
+        "y": 380,
+        "wires": [
+            [
+                "c2dcfaa9a02c6b25",
+                "a2376153d6208824",
+                "e18a3a7a361b549d"
+            ]
+        ]
+    },
+    {
+        "id": "45bc714e9c43dcab",
+        "type": "revpi-output",
+        "z": "37c4daa8aceb3f4d",
+        "server": "881e060a.9b5288",
+        "outputpin": "O_3_i03",
+        "overwritevalue": false,
+        "outputvalue": "",
+        "x": 790,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "c1a10a04d91c90b1",
+        "type": "template",
+        "z": "37c4daa8aceb3f4d",
+        "name": "Stop",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "0",
+        "output": "str",
+        "x": 650,
+        "y": 140,
+        "wires": [
+            [
+                "748a2294841527ef"
+            ]
+        ]
+    },
+    {
+        "id": "748a2294841527ef",
+        "type": "revpi-output",
+        "z": "37c4daa8aceb3f4d",
+        "server": "881e060a.9b5288",
+        "outputpin": "O_4_i03",
+        "overwritevalue": false,
+        "outputvalue": "",
+        "x": 790,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "54dd7d7a620a8414",
+        "type": "trigger",
+        "z": "37c4daa8aceb3f4d",
+        "name": "",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "-100",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "0",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 180,
+        "y": 160,
+        "wires": [
+            [
+                "6ae37e5b112eeb86"
+            ]
+        ]
+    },
+    {
+        "id": "4418c62d570eb35d",
+        "type": "revpi-getpin",
+        "z": "37c4daa8aceb3f4d",
+        "server": "881e060a.9b5288",
+        "getoverwritevalue": false,
+        "inputpin": "I_7_i04",
+        "topic": "",
+        "x": 390,
+        "y": 80,
+        "wires": [
+            [
+                "54dd7d7a620a8414",
+                "45bc714e9c43dcab",
+                "c1a10a04d91c90b1",
+                "88c91ec7b61b39fd"
+            ]
+        ]
+    },
+    {
+        "id": "6ae37e5b112eeb86",
+        "type": "revpi-getpin",
+        "z": "37c4daa8aceb3f4d",
+        "server": "881e060a.9b5288",
+        "getoverwritevalue": false,
+        "inputpin": "I_7_i04",
+        "topic": "",
+        "x": 390,
+        "y": 160,
+        "wires": [
+            [
+                "54dd7d7a620a8414",
+                "45bc714e9c43dcab",
+                "88c91ec7b61b39fd"
+            ]
+        ]
+    },
+    {
+        "id": "88c91ec7b61b39fd",
+        "type": "function",
+        "z": "37c4daa8aceb3f4d",
+        "name": "Filter",
+        "func": "if(msg.payload == 0)\n{\n    msg.payload = 1\n    return msg\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 200,
+        "wires": [
+            [
+                "7a0c4287ae241552"
+            ]
+        ]
+    },
+    {
+        "id": "0d82d4d6f45c8013",
+        "type": "function",
+        "z": "37c4daa8aceb3f4d",
+        "name": "Filter",
+        "func": "if(msg.payload == 0)\n{\n    msg.payload = 1\n    return msg\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 800,
+        "wires": [
+            [
+                "d8de4e1ac9dc143d"
+            ]
+        ]
+    },
+    {
+        "id": "7e8335f2f53b5ab0",
+        "type": "comment",
+        "z": "37c4daa8aceb3f4d",
+        "name": "Move Station Front",
+        "info": "",
+        "x": 130,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "457adfc85c352082",
+        "type": "comment",
+        "z": "37c4daa8aceb3f4d",
+        "name": "Move Station Down",
+        "info": "",
+        "x": 130,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "d4a5e37fcfb88030",
+        "type": "comment",
+        "z": "37c4daa8aceb3f4d",
+        "name": "Station Action",
+        "info": "",
+        "x": 110,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "5e92cc5d6e270ccc",
+        "type": "comment",
+        "z": "37c4daa8aceb3f4d",
+        "name": "Move Station Up",
+        "info": "",
+        "x": 120,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "f6854d2e8e567b99",
+        "type": "revpi-output",
+        "z": "37c4daa8aceb3f4d",
+        "server": "881e060a.9b5288",
+        "outputpin": "O_4_i03",
+        "overwritevalue": false,
+        "outputvalue": "",
+        "x": 790,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "d7a4b8bb6135bc4a",
+        "type": "template",
+        "z": "37c4daa8aceb3f4d",
+        "name": "Stop",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "0",
+        "output": "str",
+        "x": 650,
+        "y": 980,
+        "wires": [
+            [
+                "516a7a57f1df8855"
+            ]
+        ]
+    },
+    {
+        "id": "516a7a57f1df8855",
+        "type": "revpi-output",
+        "z": "37c4daa8aceb3f4d",
+        "server": "881e060a.9b5288",
+        "outputpin": "O_3_i03",
+        "overwritevalue": false,
+        "outputvalue": "",
+        "x": 790,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "17e9216bfed075dc",
+        "type": "trigger",
+        "z": "37c4daa8aceb3f4d",
+        "name": "",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "-100",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "0",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 180,
+        "y": 1000,
+        "wires": [
+            [
+                "22c5dc0efdf74392"
+            ]
+        ]
+    },
+    {
+        "id": "8b61d42f980ed471",
+        "type": "revpi-getpin",
+        "z": "37c4daa8aceb3f4d",
+        "server": "881e060a.9b5288",
+        "getoverwritevalue": false,
+        "inputpin": "I_5_i04",
+        "topic": "",
+        "x": 390,
+        "y": 920,
+        "wires": [
+            [
+                "f6854d2e8e567b99",
+                "d7a4b8bb6135bc4a",
+                "17e9216bfed075dc",
+                "e15a057701925104"
+            ]
+        ]
+    },
+    {
+        "id": "22c5dc0efdf74392",
+        "type": "revpi-getpin",
+        "z": "37c4daa8aceb3f4d",
+        "server": "881e060a.9b5288",
+        "getoverwritevalue": false,
+        "inputpin": "I_5_i04",
+        "topic": "",
+        "x": 390,
+        "y": 1000,
+        "wires": [
+            [
+                "f6854d2e8e567b99",
+                "17e9216bfed075dc",
+                "e15a057701925104"
+            ]
+        ]
+    },
+    {
+        "id": "e15a057701925104",
+        "type": "function",
+        "z": "37c4daa8aceb3f4d",
+        "name": "Filter",
+        "func": "if(msg.payload == 0)\n{\n    msg.payload = \"done\"\n    return msg\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 1040,
+        "wires": [
+            [
+                "edfdd95c247a5fd9"
+            ]
+        ]
+    },
+    {
+        "id": "8ee978d07c05d72b",
+        "type": "comment",
+        "z": "37c4daa8aceb3f4d",
+        "name": "Move Station Back",
+        "info": "",
+        "x": 130,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "792faf155c10ffd9",
+        "type": "delay",
+        "z": "37c4daa8aceb3f4d",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 850,
+        "y": 420,
+        "wires": [
+            [
+                "d4642b13bd1f349f",
+                "2f36bef56b046a39"
+            ]
+        ]
+    },
+    {
+        "id": "d8de4e1ac9dc143d",
+        "type": "delay",
+        "z": "37c4daa8aceb3f4d",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 770,
+        "y": 800,
+        "wires": [
+            [
+                "8b61d42f980ed471"
+            ]
+        ]
+    },
+    {
+        "id": "edfdd95c247a5fd9",
+        "type": "delay",
+        "z": "37c4daa8aceb3f4d",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 770,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7a0c4287ae241552",
+        "type": "delay",
+        "z": "37c4daa8aceb3f4d",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 770,
+        "y": 200,
+        "wires": [
+            [
+                "83c57eb6ff49c1b7"
+            ]
+        ]
+    },
+    {
+        "id": "e18a3a7a361b549d",
+        "type": "function",
+        "z": "37c4daa8aceb3f4d",
+        "name": "Filter",
+        "func": "if(msg.payload == 0)\n{\n    msg.payload = 1\n    return msg\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 420,
+        "wires": [
+            [
+                "792faf155c10ffd9"
+            ]
+        ]
+    },
+    {
+        "id": "881e060a.9b5288",
+        "type": "revpi-server",
+        "host": "localhost",
+        "port": "8000",
+        "user": "",
+        "password": "",
+        "rejectUnauthorized": false,
+        "ca": ""
+    }
+]
