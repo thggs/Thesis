@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config>
+    <!--HTTP-->
+    <address>http://192.168.1.207:1880/station_3</address>
+    <!--MQTT-->
+    <broker>tcp://192.168.250.201:1883</broker>
+    <quality_of_service>2</quality_of_service>
+    <request_topic>station_3_request</request_topic>
+    <response_topic>station_3_response</response_topic>
+    <!--publisher_id>685ef52e-7c57-4094-9a33-ee103931bea1</publisher_id-->
+    <!--OPC UA-->
+    <endpoint_url>opc.tcp://192.168.1.207:54840/Resources</endpoint_url>
+    <namespace_index>1</namespace_index>
+    <identifier>Station3</identifier>
+</config>
