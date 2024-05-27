@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <config>
     <!--HTTP-->
-    <address>http://192.168.1.207:1880/station_4</address>
+    <address>http://192.168.250.100:1880/station_4</address>
     <!--MQTT-->
-    <broker>tcp://192.168.250.207:1883</broker>
+    <broker>tcp://192.168.250.201:1883</broker>
     <quality_of_service>2</quality_of_service>
     <request_topic>station_4_request</request_topic>
     <response_topic>station_4_response</response_topic>
