@@ -1,7 +1,6 @@
 package agents;
 
 import jade.core.Agent;
-import jade.domain.FIPAAgentManagement.Register;
 import jade.domain.FIPAException;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
@@ -21,7 +20,6 @@ public class TransportAgent extends Agent {
     File xmlConfigFile;
     File xmlMarketplaceFile;
     String libType;
-    String location;
     ModuleEngine moduleEngine;
     ArrayList<String> associatedSkills = new ArrayList<>();
 

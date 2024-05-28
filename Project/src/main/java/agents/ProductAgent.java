@@ -11,7 +11,6 @@ import jade.proto.ContractNetInitiator;
 import utilities.Constants;
 import utilities.DFInteraction;
 
-import javax.swing.text.Utilities;
 import java.util.ArrayList;
 import java.util.Vector;
 import java.util.logging.Level;

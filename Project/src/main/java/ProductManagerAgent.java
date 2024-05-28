@@ -1,4 +1,3 @@
-import agents.ProductAgent;
 import jade.core.Agent;
 import jade.core.Profile;
 import jade.core.ProfileImpl;
@@ -9,6 +8,8 @@ import jade.wrapper.StaleProxyException;
 import utilities.Constants;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumn;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,11 +18,17 @@ import java.util.logging.Level;
 
 public class ProductManagerAgent extends Agent {
     JPanel rootPanel;
+    JPanel buttonPanel;
+    private JTable table1;
+    private JScrollPane tablePanel;
     ArrayList<String> productTypesList;
     ContainerController agentContainer;
+    DefaultTableModel model;
     ArrayList<JButton> productButtonsList = new ArrayList<>();
     //ArrayList<String> products = new ArrayList<>();
     int productID = 0;
+
+    String[] columnNames = {"ID", "Type"};
 
     public ProductManagerAgent(){
 
@@ -41,8 +48,12 @@ public class ProductManagerAgent extends Agent {
 
         JFrame frame = new JFrame("Product Manager Agent");
         frame.setContentPane(rootPanel);
-        frame.setLayout(new FlowLayout());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        model = (DefaultTableModel) table1.getModel();
+
+        model.addColumn("Product ID");
+        model.addColumn("Product Type");
 
         for(String product : productTypesList){
             JButton productButton = new JButton(product);
@@ -53,17 +64,17 @@ public class ProductManagerAgent extends Agent {
                     try{
                         JButton button = (JButton) e.getSource();
                         Object[] params = new Object[]{Constants.getProdSkills(button.getText())};
-                        AgentController agentController = agentContainer.createNewAgent("Product_" + productID, "agents.ProductAgent", params);
+                        AgentController agentController = agentContainer.createNewAgent(button.getText() + "_" + productID, "agents.ProductAgent", params);
                         agentController.start();
+                        model.addRow(new Object[]{productID, button.getText()});
                         productID++;
-                        //products.add("Product_" + productID);
                     } catch (StaleProxyException ex) {
                         Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, null, ex);
                     }
                 }
             });
+            buttonPanel.add(productButton);
             productButtonsList.add(productButton);
-            rootPanel.add(productButton, BorderLayout.CENTER);
         }
 
         frame.pack();

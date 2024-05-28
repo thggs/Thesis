@@ -34,22 +34,54 @@ public class Main {
     static String endpointUrl = "opc.tcp://192.168.1.207:54840/Resources";
     static String value;
 
-    public static void main(String[] args) throws UaException, ExecutionException, InterruptedException {
-        List<EndpointDescription> endpoints = DiscoveryClient.getEndpoints(endpointUrl).get();
-        EndpointDescription endpoint = EndpointUtil.updateUrl(endpoints.getFirst(), "192.168.1.207", 54840);
+    public static void main(String[] args) throws UaException, ExecutionException, InterruptedException, URISyntaxException, IOException {
+//        List<EndpointDescription> endpoints = DiscoveryClient.getEndpoints(endpointUrl).get();
+//        EndpointDescription endpoint = EndpointUtil.updateUrl(endpoints.getFirst(), "192.168.1.207", 54840);
+//
+//        for(EndpointDescription item : endpoints){
+//            System.out.println(item);
+//        }
+//
+//        OpcUaClientConfigBuilder configBuilder = new OpcUaClientConfigBuilder();
+//        configBuilder.setEndpoint(endpoint);
+//
+//        OpcUaClient client = OpcUaClient.create(configBuilder.build());
+//
+//        client.connect().get();
 
-        for(EndpointDescription item : endpoints){
-            System.out.println(item);
+        try{
+            URL url = new URI("http://192.168.1.207:1880/conveyor").toURL();
+
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("POST");
+            connection.setRequestProperty("Test_key", "Test_value");
+
+            connection.setDoOutput(true);
+            OutputStream os = connection.getOutputStream();
+            os.write("payload=Source#TOKEN#C2".getBytes());
+            os.flush();
+            os.close();
+
+            int responseCode = connection.getResponseCode();
+            System.out.println("POST response Code: " + responseCode);
+
+            if(responseCode == HttpURLConnection.HTTP_OK){
+                BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+                String inputLine;
+                StringBuilder response = new StringBuilder();
+
+                while((inputLine = in.readLine()) != null){
+                    response.append(inputLine);
+                }
+                in.close();
+                System.out.println(response);
+            }
+        }
+        catch(Exception ex){
+            throw ex;
         }
 
-        OpcUaClientConfigBuilder configBuilder = new OpcUaClientConfigBuilder();
-        configBuilder.setEndpoint(endpoint);
 
-        OpcUaClient client = OpcUaClient.create(configBuilder.build());
-
-        client.connect().get();
-
-        //OPCUA();
     }
 
     private static final Logger logger = LoggerFactory.getLogger(Main.class);

@@ -11,7 +11,25 @@
   <component name="ChangeListManager">
     <list default="true" id="93bb5eed-7652-453a-a570-681efe72eb4b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APDescription.txt" beforeDir="false" afterPath="$PROJECT_DIR$/APDescription.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c0fbbc3c-ceaf-42b3-afaa-ade58b7ab678-ws19216812079001mqtt/.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AgentManagerUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AgentManagerUI.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProductManagerAgent.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProductManagerAgent.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProductManagerAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProductManagerAgent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agents/ProductAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agents/ProductAgent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agents/TransportAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agents/TransportAgent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ProductManagerAgent$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ProductManagerAgent$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ProductManagerAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ProductManagerAgent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/agents/ProductAgent$contractNetInitiator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/agents/ProductAgent$contractNetInitiator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/agents/ProductAgent$executeNextSkill.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/agents/ProductAgent$executeNextSkill.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/agents/ProductAgent$requestStationSkill.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/agents/ProductAgent$requestStationSkill.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/agents/ProductAgent$requestTransportMove.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/agents/ProductAgent$requestTransportMove.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/agents/ProductAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/agents/ProductAgent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/agents/TransportAgent$requestResponder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/agents/TransportAgent$requestResponder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/agents/TransportAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/agents/TransportAgent.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,34 +66,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.Boot.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;Application.modularLibraries.Test.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;false&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH&quot;: &quot;206&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;304&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ddrod/Documents/GitHub/Thesis/Project/mqttFiles&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.40952381&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Boot.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.Test.executor": "Run",
+    "Application.Unnamed.executor": "Run",
+    "Application.modularLibraries.Test.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "146",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "368",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/ddrod/Documents/GitHub/Thesis/Project/mqttFiles",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.40952381",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ddrod\Documents\GitHub\Thesis\Project\mqttFiles" />
@@ -97,7 +115,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Boot">
     <configuration name="Boot" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="jade.Boot" />
       <module name="Project" />
