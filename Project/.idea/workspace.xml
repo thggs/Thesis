@@ -9,14 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93bb5eed-7652-453a-a570-681efe72eb4b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APDescription.txt" beforeDir="false" afterPath="$PROJECT_DIR$/APDescription.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MTPs-Main-Container.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MTPs-Main-Container.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DeploymentAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DeploymentAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ProductManagerAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProductManagerAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agents/ProductAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agents/ProductAgent.java" afterDir="false" />
-    </list>
+    <list default="true" id="93bb5eed-7652-453a-a570-681efe72eb4b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +48,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.Boot.executor": "Debug",
+    "Application.Boot.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.Test.executor": "Run",
     "Application.Unnamed.executor": "Run",
