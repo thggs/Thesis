@@ -33,7 +33,7 @@ public class DeploymentAgent extends Agent {
     JRadioButton transportAgentRadioButton;
 
     String selectedAgentType = "agents.ResourceAgent";
-    String marketplaceXMLPath = "C:\\Users\\David\\Documents\\FCT\\Thesis\\Thesis\\Project\\marketplace.xml";
+    String marketplaceXMLPath = System.getenv("MarketplaceFilePath"); //"C:\\Users\\David\\Documents\\FCT\\Thesis\\Thesis\\Project\\marketplace.xml";
     File xmlMarktetplace;
     ContainerController agentContainer;
 
@@ -47,7 +47,7 @@ public class DeploymentAgent extends Agent {
 
         openButton.addActionListener(e -> {
             JFileChooser fileChooser = new JFileChooser();
-            fileChooser.setCurrentDirectory(new File("C:\\Users\\David\\Documents\\FCT\\Thesis\\Thesis\\Project\\configFiles"));
+            fileChooser.setCurrentDirectory(new File(System.getenv("ConfigFolderPath")));
             int result = fileChooser.showOpenDialog(rootPanel);
 
             if(result == JFileChooser.APPROVE_OPTION) {
