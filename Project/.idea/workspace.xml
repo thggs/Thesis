@@ -12,24 +12,10 @@
     <list default="true" id="93bb5eed-7652-453a-a570-681efe72eb4b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APDescription.txt" beforeDir="false" afterPath="$PROJECT_DIR$/APDescription.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c0fbbc3c-ceaf-42b3-afaa-ade58b7ab678-ws19216812079001mqtt/.lck" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AgentManagerUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AgentManagerUI.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ProductManagerAgent.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProductManagerAgent.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MTPs-Main-Container.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MTPs-Main-Container.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DeploymentAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DeploymentAgent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ProductManagerAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProductManagerAgent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agents/ProductAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agents/ProductAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agents/TransportAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agents/TransportAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ProductManagerAgent$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ProductManagerAgent$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ProductManagerAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ProductManagerAgent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/agents/ProductAgent$contractNetInitiator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/agents/ProductAgent$contractNetInitiator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/agents/ProductAgent$executeNextSkill.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/agents/ProductAgent$executeNextSkill.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/agents/ProductAgent$requestStationSkill.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/agents/ProductAgent$requestStationSkill.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/agents/ProductAgent$requestTransportMove.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/agents/ProductAgent$requestTransportMove.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/agents/ProductAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/agents/ProductAgent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/agents/TransportAgent$requestResponder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/agents/TransportAgent$requestResponder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/agents/TransportAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/agents/TransportAgent.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +55,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.Boot.executor": "Run",
+    "Application.Boot.executor": "Debug",
     "Application.Main.executor": "Run",
     "Application.Test.executor": "Run",
     "Application.Unnamed.executor": "Run",
