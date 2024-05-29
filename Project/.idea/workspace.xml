@@ -103,6 +103,10 @@
   </component>
   <component name="RunManager" selected="Application.Boot">
     <configuration name="Boot" type="Application" factoryName="Application" nameIsGenerated="true">
+      <envs>
+        <env name="MarketplaceFilePath" value="C:\Users\ddrod\Documents\GitHub\Thesis\Project\marketplace.xml" />
+        <env name="ConfigFolderPath" value="C:\Users\ddrod\Documents\GitHub\Thesis\Project\configFiles" />
+      </envs>
       <option name="MAIN_CLASS_NAME" value="jade.Boot" />
       <module name="Project" />
       <option name="PROGRAM_PARAMETERS" value="-gui deploymentAgent:DeploymentAgent();productManagerAgent:ProductManagerAgent();" />
