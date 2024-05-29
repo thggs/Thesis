@@ -25,12 +25,12 @@ public class Constants {
     public static final String PROD_C = "Product_C";
 
     // Locations
-    public static final String LOCATION_SOURCE = "Source";
+    public static final String LOCATION_SOURCE = "C1";
     public static final String LOCATION_C1 = "C1";
     public static final String LOCATION_C2 = "C2";
     public static final String LOCATION_C3 = "C3";
     public static final String LOCATION_C4 = "C4";
-    public static final String LOCATION_STORAGE = "Storage";
+    public static final String LOCATION_STORAGE = "C4";
 
     // Station Skills
     public static final ArrayList<String> STATION_3_SKILLS = new ArrayList<>(Arrays.asList(

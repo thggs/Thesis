@@ -163,7 +163,7 @@ public class ProductAgent extends Agent {
                 }
                 ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
                 msg.addReceiver(result[0].getName());
-                msg.setContent(location + "#TOKEN#Storage");
+                msg.setContent(location + "#TOKEN#" + Constants.LOCATION_STORAGE);
                 location = inform.getContent();
                 myAgent.addBehaviour(new requestTransportMove(myAgent, msg, null));
             }
