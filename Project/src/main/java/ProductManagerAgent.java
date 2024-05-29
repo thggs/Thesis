@@ -25,7 +25,7 @@ public class ProductManagerAgent extends Agent {
     ContainerController agentContainer;
     DefaultTableModel model;
     ArrayList<JButton> productButtonsList = new ArrayList<>();
-    //ArrayList<String> products = new ArrayList<>();
+    ArrayList<AgentController> products = new ArrayList<>();
     int productID = 0;
 
     String[] columnNames = {"ID", "Type"};
@@ -52,8 +52,9 @@ public class ProductManagerAgent extends Agent {
 
         model = (DefaultTableModel) table1.getModel();
 
-        model.addColumn("Product ID");
-        model.addColumn("Product Type");
+        model.addColumn("ID");
+        model.addColumn("Type");
+        model.addColumn("Skills");
 
         for(String product : productTypesList){
             JButton productButton = new JButton(product);
@@ -66,8 +67,9 @@ public class ProductManagerAgent extends Agent {
                         Object[] params = new Object[]{Constants.getProdSkills(button.getText())};
                         AgentController agentController = agentContainer.createNewAgent(button.getText() + "_" + productID, "agents.ProductAgent", params);
                         agentController.start();
-                        model.addRow(new Object[]{productID, button.getText()});
+                        model.addRow(new Object[]{productID, button.getText(), Constants.getProdSkills(button.getText()).toString()});
                         productID++;
+                        products.add(agentController);
                     } catch (StaleProxyException ex) {
                         Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, null, ex);
                     }
@@ -79,5 +81,9 @@ public class ProductManagerAgent extends Agent {
 
         frame.pack();
         frame.setVisible(true);
+    }
+
+    public static void UpdateTableRow(){
+
     }
 }
