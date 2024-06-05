@@ -50,7 +50,13 @@ public class ProductAgent extends Agent {
             DFAgentDescription[] result = new DFAgentDescription[0];
             String skill = executionPlan.get(step);
             try{
-                result = DFInteraction.SearchInDFByName(skill, this.getAgent());
+                while(true) {
+                    result = DFInteraction.SearchInDFByName(skill, this.getAgent());
+                    if(result.length > 0){
+                        break;
+                    }
+                    Thread.onSpinWait();
+                }
             }catch(FIPAException ex){
                 Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, null, ex);
             }
@@ -78,7 +84,13 @@ public class ProductAgent extends Agent {
             DFAgentDescription[] result = new DFAgentDescription[0];
             System.out.println(myAgent.getLocalName() + ": INFORM message received from " + inform.getSender().getLocalName() + " with contents: " + inform.getContent());
             try{
-                result = DFInteraction.SearchInDFByType("TransportAgent", this.getAgent());
+                while(true) {
+                    result = DFInteraction.SearchInDFByType("TransportAgent", this.getAgent());
+                    if(result.length > 0){
+                        break;
+                    }
+                    Thread.onSpinWait();
+                }
             }catch(FIPAException ex){
                 Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, null, ex);
             }
