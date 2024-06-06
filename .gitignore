@@ -79,6 +79,6 @@ fabric.properties
 # VS Code #
 .vscode/
 
-Project/APDescription.txt
-Project/MTPs-Main-Container.txt
-/Project/target
+APDescription.txt
+MTPs-Main-Container.txt
+target
