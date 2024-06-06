@@ -103,7 +103,7 @@ public class ProductAgent extends Agent {
 
         @Override
         protected void handleAllResponses(Vector responses, Vector acceptances){
-            ACLMessage acceptMsg = (ACLMessage) responses.getFirst();
+            ACLMessage acceptMsg = (ACLMessage) responses.get(0);
             System.out.println(myAgent.getLocalName() + ": ALL PROPOSALS received");
             ACLMessage replyAccept = acceptMsg.createReply();
             replyAccept.setPerformative(ACLMessage.ACCEPT_PROPOSAL);

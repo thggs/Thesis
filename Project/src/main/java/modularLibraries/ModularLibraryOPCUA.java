@@ -64,7 +64,7 @@ public class ModularLibraryOPCUA {
 
         try{
             List<EndpointDescription> endpointsList = DiscoveryClient.getEndpoints(endpointUrl).get();
-            EndpointDescription endpoint = EndpointUtil.updateUrl(endpointsList.getFirst(), "192.168.1.207", 54840);
+            EndpointDescription endpoint = EndpointUtil.updateUrl(endpointsList.get(0), "192.168.1.207", 54840);
 
             OpcUaClientConfigBuilder config = new OpcUaClientConfigBuilder();
             config.setEndpoint(endpoint);
@@ -112,7 +112,7 @@ public class ModularLibraryOPCUA {
                 public void onDataReceived(List<ManagedDataItem> dataItems, List<DataValue> dataValues) {
                     //System.out.println("AAAAAAAAAAAAAAAAA" + dataItems);
                     //System.out.println("AAAAAAAAAAAAAAAAA" + dataValues);
-                    DataValue dataValue = dataValues.getFirst();
+                    DataValue dataValue = dataValues.get(0);
                     String res = ParseResult(dataValue);
                     if(!res.equals(skill)){
                         responseReceived = true;

@@ -147,7 +147,7 @@ public class Main {
         subscription.addChangeListener(new ManagedSubscription.ChangeListener() {
             @Override
             public void onDataReceived(List<ManagedDataItem> dataItems, List<DataValue> dataValues){
-                DataValue dataValue = dataValues.getFirst();
+                DataValue dataValue = dataValues.get(0);
                 value = ParseResult(dataValue);
                 System.out.println(value);
             }
