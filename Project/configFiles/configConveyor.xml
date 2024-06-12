@@ -9,7 +9,8 @@
     <response_topic>conveyor_response</response_topic>
     <!--publisher_id>685ef52e-7c57-4094-9a33-ee103931bea1</publisher_id-->
     <!--OPC UA-->
-    <endpoint_url>opc.tcp://192.168.1.207:54840/Resources</endpoint_url>
+    <endpoint_url>opc.tcp://192.168.1.207:53880/Resources</endpoint_url>
     <namespace_index>1</namespace_index>
-    <identifier>Conveyor</identifier>
+    <requests_identifier>Conveyor_Req</requests_identifier>
+    <responses_identifier>Conveyor_Res</responses_identifier>
 </config>
