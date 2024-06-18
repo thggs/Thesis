@@ -64,7 +64,7 @@ public class ModularLibraryOPCUA {
             List<EndpointDescription> endpointsList = DiscoveryClient.getEndpoints(endpointUrl).get();
 
             OpcUaClientConfigBuilder config = new OpcUaClientConfigBuilder();
-            config.setEndpoint(endpointsList.getFirst());
+            config.setEndpoint(endpointsList.get(0));
 
             client = OpcUaClient.create(config.build());
             client.connect().get();
@@ -96,7 +96,7 @@ public class ModularLibraryOPCUA {
                     break;
                 }
             }
-
+            System.out.println("Wrote request");
             ManagedSubscription subscription = ManagedSubscription.create(client);
 
             ManagedDataItem dataItem = subscription.createDataItem(resNodeId);
@@ -108,10 +108,11 @@ public class ModularLibraryOPCUA {
             subscription.addChangeListener(new ManagedSubscription.ChangeListener() {
                 @Override
                 public void onDataReceived(List<ManagedDataItem> dataItems, List<DataValue> dataValues) {
-                    DataValue dataValue = dataValues.getFirst();
+                    DataValue dataValue = dataValues.get(0);
                     String res = ParseResult(dataValue);
                     responseReceived = true;
                     result = res;
+                    System.out.println("Received a Value" + res);
                 }
             });
 
