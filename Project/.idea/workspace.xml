@@ -10,11 +10,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93bb5eed-7652-453a-a570-681efe72eb4b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/node_red/Kit Nodes/High Level Control DONE.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_red/Kit Nodes/Manual Control DONE.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_red/Kit Nodes/OPCUA Server DONE.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configFiles/configConveyorKit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/configFiles/configConveyorKit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configFiles/configStation3Kit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/configFiles/configStation3Kit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configFiles/configStation4Kit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/configFiles/configStation4Kit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_red/Kit Nodes/Manual Control.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_red/Kit Nodes/OPCUA Server.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_red/Kit Nodes/Sub_Flow Conveyor_Controller.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_red/Kit Nodes/Sub_Flow Station3_Controller.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_red/Kit Nodes/Sub_Flow Station4_Controller.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AgentManagerUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examples/ClientExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examples/ClientExampleRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examples/ReadExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibraryHTTP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibraryHTTP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibraryMQTT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibraryMQTT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibraryOPCUA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modularLibraries/ModularLibraryOPCUA.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
