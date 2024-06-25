@@ -28,7 +28,7 @@ public class ModularLibraryHTTP {
 
             url = new URI(addressNode.item(0).getTextContent()).toURL();
 
-            //establishConnection(url);
+            System.out.println("HTTPLib: Started with address " + url);
         } catch (Exception e){
             e.printStackTrace();
         }
@@ -38,6 +38,8 @@ public class ModularLibraryHTTP {
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("POST");
 
+        System.out.println("HTTPLib: POSTing message: " + skill);
+
         connection.setDoOutput(true);
         OutputStream os = connection.getOutputStream();
         String payload = "payload=" + skill;
@@ -46,7 +48,7 @@ public class ModularLibraryHTTP {
         os.close();
 
         int responseCode = connection.getResponseCode();
-        System.out.println("HTTPLib: Post response Code " + responseCode);
+        System.out.println("HTTPLib: POST response Code " + responseCode);
 
         if(responseCode == HttpURLConnection.HTTP_OK){
             BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
@@ -63,6 +65,6 @@ public class ModularLibraryHTTP {
     }
 
     public void Stop(){
-
+        System.out.println("HTTPLib: Disconnecting...");
     }
 }

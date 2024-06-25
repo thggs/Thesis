@@ -60,6 +60,8 @@ public class ModularLibraryOPCUA {
         String reqIdentifier = requestsIdentifierNode.item(0).getTextContent();
         String resIdentifier = responsesIdentifierNode.item(0).getTextContent();
 
+        System.out.println("OPCUALib: Connecting to server: " + endpointUrl);
+
         try{
             List<EndpointDescription> endpointsList = DiscoveryClient.getEndpoints(endpointUrl).get();
 
@@ -68,6 +70,7 @@ public class ModularLibraryOPCUA {
 
             client = OpcUaClient.create(config.build());
             client.connect().get();
+            System.out.println("OPCUALib: Connected to server");
             reqNodeId = new NodeId(namespaceIndex, reqIdentifier);
             resNodeId = new NodeId(namespaceIndex, resIdentifier);
         } catch(Exception ex){
@@ -119,6 +122,8 @@ public class ModularLibraryOPCUA {
             while(!responseReceived){
                 Thread.onSpinWait();
             }
+            System.out.println("OPCUALib: Message Received: " + result);
+            responseReceived = false;
 
             subscription.delete();
 

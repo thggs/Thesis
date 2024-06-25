@@ -73,7 +73,6 @@ public class ModularLibraryMQTT {
                 @Override
                 public void messageArrived(String msgTopic, MqttMessage mqttMessage) {
                     String msg = new String(mqttMessage.getPayload());
-                    System.out.println("MQTT Library message received: " + msg);
                     responseReceived = true;
                     skillResult = msg;
                 }
@@ -113,6 +112,7 @@ public class ModularLibraryMQTT {
             while (!responseReceived) {
                 Thread.onSpinWait();
             }
+            System.out.println("MQTTLib: Message Received: " + skillResult);
             responseReceived = false;
             return skillResult;
 
