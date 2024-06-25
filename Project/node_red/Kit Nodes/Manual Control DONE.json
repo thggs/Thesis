@@ -1918,6 +1918,7 @@
         "name": "Filter",
         "func": "if(\"_linkSource\" in msg)\n{\n    context.set(\"linkSource\", msg._linkSource)\n}\n\nif(msg.payload == 0)\n{\n    msg.payload = \"done\"\n    msg._linkSource = context.get(\"linkSource\")\n    return msg\n}",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
