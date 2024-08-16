@@ -1,0 +1,62 @@
+Desculpa só responder agora, mas só agora é que consegui ver com calma o teu trabalho, eu vou deixar aqui alguns comentários, mas a minha sugestão é que falássemos (uma chamada para se discutir isto porque o teu documento está muito fraco).
+
+Arquitetura: 
+        
+Fazer descrição do sistema como um todo, incluir os diagramas já feitos. (MAS e ME) DONE
+
+Criar diagramas a explicar como o sistema em determinados use cases (durante desenvolvimento, manutenção, integração de novos agentes, etc) (ME) DONE
+        
+Diagrama de componentes com os vários componentes do sistema e quem é que tem interfaces com quem (ME) DONE
+
+Diagrama de atividades onde demonstras a evolução do sistema ao longo do tempo, para que o leitor perceba como este evolui, decisões, etc. (MAS e ME) (Activity diagrams)
+       
+Descrever que o sistema foi desenhado tendo em conta a arquitetura com estes três agentes (RA, PA, TA) e que o RA e TA são os únicos que instanciam module engines. (MAS e ME)
+        
+Explicar que os agentes utilizam o conceito de skill para que os RAs e TAs disponibilizem as suas capacidades e para que os PAs encontrem e peçam as capacidades que precisam. (MAS) DONE
+        
+Depois explicar como é que isto tudo funciona já com os agentes em causa. (MAS e ME) (Sequence Diagrams já feitos)
+    
+
+
+Implementação:
+                
+Que interfaces existem entre os diferentes módulos, que dados são trocados nessas interfaces
+        
+O modelo de dados (?)
+        
+Diagramas de classes com a implementação dos módulos e dos agentes
+        
+quais os métodos que são chamados quando uma sequência de execução de skill é feita
+        
+quais os métodos quando um agente é lançado
+        
+quais os behaviours utilizados para implementar os agentes
+        
+quais as interações entre a tool que fizeste e o resto do ecossistema
+        
+quais as libs que implementaste e como as fizeste
+    
+
+Resultados e testes
+        
+Aqui ainda vamos ter de fazer os testes de carga que já tínhamos falado
+        
+Quanto tempo demora a fazer deploy de um agente com a tua solução (e 10 agentes e 100 agentes) <---
+        
+Quanto tempo demora um agente a executar uma skill, desde que a mensagem sai do agente, até que esta volta ao agente (é mais lento no teu caso, ou com uma abordagem tradicional?)
+        
+O caso de estudo que fizeste no laboratório tem de ser descrito e com componente visual (Tens de ter uma ou duas fotografias do kit, explicar as máquinas que tens lá e as skills, o controlador que tens, o setup para o opc-ua e o mqtt funcionar, TUDO)
+        
+Depois então explicas os vários testes que fizeste com várias imagens e explicando o que foste fazendo.
+            
+
+Lancei assim, como podem ver na imagem X, e executei, depois passei a usar a lib Y no agente Z, e quando o setup estava terminado, voltei a pedir a execução e o resultado foi este como é possível ver na imagem A.
+        
+
+Depois é preciso fazer uma apreciação de todos os resultados avaliando se era o esperado ou não e o que pode ser melhorado.
+
+
+
+
+
+O estado da arte também deverá ser melhorado, mas para já fica assim, porque estes três estão mesmo muito longe de estarem aceitável para entrega.
