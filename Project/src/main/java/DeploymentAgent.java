@@ -31,17 +31,18 @@ public class DeploymentAgent extends Agent {
     JList<String> availableLibrariesList;
     JRadioButton resourceAgentRadioButton;
     JRadioButton transportAgentRadioButton;
+    JFrame frame;
 
     String selectedAgentType = "agents.ResourceAgent";
     String marketplaceXMLPath = System.getenv("MarketplaceFilePath"); //"C:\\Users\\David\\Documents\\FCT\\Thesis\\Thesis\\Project\\marketplace.xml";
-    File xmlMarktetplace;
+    File xmlMarketplace;
     ContainerController agentContainer;
 
     String xmlConfigPath;
 
     public DeploymentAgent(){
 
-        xmlMarktetplace = new File(marketplaceXMLPath);
+        xmlMarketplace = new File(marketplaceXMLPath);
 
         availableLibrariesList.setListData(getMarketplaceLibraries());
 
@@ -106,7 +107,7 @@ public class DeploymentAgent extends Agent {
         stopAgentButton.addActionListener(e -> {
             try {
                 if(!runningAgentsList.isSelectionEmpty()){
-                    String agentName = (String) runningAgentsList.getSelectedValue();
+                    String agentName = runningAgentsList.getSelectedValue();
                     DefaultListModel<String> list = new DefaultListModel<>();
                     for(int i = 0; i < runningAgentsList.getModel().getSize(); i++){
                         list.addElement(runningAgentsList.getModel().getElementAt(i));
@@ -126,7 +127,7 @@ public class DeploymentAgent extends Agent {
     public String[] getMarketplaceLibraries() {
         try{
             DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-            Document marketplaceXML = builder.parse(xmlMarktetplace);
+            Document marketplaceXML = builder.parse(xmlMarketplace);
             marketplaceXML.getDocumentElement().normalize();
 
             // Get first node, in this case "marketplace"
@@ -160,7 +161,7 @@ public class DeploymentAgent extends Agent {
         profile.setParameter(Profile.MAIN_HOST, "localhost");
         agentContainer = runtime.createAgentContainer(profile);
 
-        JFrame frame = new JFrame("Deployment Agent");
+        frame = new JFrame("Deployment Agent");
         frame.setContentPane(rootPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
