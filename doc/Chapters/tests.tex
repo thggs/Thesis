@@ -1,0 +1,35 @@
+% !TEX root=template.tex
+
+\typeout{NT FILE tests.tex}
+
+\prependtographicspath{{Chapters/Figures/}}
+
+\chapter{Tests}
+\label{cha:tests}
+
+To test the system, both NodeRED and the \acrshort{MAS} systems were launched. The \acrlong{PM} and \acrlong{DA} startup and wait for agents to be launched. After this, two \acrlongpl{RA} are launched, corresponding to Station 3 and Station 4, aptly named Station\_3 and Station\_4. Along with those agents, a \acrlong{TA} is also launched, corresponding to the Conveyor Belt, called Conveyor. The right configuration files are selected for each agent and they are launched, one by one. To start off, all agents are using the Link Library that communicates through \acrshort{MQTT}, and thus the configurations for this protocol are used. These agents are connected to the broker on launch, and will communicate to the corresponding topics described in Chapter~\ref{cha:implementation}.\\
+
+After agents are done with their initial setups, a product agent can be launched. For the purposes of showcasing the systems capabilities, three different Product Types were created. These products are shown in \ref{tab:product_types}, along with their production sequences and the sequence of Conveyor Belt sections they need to go to in order to complete their process.\\
+
+\begin{table}[h!]
+	\caption{Product Types}
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Product Type & Production Sequence      & Location Sequence    \\ \hline
+		A            & {[}Skill\_A{]}           & {[}C1; C2; C4{]}     \\ \hline
+		B            & {[}Skill\_B{]}           & {[}C1; C3; C4{]}     \\ \hline
+		C            & {[}Skill\_B; Skill\_A{]} & {[}C1; C3; C2; C4{]} \\ \hline
+	\end{tabular}
+	\label{tab:product_types}
+\end{table}
+
+All three product types were launched, one at a time. The system handled their production without any problems, with all \acrshortpl{RA} and \acrshort{TA} communicating to the hardware through the \acrshort{MQTT} protocol.\\
+
+After the last product finished its process, the \acrlong{RA} for Station 3 was stopped and restarted with the \acrshort{HTTP} Link Library. The same test was run again, and no significant changes to the production steps were noted, even though Station 3 was now communicating through \acrshort{HTTP} Requests to the hardware. Similar tests were performed, where an agent would be stopped and restarted again, with a different Link Library.\\
+
+The only changes in processing time were noticed when the \acrshort{OPCUA} protocol was used, but this is likely due to the server being hosted on the RevPi itself, which could slow down its operation speed somewhat, since multiple processes were running in parallel. This could've easily been mitigated by hosting the \acrshort{OPCUA} server on another machine.\\
+
+To ascertain if there was a difference in processing time in a system using the Module Engine and a system communicating directly to the hardware, a simple test was done. A dummy agent was created for this and in its setup code a simple loop was implemented that would send two \acrshort{HTTP} POSTs. The first through the Module Engine and the other directly. This loop ran for a hundred thousand iterations and the time each communication took was taken, and the average of the differences between times was calculated. All average times measured were under a millisecond, which mean that, on average, the system using the Module Engine takes about the same amount of time as system communicating directly to the hardware.\\
+
+This result was to be expected, since the Link Library used by the Module Engine is loaded like any other Java class and treated like any other Java object. This makes it behave like it was there since the projects compilation, even though it wasn't, which should not impact the time performance significantly, as the test demonstrates.\\
