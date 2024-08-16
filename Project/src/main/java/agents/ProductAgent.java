@@ -103,6 +103,18 @@ public class ProductAgent extends Agent {
 
         @Override
         protected void handleAllResponses(Vector responses, Vector acceptances){
+            boolean acceptance = false;
+
+            for (Object aclMessage : responses) {
+                if (((ACLMessage)aclMessage).getPerformative() == ACLMessage.PROPOSE) {
+                    acceptance = true;
+                }
+            }
+            if(responses.isEmpty() || !acceptance){
+                myAgent.addBehaviour(new executeNextSkill(myAgent));
+                return;
+            }
+
             ACLMessage acceptMsg = (ACLMessage) responses.get(0);
             System.out.println(myAgent.getLocalName() + ": ALL PROPOSALS received");
             ACLMessage replyAccept = acceptMsg.createReply();
