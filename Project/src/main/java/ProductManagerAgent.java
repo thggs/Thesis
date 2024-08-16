@@ -9,8 +9,6 @@ import utilities.Constants;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableColumn;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -19,20 +17,14 @@ import java.util.logging.Level;
 public class ProductManagerAgent extends Agent {
     JPanel rootPanel;
     JPanel buttonPanel;
-    private JTable table1;
-    private JScrollPane tablePanel;
+    JTable table1;
+    DefaultTableModel model;
+
     ArrayList<String> productTypesList;
     ContainerController agentContainer;
-    DefaultTableModel model;
     ArrayList<JButton> productButtonsList = new ArrayList<>();
     ArrayList<AgentController> products = new ArrayList<>();
     int productID = 0;
-
-    String[] columnNames = {"ID", "Type"};
-
-    public ProductManagerAgent(){
-
-    }
 
     @Override
     protected void setup() {
@@ -81,9 +73,5 @@ public class ProductManagerAgent extends Agent {
 
         frame.pack();
         frame.setVisible(true);
-    }
-
-    public static void UpdateTableRow(){
-
     }
 }
