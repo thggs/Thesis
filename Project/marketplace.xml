@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <marketplace>
-    <class className="modularLibraries.ModularLibraryMQTT" name="MQTT"/>
-    <!--class className="modularLibraries.ModularLibraryC" name="C (WIP)"/-->
-    <class className="modularLibraries.ModularLibraryHTTP" name="HTTP"/>
-    <class className="modularLibraries.ModularLibraryOPCUA" name="OPC UA"/>
+    <class className="linkLibraries.LinkLibraryMQTT" name="MQTT"/>
+    <class className="linkLibraries.LinkLibraryHTTP" name="HTTP"/>
+    <class className="linkLibraries.LinkLibraryOPCUA" name="OPC UA"/>
 </marketplace>
