@@ -48,7 +48,6 @@ public class ModuleEngine {
                 Class<?> currentClass;
 
                 currentClass = Class.forName(className);
-                classesToLoad.put(name ,currentClass);
             }
         } catch(Exception ex) {
             Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, null, ex);
@@ -76,8 +75,8 @@ public class ModuleEngine {
             return (String) method.invoke(modularLibrary, skill);
         } catch (Exception ex){
             Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, null, ex);
+            return "error";
         }
-        return "error";
     }
 
     public void shutdown(){
