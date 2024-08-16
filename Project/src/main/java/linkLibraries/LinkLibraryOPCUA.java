@@ -1,4 +1,4 @@
-package modularLibraries;
+package linkLibraries;
 
 import io.netty.util.internal.StringUtil;
 import jade.util.Logger;
@@ -26,7 +26,7 @@ import java.io.File;
 import java.util.List;
 import java.util.logging.Level;
 
-public class ModularLibraryOPCUA {
+public class LinkLibraryOPCUA extends LinkLibrary {
 
     String skill;
     String result;
@@ -38,7 +38,7 @@ public class ModularLibraryOPCUA {
     volatile Boolean responseReceived = false;
     OpcUaClient client;
 
-    public ModularLibraryOPCUA(File xmlFile){
+    public LinkLibraryOPCUA(File xmlFile){
 
         Document xml = null;
 

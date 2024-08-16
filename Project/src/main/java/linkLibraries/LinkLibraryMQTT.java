@@ -1,4 +1,4 @@
-package modularLibraries;
+package linkLibraries;
 
 import org.eclipse.paho.client.mqttv3.*;
 
@@ -11,7 +11,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.util.UUID;
 
-public class ModularLibraryMQTT {
+public class LinkLibraryMQTT extends LinkLibrary {
 
     String broker;
     String publisherId;
@@ -23,7 +23,7 @@ public class ModularLibraryMQTT {
     volatile Boolean responseReceived = false;
     String skillResult;
 
-    public ModularLibraryMQTT(File xmlFile){
+    public LinkLibraryMQTT(File xmlFile){
 
         Document xml = null;
 
@@ -58,7 +58,7 @@ public class ModularLibraryMQTT {
 
     private void ConnectToBroker(){
         try {
-            client = new MqttClient(broker, publisherId);
+            client = new MqttClient(broker, publisherId, null);
             MqttConnectOptions options = new MqttConnectOptions();
             options.setAutomaticReconnect(true);
             options.setConnectionTimeout(10);
@@ -127,8 +127,18 @@ public class ModularLibraryMQTT {
         return "error";
     }
 
-    public void Stop() throws MqttException {
-        System.out.println("MQTTLib: Disconnecting...");
-        client.disconnect();
+    public void Stop(){
+        try {
+            System.out.println("MQTTLib: Disconnecting...");
+            client.disconnect();
+        }catch(MqttException ex)
+        {
+            System.out.println("reason "+ex.getReasonCode());
+            System.out.println("msg "+ex.getMessage());
+            System.out.println("loc "+ex.getLocalizedMessage());
+            System.out.println("cause "+ex.getCause());
+            System.out.println("excep "+ex);
+            ex.printStackTrace();
+        }
     }
 }

@@ -16,7 +16,7 @@ import java.util.logging.Level;
 
 public class ModuleEngine {
 
-    Object modularLibrary;
+    Object linkLibrary;
     HashMap<String, Class<?>> classesToLoad = new HashMap<>();
 
     // Constructor
@@ -48,6 +48,7 @@ public class ModuleEngine {
                 Class<?> currentClass;
 
                 currentClass = Class.forName(className);
+                classesToLoad.put(name, currentClass);
             }
         } catch(Exception ex) {
             Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, null, ex);
@@ -60,19 +61,19 @@ public class ModuleEngine {
             Class<?> classToLoad = classesToLoad.get(libType);
 
            // Create object
-            modularLibrary = classToLoad.getConstructor(File.class).newInstance(xmlConfigFile);
+            linkLibrary = classToLoad.getConstructor(File.class).newInstance(xmlConfigFile);
         }catch(Exception ex){
             Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, null, ex);
         }
     }
 
     public String executeSkill(Object skill) {
-        Class<?> objectClass = modularLibrary.getClass();
+        Class<?> objectClass = linkLibrary.getClass();
 
         try {
             Method method = objectClass.getMethod("ExecuteSkill", skill.getClass());
 
-            return (String) method.invoke(modularLibrary, skill);
+            return (String) method.invoke(linkLibrary, skill);
         } catch (Exception ex){
             Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, null, ex);
             return "error";
@@ -80,12 +81,12 @@ public class ModuleEngine {
     }
 
     public void shutdown(){
-        Class<?> objectClass = modularLibrary.getClass();
+        Class<?> objectClass = linkLibrary.getClass();
 
         try {
             Method method = objectClass.getMethod("Stop");
 
-            method.invoke(modularLibrary);
+            method.invoke(linkLibrary);
         } catch (Exception ex){
             Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, null, ex);
         }
