@@ -51,7 +51,7 @@ public class ResourceAgent extends Agent {
     }
 
     @Override
-    public void takeDown(){
+    protected void takeDown(){
         try{
             DFInteraction.RemoveFromDF(this, Arrays.toString(associatedSkills.toArray()), this.getClass().getName());
         }catch(FIPAException ex){
