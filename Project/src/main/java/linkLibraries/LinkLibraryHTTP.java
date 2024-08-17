@@ -68,6 +68,6 @@ public class LinkLibraryHTTP extends LinkLibrary {
     }
 
     public void Stop(){
-
+        System.out.println("HTTPLib: Disconnecting...");
     }
 }
