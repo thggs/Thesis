@@ -184,10 +184,14 @@ public class LinkLibraryOPCUA extends LinkLibrary {
         return value;
     }
 
-    public void Stop() throws UaException {
-        System.out.println("OPCUALib: Disconnecting...");
-        subscription.delete();
-        client.disconnect();
+    public void Stop() {
+        try{
+            System.out.println("OPCUALib: Disconnecting...");
+            subscription.delete();
+            client.disconnect();
+        }catch(UaException ex){
+            ex.printStackTrace();
+        }
     }
 
 }
