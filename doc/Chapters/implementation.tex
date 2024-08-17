@@ -253,18 +253,15 @@ The Link Library will now forward the skill through the protocol it is implement
 
 Three Link Libraries were implemented, seen in \ref{subsec:link_library_class}. The \acrshort{HTTP} library works by creating an \acrshort{HTTP} connection, every time a skill is to be executed, using the address provided in the configurations. It sends the skill as a payload in a POST request. It then waits for an OK message with code 200 as per the \acrshort{HTTP} protocol. This response must include the result of the operation that is converted into a String and passed upward to the Module Engine. This library does not need to disconnect from the \acrshort{HTTP} server, since this protocol does not depend on a persistent connection.\\
 
-The implemented \acrshort{MQTT} library needs more parameters to work. It requires an \acrshort{MQTT} broker address, a \acrfull{Quality of Service} value, a request topic and a response topic. These topics are differentiated to allow for a simpler implementation of the library. When the library is loaded, it immediately establishes a connection to the broker and immediately subscribes to the response topic. This means that every time a response arrives, the callback function is called. This function simply stores the message as a String. Whenever the "ExecuteSkill" method is run, the library will publish the skill in the request topic. It then waits until the response topic gets a message. Upon receiving it, it will return it to the Module Engine. When this library needs to disconnect, it just disconnects from the broker.\\
+The implemented \acrshort{MQTT} library needs more parameters to work. It requires an \acrshort{MQTT} broker address, a \acrfull{QoS} value, a request topic and a response topic. These topics are differentiated to allow for a simpler implementation of the library. When the library is loaded, it immediately establishes a connection to the broker and immediately subscribes to the response topic. This means that every time a response arrives, the callback function is called. This function simply stores the message as a String. Whenever the "ExecuteSkill" method is run, the library will publish the skill in the request topic. It then waits until the response topic gets a message. Upon receiving it, it will return it to the Module Engine. When this library needs to disconnect, it just disconnects from the broker.\\
 
 %TODO: Explain OPCUA in State of the Art?
 
 The \acrshort{OPCUA} library is a bit more complex than the other two. It also needs a server address, or endpoint, and a namespace. This namespace identifies which container the node representing the hardware is. In this node, two variable nodes are found, one for incoming requests and one for outgoing responses. To summarize, the library needs and endpoint address, a namespace, the identifier of the request node and the identifier response node.
 
-When the Link Library is loaded, it immediately connects to the \acrshort{OPCUA} server and creates two node objects with the namespace and one with the request and one with the response identifier. 
+When the Link Library is loaded, it immediately connects to the \acrshort{OPCUA} server and creates two node objects with the namespace and one with the request and one with the response identifier.
 
-
-
-
- \acrshort{OPCUA} works by creating a server. In this server there are many different folders. This Link Library assumes there is a folder 
+When a skill is to be executed, the skill is written to the requests node. The server then creates a subscription and 
 
 %TODO: Explain Link Library implementations as interfaces to the hardware
 
