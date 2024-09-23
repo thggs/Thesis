@@ -3,4 +3,5 @@
     <class className="linkLibraries.LinkLibraryMQTT" name="MQTT"/>
     <class className="linkLibraries.LinkLibraryHTTP" name="HTTP"/>
     <class className="linkLibraries.LinkLibraryOPCUA" name="OPC UA"/>
+    <class className="linkLibraries.LinkLibraryDelayTest" name="DelayTest"/>
 </marketplace>
