@@ -27,20 +27,20 @@
 \chapter{Architecture}
 \label{cha:architecture}
 
-In this section, the designed architecture is explained. Starting with an overview of the system, the main architecture is presented, followed by a few usage scenarios. Then each component of the system is identified, how they work and how they are connected through the interfaces they use to communicate with other components. Normal system operations are overviewed and the supporting \acrlong{MAS} that was built to showcase the integration solution is explained. Every agent is presented in detail and a full system architecture is pictured at the end.
+In this section, the designed architecture for the proposed solution is explained. Starting with an overview of the system, the main architecture is presented, followed by a few usage scenarios. Then each component of the system is identified, how they work and how they are connected through the interfaces they use to communicate with other components. Normal system operations are overviewed and the supporting \acrlong{MAS} that was built to showcase the integration solution is explained. Every agent is presented in detail and a full system architecture is pictured at the end.
 
 \section{System Architecture}
 \label{sec:developed_architecture}
 
-The main objective of this architecture is to bridge the gap between software and hardware. More specifically, to allow for a cyber-physical entity to interface with any kind of hardware in a flexible manner. To allow this flexibility, the system needs to be modular to an extent, enough to allow compatibility for many types of hardware, but not so much to make it hard to work with. A main entity must allow for the interfacing with the modular part of the system, to enable support of multiple physical entities.\\ 
+The main objective of this architecture is to bridge the gap between software and hardware. More specifically, to allow for a cyber-physical entity to interface with any kind of hardware in a flexible manner. To allow this flexibility, the system needs to be modular to an extent, enough to allow compatibility for many types of hardware, but not so much to make it hard to work with. A main entity must allow for the interfacing with the modular part of the interface, to enable support of multiple physical entities.\\ 
 
-In addition, some supporting architecture is also needed to deploy the cyber-physical entities. This architecture must provide the main entity with a list of all integration modules available, so that it is able to load them.
+In addition, some supporting architecture is also needed to deploy the cyber-physical entities. This architecture must provide the main interface entity with a list of all integration modules available, so that it is able to load them.
 
 These modules must then be supplied with the right configurations so that they are able to interface with the hardware. These configurations are also provided to the main entity by the supporting architecture, but are then sent to the modules.\\
 
 The system proposed in this work then consists of two main components, a \acrfull{ME} and the \acrfullpl{LL}, with a deployment entity capable of providing these two components with the right resources. The \acrlong{ME} is the main entity that operates between the layers of software, in this case the agent, and hardware. It allows the agent to interface with any kind of hardware by loading \acrlongpl{LL}.\\
 
-These \acrshortpl{LL} are what actually communicates to the hardware below, and must be able to use any kind of communication protocols. Due to their modularity, any \acrshort{LL} can be used at any point, independent of the characteristics of the agents above them. They are made with flexibility in mind to allow for the integration of any kind of hardware.\\
+These \acrshortpl{LL} are what actually communicate to the hardware below, and must be able to use any kind of communication protocols. Due to their modularity, any \acrshort{LL} can be used at any point, independent of the characteristics of the agents above them. They are made with flexibility in mind to allow for the integration of any kind of hardware.\\
 
 The \acrshort{ME} must be equally as flexible to allow for switching on the fly, during system operations. This allows for a more flexible and adaptable \acrshort{MAS}, since communications protocols can be switched fairly easy, the system becomes more robust also. To accomplish this, the \acrshortpl{LL} need to be loosely linked to the \acrshort{ME}.\\
 
@@ -66,7 +66,7 @@ The agent should be able to call the \acrshort{ME} at any point during its opera
 
 To develop a new \acrlong{LL} a developer only needs to pick a new protocol and start development. As long as they respect the interfaces and methods for an \acrshort{LL}, better explained in Chapter~\ref{cha:implementation}, the \acrshort{ME} should be able to load it. In addition, the hardware also needs to implement the same communication protocol implemented by the \acrshort{LL}. If the hardware supports \acrshort{HTTP} requests, for instance, the \acrshort{LL} would need to implement a way to communicate through \acrshort{HTTP} requests. When development is complete, this new \acrshort{LL} can be published in some software distribution system, GitHub for instance, to be freely available to other developers wishing to use it. This scenario can be seen in Figure~\ref{fig:ll_dev_use_case}.
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\subbottom[New agent development scenario.\label{fig:me_dev_use_case}]{%
 		\includegraphics[width=0.45\linewidth]{ME_Dev_Use_Case}}%
