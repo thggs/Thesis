@@ -10,9 +10,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93bb5eed-7652-453a-a570-681efe72eb4b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/MTPs-DummyAgentsContainer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/agents/DummyAgentDelay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/agents/DummyAgentDeployed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/agents/DummyAgentDeployment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/linkLibraries/LinkLibraryDelayTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statsMEFile.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statsNormalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FinalVersion6.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agents/TransportAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agents/TransportAgent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marketplace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/marketplace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agents/DummyAgent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agents/ProductAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agents/ProductAgent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/DFInteraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/DFInteraction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/Bibliography/bibliography.bib" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Bibliography/bibliography.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/Chapters/Figures/Activity_Diagram_PM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Chapters/Figures/Activity_Diagram_PM.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/Chapters/Figures/Const_Class_Diagram.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Chapters/Figures/Const_Class_Diagram.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/Chapters/Figures/DF_Class_Diagram.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Chapters/Figures/DF_Class_Diagram.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/Chapters/Figures/Module_Engine_Sequence_Diagram.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Chapters/Figures/Module_Engine_Sequence_Diagram.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/Chapters/Figures/System_Architecture.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Chapters/Figures/System_Architecture.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/Chapters/abstract-en.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Chapters/abstract-en.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/Chapters/abstract-pt.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Chapters/abstract-pt.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/Chapters/acronyms.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Chapters/acronyms.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/Chapters/architecture.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Chapters/architecture.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/Chapters/conclusion.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Chapters/conclusion.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../doc/Chapters/implementation.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Chapters/implementation.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/Chapters/intro.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Chapters/intro.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/Chapters/state-of-the-art.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Chapters/state-of-the-art.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/Chapters/tests.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Chapters/tests.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/Drawio/.$Const_Class_Diagram.drawio.bkp" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Drawio/.$Const_Class_Diagram.drawio.bkp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/Drawio/.$DF_Class_Diagram.drawio.bkp" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Drawio/.$DF_Class_Diagram.drawio.bkp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/Drawio/.$Module_Engine_Sequence_Diagram.drawio.bkp" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Drawio/.$Module_Engine_Sequence_Diagram.drawio.bkp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/Drawio/.$System_Architecture.drawio.bkp" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Drawio/.$System_Architecture.drawio.bkp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/Drawio/Activity_Diagram_PM.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Drawio/Activity_Diagram_PM.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/Drawio/Const_Class_Diagram.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Drawio/Const_Class_Diagram.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/Drawio/DF_Class_Diagram.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Drawio/DF_Class_Diagram.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/Drawio/Module_Engine_Sequence_Diagram.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Drawio/Module_Engine_Sequence_Diagram.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/Drawio/System_Architecture.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Drawio/System_Architecture.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../template.pdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +71,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
   </component>
   <component name="ProjectColorInfo">{
     &quot;associatedIndex&quot;: 5
@@ -54,6 +89,7 @@
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Application.Boot.executor&quot;: &quot;Run&quot;,
     &quot;Application.DelayTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DeployTest.executor&quot;: &quot;Run&quot;,
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;Application.Test.executor&quot;: &quot;Run&quot;,
     &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
@@ -71,8 +107,8 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ddrod/Documents/GitHub/Thesis/Project/configFiles&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ddrod/Documents/GitHub/Thesis/Project&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.40952381&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
@@ -80,8 +116,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ddrod\Documents\GitHub\Thesis\Project\configFiles" />
       <recent name="C:\Users\ddrod\Documents\GitHub\Thesis\Project" />
+      <recent name="C:\Users\ddrod\Documents\GitHub\Thesis\Project\configFiles" />
       <recent name="C:\Users\ddrod\Documents\GitHub\Thesis\Project\mqttFiles" />
       <recent name="C:\Users\ddrod\Documents\GitHub\Thesis\Project\src" />
       <recent name="C:\Users\ddrod\Documents\GitHub\Thesis\Project\resources" />
@@ -100,7 +136,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Boot">
+  <component name="RunManager" selected="Application.DeployTest">
     <configuration name="Boot" type="Application" factoryName="Application" nameIsGenerated="true">
       <envs>
         <env name="ConfigFolderPath" value="C:\Users\ddrod\Documents\GitHub\Thesis\Project\configFiles" />
@@ -116,7 +152,15 @@
     <configuration name="DelayTest" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="jade.Boot" />
       <module name="Project" />
-      <option name="PROGRAM_PARAMETERS" value="-gui dummyAgent:agents.DummyAgent();" />
+      <option name="PROGRAM_PARAMETERS" value="-gui dummyAgent:agents.DummyAgentDelay();" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeployTest" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="jade.Boot" />
+      <module name="Project" />
+      <option name="PROGRAM_PARAMETERS" value="-gui dummyAgentDeployment:agents.DummyAgentDeployment" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -130,6 +174,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.DeployTest" />
       <item itemvalue="Application.DelayTest" />
       <item itemvalue="Application.Boot" />
       <item itemvalue="Application.Main" />
