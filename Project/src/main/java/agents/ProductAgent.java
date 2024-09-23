@@ -51,7 +51,7 @@ public class ProductAgent extends Agent {
             String skill = executionPlan.get(step);
             try{
                 while(true) {
-                    result = DFInteraction.SearchInDFByName(skill, this.getAgent());
+                    result = DFInteraction.SearchInDFBySkill(skill, this.getAgent());
                     if(result.length > 0){
                         break;
                     }
