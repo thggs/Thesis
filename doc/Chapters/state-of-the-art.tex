@@ -173,10 +173,10 @@ There are, although, many research prototypes of \acrshort{MAS} used for an indu
 For the design of the bottling plant in \cite{bottling_plant_part2}, a research paper \cite{bottling_plant_part1} was first done by \citeauthor{bottling_plant_part1}, with the collaboration of multiple partners from different backgrounds. This was done to define the base requirements for the \acrshort{CPPS} as well as the associated \acrshort{MAS}. These requirements are:
 
 \begin{itemize}
-	\item Easy Scalability and Functional Expansion
-	\item Manufacturer-neutral Resource Representation
-	\item Robust Production Control by the Product
-	\item Lot Size One without Identification
+	\item Easy Scalability and Functional Expansion;
+	\item Manufacturer-neutral Resource Representation;
+	\item Robust Production Control by the Product;
+	\item Lot Size One without Identification.
 \end{itemize}
 
 Summarizing, the system needed to be easily scalable and it must be able to expand its functions to handle changes in production, it must be able to represent the resources in the \acrshort{CPPS} as a generic and manufacturer independent representation, products must be able to handle their own production steps, handling errors and reacting robustly to those errors and finally be able to produce lot sizes of one without needing an identification system for each individual product.\\
@@ -185,34 +185,34 @@ In consequence of these requirements, \citeauthor{bottling_plant_part1} designed
 
 The \acrshort{MAS} was made using \acrshort{JADE}, and as such all agents in this system are \acrshort{FIPA} compliant and communicate through \acrshort{FIPA} Requests and the \acrshort{FIPA} Contract Net.\\
 
-Each agent inherits from a generic class called Agent. The \acrshort{RA} and \acrshort{PA} then inherit from this class, with added functionalities and variable fields. The \acrshort{PA} is an agent with the capabilities of performing autonomous and goal-driven behaviors. The \acrshort{RA} is an agent capable of controlling the physical resources by using sensor data and messages with hardware instructions.\\
+Each agent inherits from a generic class called Agent. The \acrshort{RA} and \acrshort{PA} then inherit from this class, with added functionalities and variable fields. The \acrshort{PA} is an agent with the capabilities of performing autonomous and goal-driven behaviours. The \acrshort{RA} is an agent capable of controlling the physical resources by using sensor data and messages with hardware instructions.\\
 
-A \acrshort{PA} differs from the generic Agent by implementing a configuration file ProductConfig. This file is in the \acrshort{XML} format and has information on the product represented by it. It also has a PlanningModule, which is essentially a StateMachine with all the products processing instructions.\\
+A \acrshort{PA} differs from the generic Agent by implementing a configuration file "ProductConfig". This file is in the \acrshort{XML} format and has information on the product represented by it. It also has a "PlanningModule", which is essentially a "StateMachine" with all the products processing instructions.\\
 
-Like the \acrshort{PA}, the \acrshort{RA} also mirrors the Agent class. It must be generic in order to be implemented on multiple resources, so for each ResourceType there exists a ResourceConfig file which is loaded onto the \acrshort{RA} in order to implement its interface. To give an example, if the resource has the ResourceType Machine, the ResourceConfig file MachineConfig must be loaded.\\
+Like the \acrshort{PA}, the \acrshort{RA} also mirrors the Agent class. It must be generic in order to be implemented on multiple resources, so for each "ResourceType" there exists a "ResourceConfig" file which is loaded onto the \acrshort{RA} in order to implement its interface. To give an example, if the resource has the "ResourceType" "Machine", the "ResourceConfig" file "MachineConfig" must be loaded.\\
 
-The authors identified five different ResourceTypes by classifying many resources from renowned machine manufacturers. \acrshortpl{RA} not only include robots, transport systems and stations but also databases, as a data management method. The authors recognize that not all types of possible resources for a \acrshort{CPPS} have been considered. This means that for every new resource type that needs to be added to the system, a new ResourceConfig must be created in order to integrate the new \acrshort{RA} into the system. In addition, a new resource that communicates differently from the ones already in the system would need a new interface, and thus a new ResourceConfig would also need to be created, even if the new resource performs similar functions in the manufacturing plant.\\
+The authors identified five different "ResourceTypes" by classifying many resources from renowned machine manufacturers. \acrshortpl{RA} not only include robots, transport systems and stations but also databases, as a data management method. The authors recognize that not all types of possible resources for a \acrshort{CPPS} have been considered. This means that for every new resource type that needs to be added to the system, a new "ResourceConfig" must be created in order to integrate the new \acrshort{RA} into the system. In addition, a new resource that communicates differently from the ones already in the system would need a new interface, and thus a new "ResourceConfig" would also need to be created, even if the new resource performs similar functions in the manufacturing plant.\\
 
-In \cite{bottling_plant_part2}, \citeauthor{bottling_plant_part2} created the service oriented bottling plant using the industrial agent system designed in \cite{bottling_plant_part1}, with positive results. To allow for extensibility of the system by additional resources a new agent class was created called \acrfull{IntA}. The ResourceConfig files for each type of \acrshort{RA} now have a new field which contains an InterfaceAgentConfig. This new \acrshort{IntA} is instantiated by the \acrshortpl{RA} following the configurations of their respective InterfaceAgentConfig and it extends either a DBLinkAgent, used to connect to a database, and a PLCLinkAgent, used to connect to a \acrshort{OPCUA} client. All the information, like server address, port and authentication, is stored in the InterfaceAgentConfig file. By using \acrshort{OPCUA}, the system can now interface with the hardware in the manufacturing plant, through a Loosely coupled Hybrid interface. The authors recognize that according to the IEEE P2660.1 Working Group the scalability is considered weak, although they claim the flexibility is worth this loss in scalability.\\
+In \cite{bottling_plant_part2}, \citeauthor{bottling_plant_part2} created the service oriented bottling plant using the industrial agent system designed in \cite{bottling_plant_part1}, with positive results. To allow for extensibility of the system by additional resources a new agent class was created called \acrfull{IntA}. The "ResourceConfig" files for each type of \acrshort{RA} now have a new field which contains an "InterfaceAgentConfig". This new \acrshort{IntA} is instantiated by the \acrshortpl{RA} following the configurations of their respective "InterfaceAgentConfig" and it extends either a "DBLinkAgent", used to connect to a database, or a "PLCLinkAgent", used to connect to a \acrshort{OPCUA} client. All the information, like server address, port and authentication, is stored in the "InterfaceAgentConfig" file. By using \acrshort{OPCUA}, the system can now interface with the hardware in the manufacturing plant, through a Loosely coupled Hybrid interface. The authors recognize that according to the IEEE P2660.1 Working Group the scalability is considered weak, although they claim the flexibility is worth this loss in scalability.\\
 
 To implement a new \acrshort{IntA}, the following must be provided:
 \begin{itemize}
-	\item The communications protocol and the address, ports and authentication
-	\item The way the interactions between the agent and resource should proceed
-	\item The rules for the interpretation of internal resource states
+	\item The communications protocol and the address, ports and authentication;
+	\item The way the interactions between the agent and resource should proceed;
+	\item The rules for the interpretation of internal resource states.
 \end{itemize}
 
-Communication between the PLCLinkAgent and the machine is done through the use of simple commands. They specify the command to perform and the program type to use and must also include a unique name, the NodeID which identifies the type of the given input on the \acrshort{OPCUA} server, the data type, all possible values, the read/write direction and the description. The program type is chosen based on the size of the bottle and the command has to be one of the five commands already defined:
+Communication between the "PLCLinkAgent" and the machine is done through the use of simple commands. They specify the command to perform and the program type to use and must also include a unique name, the "NodeID", which identifies the node of the given input on the \acrshort{OPCUA} server, the data type, all possible values, the read/write direction and the description. The program type is chosen based on the size of the bottle and the command has to be one of the five commands already defined:
 
 \begin{itemize}
-	\item NoCommand, in case no action is needed
-	\item ProductInPosition, in case the product is in position and ready
-	\item ExecuteProcess, in case the process should start
-	\item ProductRemoved, in case the product needs to be removed from the machine/station
-	\item PrepareMachine, in case the machine needs to be prepared for a process to start
+	\item "NoCommand", in case no action is needed;
+	\item "ProductInPosition", in case the product is in position and ready;
+	\item "ExecuteProcess", in case the process should start;
+	\item "ProductRemoved", in case the product needs to be removed from the machine/station;
+	\item "PrepareMachine", in case the machine needs to be prepared for a process to start.
 \end{itemize}
 
-All commands have a number code associated to them to facilitate communications and at any time the PLCLinkAgent can retrieve the state of a machine by observing a NodeID with the machine state code. In Figure~\ref{fig:bottling_plant_state_achine} it is possible to observe the state machine representing the interactions between the PLCLinkAgent and a machine. To handle manufacturer specific machine state codes, the authors mapped said codes onto generic \acrshort{MAS} states, with the possibility of having multiple codes mapped to a single state. This was done to make the system capable of handling machines from different manufacturers without sacrificing flexibility in the \acrshort{MAS}.\\
+All commands have a number code associated to them to facilitate communications and at any time the "PLCLinkAgent" can retrieve the state of a machine by observing the "NodeID" with the machine state code. In Figure~\ref{fig:bottling_plant_state_achine} it is possible to observe the state machine representing the interactions between the "PLCLinkAgent" and a machine. To handle manufacturer specific machine state codes, the authors mapped said codes onto generic \acrshort{MAS} states, with the possibility of having multiple codes mapped to a single state. This was done to make the system capable of handling machines from different manufacturers without sacrificing flexibility in the \acrshort{MAS}.\\
 
 \begin{figure}[H]
 	\centering
@@ -241,7 +241,7 @@ To accomplish this the authors considered the grouping of a physical resource wi
 	\label{fig:plug_and_play_device_architecture}
 \end{figure}
 
-For the interface between hardware and agent, \acrshortpl{PLC} were chosen. These \acrshort{PLC} are able to communicate using \acrfull{DWPS}. For the \acrshort{DA}, a Java class was implemented using the \acrfull{WS4D-JMEDS} framework, which searched for the devices in the network and obtained information about them. It was able to detect all devices connected to the network and add and remove them as needed.\\
+For the interface between hardware and agent, \acrshortpl{PLC} were chosen. These \acrshortpl{PLC} are able to communicate using \acrfull{DWPS}. For the \acrshort{DA}, a Java class was implemented using the \acrfull{WS4D-JMEDS} framework, which searched for the devices in the network and obtained information about them. It was able to detect all devices connected to the network and add and remove them as needed.\\
 
 Each resource is able to perform certain procedures on the products, represented in the \acrshort{MAS} as skill which \acrshortpl{RA} perform on to \acrshort{PA}. This is how the authors simulate the system virtually, whenever a product needs a certain procedure to be performed on itself, the corresponding \acrshort{PA} asks an \acrshort{RA} for that skill. This is relevant because the system may or may not have a resource able to perform a specific skill. In the case of a \acrshort{PA} that needs an non-existing skill to be performed, it waits until an \acrshort{RA} capable of performing the needed skill to be plugged into the system.\\
 
@@ -255,18 +255,18 @@ This system was used to simulate a simple conveyor belt line with brushing capab
 
 All agents in this framework were developed using \acrshort{JADE}, therefore all agents are \acrshort{FIPA} compliant. This adds to the plug and produce functionality of the system. The PRIME agent system is composed of eight different agents:
 \begin{itemize}
-	\item \acrfull{PSA} is the highest level agent in the framework. It manages the current state of the system.
-	\item \acrfull{PMA} is responsible to combine all resources and tasks in the same space to abstract certain functionalities
-	\item \acrfull{SMA} works in tandem with a \acrshort{PMA}, combining the lower-level skills into higher-level ones according to pre-defined rules, that the associated \acrshort{PMA} then provides to the system
-	\item \acrfull{CA} is the agent that abstracts the hardware in the \acrshort{CPPS}. It is able to read and write data to and from the hardware
-	\item Local Monitoring and Data Analysis
+	\item \acrfull{PSA} is the highest level agent in the framework. It manages the current state of the system;
+	\item \acrfull{PMA} is responsible to combine all resources and tasks in the same space to abstract certain functionalities;
+	\item \acrfull{SMA} works in tandem with a \acrshort{PMA}, combining the lower-level skills into higher-level ones according to pre-defined rules, that the associated \acrshort{PMA} then provides to the system;
+	\item \acrfull{CA} is the agent that abstracts the hardware in the \acrshort{CPPS}. It is able to read and write data to and from the hardware;
+	\item Local Monitoring and Data Analysis agent.
 \end{itemize}
 
 All devices to be integrated into the system were categorized into three groups according to their characteristics:
 \begin{itemize}
-	\item Fully intelligent resources, capable of running the necessary agents locally, typically a machine with the ability to run the Java environment, setup in a Tightly or Loosely Coupled On-device architecture
-	\item Semi-intelligent resources, capable of announcing their existence to the system and of reconfiguring themselves but without the ability to run the Java environment, setup in a Tightly or Loosely Coupled hybrid architecture
-	\item Passive resources, without any computational abilities and dependent on a controller to connect them to the main system  
+	\item Fully intelligent resources, capable of running the necessary agents locally, typically a machine with the ability to run the Java environment, setup in a Tightly or Loosely Coupled On-device architecture;
+	\item Semi-intelligent resources, capable of announcing their existence to the system and of reconfiguring themselves but without the ability to run the Java environment, setup in a Tightly or Loosely Coupled hybrid architecture;
+	\item Passive resources, without any computational abilities and dependent on a controller to connect them to the main system. 
 \end{itemize}
 
 For the first type of device, PRIME was able to very easily connect to it. The device ran all the necessary components to enable communications and to expose itself to the network. It ran the necessary agents related to the hardware locally and the main framework was able to configure the hardware by interacting with the local agents, which in turn interfaced with the device. This is the type of architecture preferred by PRIME, since it provides all services autonomously \cite{PRIME_plug_and_produce}.\\
