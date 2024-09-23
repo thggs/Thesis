@@ -40,10 +40,10 @@ public class DFInteraction {
         DFService.deregister(agent, dfAgentDescription);
     }
 
-    public static DFAgentDescription[] SearchInDFByName(String name, Agent agent) throws FIPAException{
+    public static DFAgentDescription[] SearchInDFBySkill(String skill, Agent agent) throws FIPAException{
         DFAgentDescription dfAgentDescription = new DFAgentDescription();
         ServiceDescription serviceDescription = new ServiceDescription();
-        serviceDescription.setName(name);
+        serviceDescription.setName(skill);
         dfAgentDescription.addServices(serviceDescription);
         return DFService.search(agent, dfAgentDescription);
     }
