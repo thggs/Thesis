@@ -11,6 +11,8 @@ import org.w3c.dom.NodeList;
 
 import java.io.File;
 import java.lang.reflect.Method;
+import java.net.URL;
+import java.net.URLClassLoader;
 import java.util.*;
 import java.util.logging.Level;
 
@@ -27,6 +29,15 @@ public class ModuleEngine {
 
     public void parseMarketplaceXML(File marketplaceXMLFile) {
         try{
+
+            File file = new File("c:\\other_classes\\");
+
+            URL url = file.toURI().toURL();
+            URL[] urls = new URL[]{url};
+
+            ClassLoader cl = new URLClassLoader(urls);
+
+
             DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
             Document marketplaceXML = builder.parse(marketplaceXMLFile);
             marketplaceXML.getDocumentElement().normalize();
@@ -47,7 +58,7 @@ public class ModuleEngine {
                 // Add current class to class list
                 Class<?> currentClass;
 
-                currentClass = Class.forName(className);
+                currentClass = cl.loadClass(className);
                 classesToLoad.put(name, currentClass);
             }
         } catch(Exception ex) {
