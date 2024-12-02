@@ -9,17 +9,19 @@
 \chapter{State of the Art}
 \label{cha:state-of-the-art}
 
-In this chapter, a way of dealing with the challenges encountered by researchers while creating a \acrlong{MAS} based \acrlong{CPPS} is explored. The concepts of \acrshort{CPPS} and \acrshort{MAS} are examined in more detail and the most commonly used designs and tools, as well as the recommended practices for an industrial \acrshort{MAS}, are identified. Finally, a brief analysis is made on some prototypes that were created to showcase the usefulness of an \acrshort{MAS} in an industrial setting.
+In this chapter, a way of dealing with the challenges encountered by researchers while creating a \acrlong{MAS} based \acrlong{CPPS} is explored. The concepts of \acrshort{CPPS} and \acrshort{MAS} are examined in more detail and the most commonly used designs and tools, as well as the recommended practices for an industrial \acrshort{MAS}, are identified. Finally, a brief analysis is made on some prototypes that were created to showcase the usefulness of an \acrshort{MAS} in an industrial setting.\\
 
 \section{Cyber-Physical Production Systems}
 \label{sec:cyber-physical_production_systems}
 
-As stated before, a \acrlong{CPS} is a system composed of two main types of subsystems, the physical subsystem that contains all the hardware and resources and the cyber subsystem that represents the physical system in the digital world. These two systems work together, the physical sends data taken from sensors from the environment to the digital system and the digital processes and stores this data and instructs the physical system on what actions to perform through the use of actuators. As such, this system works in a loop, constantly exchanging data and instructions between the physical entities and the digital ones, to achieve a set goal. 
+As stated before, a \acrlong{CPS} is a system composed of two main types of subsystems, the physical subsystem that contains all the hardware and resources and the cyber subsystem that represents the physical system in the digital world. These two systems work together, the physical sends data taken from sensors from the environment to the digital system and the digital processes and stores this data and instructs the physical system on what actions to perform through the use of actuators. As such, this system works in a loop, constantly exchanging data and instructions between the physical entities and the digital ones, to achieve a set goal.
 
-A coupling of a physical entity and a digital one can be called a cyber-physical entity.\\
+A coupling between a physical entity and a digital one can be called a cyber-physical entity.\\
 
-A \acrlong{CPPS} is, as the name implies, a \acrlong{CPS} that operates in a manufacturing setting. The physical system is composed of a myriad of devices like robot arms, \acrshortpl{AGV}, conveyor belts and other specialized machinery for manufacturing. The cyber system might be as simple as a computer program or as complex as a full-on three dimensional model of the physical system. \citeauthor{birgit01} \cite{birgit01} proposed that a \acrshort{CPPS} should:
+A \acrlong{CPPS} is, as the name implies, a \acrlong{CPS} that operates in a manufacturing setting. The physical system is composed of a myriad of devices like robot arms, \acrshortpl{AGV}, conveyor belts and other specialized machinery for manufacturing. The cyber system might be as simple as a computer program or as complex as a full-on three dimensional model of the physical system. \citeauthor{birgit01} \cite{birgit01} proposed that a \acrshort{CPPS} should:\\\\
+
 \begin{itemize}
+	\itemsep0em
 	\item Be service oriented, meaning that it should offer its services through the internet;
 	\item Be intelligent, with the ability to make decisions on its own;
 	\item Be interoperable, by having the capacity to aggregate and represent human-readable information and by providing a virtualization of the physical system;
@@ -85,12 +87,14 @@ In \cite{Karnouskos2019}, it is proposed that one of the key requirements in the
 
 \citeauthor{8591641} \cite{8591641} analyzed a study performed under the IEEE P2660.1 Working Group \cite{9340089} and concluded that most approaches followed a two-layer convention. The upper layer contained the agents part of the \acrshort{MAS} and the lower layer the hardware associated with the physical production system. These two layers can interact in two ways \cite{8591641}:
 \begin{itemize}
+	\itemsep0em
 	\item Tight coupling, where the two layers communicate either through shared memory or through a direct network connection. This communication is synchronous and more direct.
 	\item Loose coupling, where the two layers communicate through a queue or a pub/sub channel. This communication is asynchronous and less direct.
 \end{itemize}
 
 These layers can also be hosted in different setups \cite{8591641}:
 \begin{itemize}
+	\itemsep0em
 	\item Hybrid setup, where the two layers run in different devices.
 	\item On-device setup, where the two layers run in the same device. 
 \end{itemize}
@@ -99,7 +103,7 @@ This means that there can be four different interfaces, Tightly coupled Hybrid, 
 
 A Tightly coupled Hybrid interface (Fig.~\ref{fig:tightly_coupled_hybrid}) is characterized by having the upper layer where the agent operates running remotely and accessing the lower layer through an \acrshort{API}. This \acrshort{API} is responsible for translating the instructions given by the agent into commands the hardware can interpret. It is also responsible for the opposite, translating the hardware output, such as error codes or function results into data the agent can use. This approach is limited by the channel through which both layers communicate since both agent and device operate on two different computing platforms. This channel is affected by the amount of traffic in the network, more connections implies a lesser quality of service, namely in response time \cite{8591641}.\\
 
-\begin{figure}[]
+\begin{figure}[H]
 	\centering
 	\includegraphics{TightlyCoupledHybrid}
 	\caption{Tightly coupled Hybrid interface. Source: Adapted from \cite{8591641}}
@@ -223,7 +227,7 @@ All commands have a number code associated to them to facilitate communications 
 
 The use of \acrshort{OPCUA} makes this system very flexible. New hardware that needs to be implemented in the system can be configured to use these commands through the use of a \acrshort{PLC}. The use of generic states make it scalable and configuration files also help fulfilling this necessity. However, it is still dependent on these files, with individual configurations needed for different manufacturers and machine types. The system also needs to be adapted to recognize the machine states from the new implemented hardware.\\
 
-Nevertheless this system performed as intended, producing customized beverage bottles according the customers specifications. It is a good example of an \acrshort{MAS} based \acrshort{CPPS}, flexible, scalable, robust, with decentralized control and autonomous intelligent agents.
+Nevertheless this system performed as intended, producing customized beverage bottles according the customers specifications. It is a good example of an \acrshort{MAS} based \acrshort{CPPS}, flexible, scalable, robust, with decentralized control and autonomous intelligent agents.\\
  
 \subsection{Agent-based Plug and Produce CPPS}
 \label{agent_plug_and_produce}
@@ -255,6 +259,7 @@ This system was used to simulate a simple conveyor belt line with brushing capab
 
 All agents in this framework were developed using \acrshort{JADE}, therefore all agents are \acrshort{FIPA} compliant. This adds to the plug and produce functionality of the system. The PRIME agent system is composed of eight different agents:
 \begin{itemize}
+	\itemsep0em
 	\item \acrfull{PSA} is the highest level agent in the framework. It manages the current state of the system;
 	\item \acrfull{PMA} is responsible to combine all resources and tasks in the same space to abstract certain functionalities;
 	\item \acrfull{SMA} works in tandem with a \acrshort{PMA}, combining the lower-level skills into higher-level ones according to pre-defined rules, that the associated \acrshort{PMA} then provides to the system;

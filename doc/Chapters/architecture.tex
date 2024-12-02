@@ -100,7 +100,7 @@ In Figure~\ref{fig:component_diagram}, a Deployment Entity is also represented. 
 	\label{fig:component_diagram}
 \end{figure}
 
-Because the \acrlongpl{LL} are modular, these would need to be designed and implemented by other developers working with the \acrlong{ME}, wishing to create \acrshortpl{LL} with new protocols. To create a new one, a few specifications need to be followed in order to make sure the \acrshort{LL} is able to communicate with the \acrshort{ME} without problems. The \acrshort{LL} must establish the connection with the hardware upon being loaded, through the protocol it implements. It also must be able to close this connection at any point, since these \acrshortpl{LL} can be switched arbitrarily. Lastly, an \acrshort{LL} needs to be able to communicate to the hardware through the protocol it implements. This means that the hardware would also need to implement the same protocol in order to establish a connection. It would also be possible to develop an \acrshort{LL} capable of directly interfacing with the hardware through a more specific communication channel, by hosting the agent on the same device as the hardware, for instance. As long as a \acrlong{LL} implements it, it should be possible to use any communication channel. No information is exchanged exclusively between the loaded \acrlong{LL} and the \acrlong{ME}, which makes development easier, since no protocols need to be followed in that regard.\\ 
+Because the \acrlongpl{LL} are modular, these could be designed and implemented by other developers working with the \acrlong{ME}, wishing to create \acrshortpl{LL} with new protocols. To create a new one, a few specifications need to be followed in order to make sure the \acrshort{LL} is able to communicate with the \acrshort{ME} without problems. The \acrshort{LL} must establish the connection with the hardware upon being loaded, through the protocol it implements. It must be able to close this connection at any point as well, since these \acrshortpl{LL} can be switched arbitrarily. Lastly, an \acrshort{LL} needs to be able to communicate to the hardware through the protocol it implements. This means that the hardware would also need to implement the same protocol in order to establish a connection. It would also be possible to develop an \acrshort{LL} capable of directly interfacing with the hardware through a more specific communication channel, by hosting the agent on the same device as the hardware, for instance. As long as a \acrlong{LL} implements it, it should be possible to use any communication channel. No information is exchanged exclusively between the loaded \acrlong{LL} and the \acrlong{ME}, which makes development easier, since no protocols need to be followed in that regard.\\ 
 
 The \acrlong{ME} simply serves as a loader and interface between the agent and the \acrlong{LL}. All messages sent to the \acrshort{LL} by the agent need to go through the \acrshort{ME}, and they will arrive at the \acrshort{LL} untouched. From the point of view of the agent, it is as if it is communicating directly to the \acrshort{LL}. All data that flows from the agent to the \acrlong{LL} must be in the format of a string of text. This \acrshort{LL} can now transform the message in any way if needed, to allow for the correct usage of the protocol, in order to communicate with the hardware.\\
 
@@ -117,24 +117,22 @@ The \acrlong{LL} must now read this file and search for the configurations of th
 
 Once communication with the hardware is established, the \acrlong{ME} will wait until a new command arrives from the agent. To accomplish this, an agent only needs to call the \acrshort{ME} and provide it with the command. Once it does, the \acrshort{ME} will pass that command downward to the \acrshort{LL}, which will pass it along to the hardware. This process is needed to ensure modularity. Any \acrshort{LL} can be associated with any agent, so the way to achieve this is to have an interface in the middle, the \acrlong{ME}, to pass instructions along.\\
 
-Once the command is executed by the hardware, the result is passed along through the inverse path. From the hardware, to the \acrlong{LL}, to the \acrlong{ME} and finally to the agent. This whole sequence of events is depicted in Figure~\ref{fig:module_engine_sequence_diagram}. It is also possible to disconnect a \acrshort{LL} by using the right functionality. The \acrshort{ME} would need to be restarted to change the \acrshort{LL}.
+Once the command is executed by the hardware, the result is passed along through the inverse path. From the hardware, to the \acrlong{LL}, to the \acrlong{ME} and finally to the agent. This whole sequence of events is depicted in Figure~\ref{fig:module_engine_sequence_diagram}. It is also possible to disconnect an \acrshort{LL} by calling the right method. The \acrshort{ME} would need to be restarted to change the \acrshort{LL}, since it loads it as part of setup.\\
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.85]{Module_Engine_Sequence_Diagram}
+	\includegraphics[scale=0.9]{Module_Engine_Sequence_Diagram}
 	\caption{Sequence diagram of \acrlong{ME} operations.}
 	\label{fig:module_engine_sequence_diagram}
 \end{figure}
 
-The \acrshort{ME} will need a method to parse the marketplace file and extract from it the name and path to the location of the \acrshort{LL}, sorting them into a lookup table, for faster access.
+The \acrshort{ME} will need a method to parse the marketplace file and extract from it the name and path to the location of the \acrshort{LL}, sorting them into a lookup table, for faster access. It would also need a method to load a \acrlong{LL} given its type and provide the loaded \acrshort{LL} with its configurations.\\
 
-It would also need a method to load a \acrlong{LL} given its type and provide the loaded \acrshort{LL} with its configurations.
+Two methods to utilize the \acrshort{LL} are also needed, to execute a command and receive its result, and to stop the \acrshort{LL} and disconnect it from the hardware.\\
 
-Two methods to utilize the \acrshort{LL} are also needed, to execute a command and receive its result, and to stop the \acrshort{LL} and disconnect it from the hardware.
+On the \acrlong{LL} side, it would need a starter method that is run when it first loads, to initialize any needed fields and establish connection to the hardware. It needs a method to send instructions and receive its result, and a method to stop operations and disconnect. Both of these methods are called by the \acrshort{ME}.\\
 
-On the \acrlong{LL} side, it would need a starter method that is run when it first loads, to initialize any needed fields and establish connection to the hardware. It needs a method to run and instruction and receive its result and a method to stop operations. Both of these last methods are the ones utilized by the \acrshort{ME}.
-
-The only messages sent between \acrshort{ME} and \acrshort{LL} are the commands the agent sends to the hardware. This interface should not change any command whatsoever, it simply serves as an interface. It is as if the agent is communicating directly to the hardware below, as illustrated in Figure~\ref{fig:cpe_internal_communications}. 
+The only messages sent between \acrshort{ME} and \acrshort{LL} are the commands the agent sends to the hardware. This interface should not change any command whatsoever, it simply serves as an interface. It is as if the agent is communicating directly to the hardware below, as illustrated in Figure~\ref{fig:cpe_internal_communications}. The \acrshort{LL} could potentially convert the command to something the hardware understands, if needed, but that is up to the developer creating the \acrlong{LL}. 
 
 \begin{figure}[h!]
 	\centering
@@ -160,7 +158,7 @@ The developed entities are:
 
 When the system is first launched, the agents that start up immediately are the \acrfull{DA} and \acrfull{PM}, since both of these agents are responsible for the launch and management of all other agents. Both of them need to be capable of receiving input from a human user through a \acrfull{GUI}. The user creates the necessary agents through the \acrshort{DA} by providing it with the \acrshort{LL} type and configuration file. The \acrshort{DA} is capable of launching both \acrshortpl{RA} and \acrshortpl{TA} because these are the agents that need the \acrlong{ME} to operate as mentioned previously. Figure~\ref{fig:da_activity_diagrams} presents the process of deploying a new agent (\ref{fig:da_activity_diagram_deploy_agent}) and stopping a pre-existing agent (\ref{fig:da_activity_diagram_stop_agent}). The marketplace file is not provided by the user, but could instead be provided by some kind of web application. For this work however, it is provided locally and the \acrshort{DA} has access to its contents directly.\\
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\subbottom[Deployment of new agent.\label{fig:da_activity_diagram_deploy_agent}]{%
 		\includegraphics[width=0.47\linewidth]{Activity_Diagram_DA_deploy}}%
@@ -175,7 +173,7 @@ The \acrlong{PM} is simpler in its activities, since its only task is to launch 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.9]{Activity_Diagram_PM}
+	\includegraphics[scale=0.7]{Activity_Diagram_PM}
 	\caption{\acrlong{PM} activity diagram.}
 	\label{fig:pm_activity_diagram}
 \end{figure}
@@ -184,11 +182,11 @@ After deployment, \acrlongpl{RA} and \acrlongpl{TA} will instantiate the \acrlon
 
 When all \acrshortpl{RA} and \acrshortpl{TA} have been launched and their initial setup completed, the system is now ready to work. \acrshortpl{PA} are launched as new products enter the production line, and after getting their production sequences, they will search the Yellow Pages to find a \acrshort{RA} capable of performing the first skill. When they find it, they will issue a Call for Proposals from all relevant agents through the \acrshort{FIPA} Contract Net. This interaction protocol was developed by \acrshort{FIPA}, and it works as follows:
 
-In this protocol the agent that starts the communication is called the Initiator, and all other are the Participants. The Initiator sends a Call for Proposals or CFP message to all Participants preselected by the Initiator. After receiving the message, the Participants can either accept the call by sending a Proposal, or refuse altogether. On refusal, this particular Participant is out of communications from now on. Proposals might include some data to help the Initiator decide which Participants it wants to keep communicating with. Upon deciding this, the Initiator will send an Accept Proposal message to the desired Participants, Rejecting all other Proposals. Finally, the Participants whose Proposal was accepted might perform some process and inform the Initiator of the result, with a Failure message or a Inform message. This interaction protocol can be visualized in Figure~\ref{fig:contract_net_protocol}.\\
+In this protocol the agent that starts the communication is called the Initiator, and all other are the Participants. The Initiator sends a Call for Proposals or CFP message to all Participants preselected by the Initiator. After receiving the message, the Participants can either accept the call by sending a Proposal, or refuse altogether. On refusal, this particular Participant is out of communications from now on. Proposals might include some data to help the Initiator decide which Participants it wants to keep communicating with. Upon deciding this, the Initiator will send an Accept Proposal message to the desired Participants, Rejecting all other Proposals. Finally, the Participants whose Proposal was accepted might perform some process and inform the Initiator of the result, with a Failure message or a Inform message. This interaction protocol can be visualized in Figure~\ref{fig:contract_net_protocol}.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.87]{FIPA_Contract_Net}
+	\includegraphics[scale=0.75]{FIPA_Contract_Net}
 	\caption{\acrshort{FIPA} Contract Net interaction protocol. Adapted from \cite{FIPA_Contract_Net}.}
 	\label{fig:contract_net_protocol}
 \end{figure}
@@ -197,25 +195,26 @@ After receiving the Call for Proposals, \acrshortpl{RA} will respond with a Prop
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics{PA_RA_Contract_Net}
+	\includegraphics[scale=0.75]{PA_RA_Contract_Net}
+	\captionsetup{justification=centering}
 	\caption{\acrshort{FIPA} Contract Net protocol between a \acrlong{PA} and two \acrlongpl{RA}.}
 	\label{fig:pa_ra_contract_net}
 \end{figure}
 
-Upon finding a \acrlong{RA}, the \acrlong{PA} now needs to be transported to its work station. For this it needs a \acrlong{TA}. So the \acrshort{PA} will once again look into the Yellow Pages for a \acrshort{TA}, by searching for a skill once again. It was decided that for simplicity, only one transport agent will be used in the simulated system. So instead of asking for an agent through the \acrshort{FIPA} Contract Net, the agent can skip straight away to the next step, which is to ask for a skill to be performed through a \acrshort{FIPA} Request. This protocol is also one created by \acrshort{FIPA}, and its less complex than the \acrshort{FIPA} Contract Net:
+Upon finding a \acrlong{RA}, the \acrlong{PA} now needs to be transported to its work station. For this it needs a \acrlong{TA}. So the \acrshort{PA} will once again look into the Yellow Pages for a \acrshort{TA}, by searching for a skill once again. The physical system used in Chapter~\ref{cha:implementation} to simulate a real environment only uses a single \acrshort{TA}. So instead of asking for an agent through the \acrshort{FIPA} Contract Net, the agent can skip straight away to the next step, which is to ask for a skill to be performed through a \acrshort{FIPA} Request. This protocol is also one created by \acrshort{FIPA}, and its less complex than the \acrshort{FIPA} Contract Net:
 
 This protocol also includes an Initiator, but only one Participant. This is a one to one communication. The Initiator starts by sending a Request to the Participant. At this point the Participant may Refuse, and communications are terminated. If it Agrees however, it will start performing the desired process immediately. Upon completion, it will notify the Initiator with either a Failure or Inform message. This protocol is shown in Figure~\ref{fig:requests_protocol}.\\
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics{FIPA_Requests}
+	\includegraphics[scale=0.9]{FIPA_Requests}
 	\caption{\acrshort{FIPA} Request interaction protocol. Adapted from \cite{FIPA_Request}.}
 	\label{fig:requests_protocol}
 \end{figure}
 
-The \acrshort{PA} starts a \acrshort{FIPA} Request with its starting and ending positions, so the \acrshort{TA} from where the \acrshort{PA} departs from, and what is its destination. After Agreeing with the Request and before the communication terminates, the \acrshort{TA} will transport the \acrshort{PA} to the destination and send an Inform message signalling the transportation is complete. After arriving at the location where the previously found \acrshort{RA} is located, the \acrshort{PA} will use the same protocol to Request the skill from the \acrshort{RA}. Both of these sequences of messages are shown in Figure~\ref{fig:agent_requests}. In \ref{fig:pa_ra_requests} the \acrshort{FIPA} Requests protocol between a \acrshort{PA} and \acrshort{TA} is shown, and in \ref{fig:pa_ta_requests} between a \acrshort{PA} and \acrshort{RA}.\\
+The \acrshort{PA} starts a \acrshort{FIPA} Request with its starting and ending positions, so the \acrshort{TA} knows from where the \acrshort{PA} departs from, and what is its destination. After Agreeing with the Request and before the communication terminates, the \acrshort{TA} will start the transportation procedure by moving the \acrshort{PA} from its starting position to its destination. When this is completed, the \acrshort{TA} will send the Inform message to the \acrshort{PA} signalling the transportation is complete. After arriving at the location where the previously found \acrshort{RA} is located, the \acrshort{PA} will use the same protocol to Request the skill from the \acrshort{RA}. After Agreeing, the \acrshort{RA} will start performing the skill on the product. When complete, an Inform message is sent to the \acrshort{PA} signalling the end of the operation. Both of these sequences of messages are shown in Figure~\ref{fig:agent_requests}. In \ref{fig:pa_ra_requests} the \acrshort{FIPA} Requests protocol between a \acrshort{PA} and \acrshort{TA} is shown, and in \ref{fig:pa_ta_requests} between a \acrshort{PA} and \acrshort{RA}.\\
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\subbottom[\acrlong{PA} and \acrlong{TA}.\label{fig:pa_ra_requests}]{%
 		\includegraphics[width=0.45\linewidth]{PA_TA_Requests}}%
@@ -226,11 +225,11 @@ The \acrshort{PA} starts a \acrshort{FIPA} Request with its starting and ending 
 	\label{fig:agent_requests}
 \end{figure}
 
-When the \acrshort{RA} finishes it skill and informs the \acrshort{PA}, the \acrshort{PA} will check if its production sequence is complete. If it is, it will Request transportation from a \acrshort{TA} to storage. If the sequence is not complete, it restarts the process by checking the Yellow Pages for agents capable of performing the next skill, Calling for Proposals, and so on. The whole evolution of the \acrshort{MAS} can be visualized in Figure~\ref{fig:mas_activity_diagram}. It only shows the full interactions between agents, their actions and decisions without the \acrlong{ME}.\\
+When the \acrshort{RA} finishes its skill and informs the \acrshort{PA}, the \acrshort{PA} will check if its production sequence is complete. If it is, it will Request transportation from a \acrshort{TA} to storage. If the sequence is not complete, it restarts the process by checking the Yellow Pages for agents capable of performing the next skill, Calling for Proposals, and so on, repeating the process. The whole evolution of the \acrshort{MAS} can be visualized in Figure~\ref{fig:mas_activity_diagram}. It only shows the full interactions between agents, their actions and decisions without the \acrlong{ME}.\\
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics{MAS_Activity_Diagram}
+	\includegraphics[scale=0.7]{MAS_Activity_Diagram}
 	\caption{Activity diagram of the Industrial \acrlong{MAS}.}
 	\label{fig:mas_activity_diagram}
 \end{figure}
@@ -238,11 +237,11 @@ When the \acrshort{RA} finishes it skill and informs the \acrshort{PA}, the \acr
 \section{System Overview}
 \label{sec:system_overview}
 
-Now that all parts of the system have been explained, it is now time to do a brief overview of the behaviour of the system has a whole. When the \acrshort{MAS} is launched, the first two agents that start up immediately are the \acrlong{DA} and the \acrlong{PM}. Then a user needs to launch the \acrlongpl{RA} and the \acrlong{TA} and select the right configurations for each agent.\\ 
+Now that all parts of the system have been explained, it is now time to do a brief overview of the behaviour of the system has a whole. When the \acrshort{MAS} is launched, the first two agents that start up immediately are the \acrlong{DA} and the \acrlong{PM}. Then a user needs to manually launch the \acrlongpl{RA} and the \acrlong{TA} and select the right configurations for each agent.\\ 
 
 When these agents are launched, they will register themselves in the Yellow Pages Service with their skills and instantiate their \acrlong{ME}, which will in turn load the corresponding \acrlong{LL}. These \acrshortpl{LL} will establish connection to the hardware. After all of these agents are deployed and ready to operate, the user can now launch the \acrlong{PA}.\\
 
-Upon being launched, the \acrshort{PA} will look at the Yellow Pages and it will find the \acrshortpl{RA} capable of performing the first skill in its production sequence. Then it will establish contact with all of them through the \acrshort{FIPA} Contract Net. After receiving the Proposals, it will select one and refuse the all others. In the last message, the \acrshort{PA} will receive the location of the station where the \acrshort{RA} is located.\\
+Upon being launched, the \acrshort{PA} will look at the Yellow Pages and it will find the \acrshortpl{RA} capable of performing the first skill in its production sequence. Then it will establish contact with all of them through the \acrshort{FIPA} Contract Net. After receiving all Proposals, it will select one and refuse the others. In the Inform message, the \acrshort{PA} will receive the location of the station where the \acrshort{RA} is located.\\
 
 The next step is to Request transportation from a \acrshort{TA} to this location. The \acrshort{PA} will start a \acrshort{FIPA} Request with its current location and its destination. The \acrshort{TA} will answer this Request to signal it received the message and will immediately start the process of moving the product. For this, it will send the command through the \acrlong{ME} and through the \acrlong{LL}, to the hardware. Once the hardware finishes executing it, it will return the result back up through the \acrshort{LL} and through the \acrshort{ME} to the agent.\\
 
@@ -251,6 +250,6 @@ The \acrshort{TA} will now notify the \acrshort{PA} that transportation is compl
 \begin{figure}[h!]
 	\centering
 	\includegraphics{Complete_System_Activity_Diagram}
-	\caption{Activity diagram of the final system.}
+	\caption{Activity diagram of the complete system.}
 	\label{fig:complete_activity_diagram}
 \end{figure}

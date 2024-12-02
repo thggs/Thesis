@@ -32,9 +32,9 @@ Now that the proposed architecture of the system has been laid out and well defi
 \section{System Implementation}
 \label{sec:class_implementation}
 
-The implementation needs to start with the deployment agents, since these are responsible for launching all other agent types. The \acrfull{DA} is tasked with deploying \acrfullpl{RA} and \acrfullpl{TA}. The \acrshort{DA} needs a \acrfull{GUI} to allow a user to launch these agents with the right configurations. These must include the agent type to be launched, the type of \acrlong{LL} the agent must use and its configurations. In addition to the \acrshort{DA}, the \acrfull{PM} also needs to launch agents, more specifically, \acrfullpl{PA}. This should also be done through a \acrshort{GUI} but this one should only show buttons per product type, and some information on the already deployed \acrshortpl{PA}.\\
+The implementation needs to start with the deployment agents, since these are responsible for launching all other agent types. The \acrfull{DA} is tasked with deploying \acrfullpl{RA} and \acrfullpl{TA}. The \acrshort{DA} needs a \acrfull{GUI} to allow a user to launch these agents with the right configurations. These must include the agent type to be launched, the type of \acrlong{LL} the agent must use and its configurations. Like the \acrshort{DA}, the \acrfull{PM} also needs to launch agents, more specifically, \acrfullpl{PA}. This should also be done through a \acrshort{GUI} but this one should only show buttons per product type, and some information on the already deployed \acrshortpl{PA}.\\
 
-The \acrshortpl{RA} and \acrshortpl{TA} will operate somewhat similarly to each other, with the \acrshortpl{RA} needing an extra step before a skill executes. They will register themselves in a registry of agents called the \acrfull{DF}. This \acrshort{DF} is the Yellow Pages Service mentioned in Chapter~\ref{cha:architecture}. This is mainly so that the \acrlongpl{PA} can find the right agent for the operation they need to accomplish. For skill execution, \acrshortpl{RA} and \acrshortpl{TA} are dependent on the \acrlong{ME}.\\
+The \acrshortpl{RA} and \acrshortpl{TA} will operate somewhat similarly to each other, with the \acrshortpl{RA} needing an extra step before a skill executes. They will register themselves in a registry of agents called the \acrfull{DF}. This \acrshort{DF} is the Yellow Pages Service mentioned in Chapter~\ref{cha:architecture}. This is mainly so that the \acrlongpl{PA} can find the right agent for the operation they need to accomplish. For skill execution, \acrshortpl{RA} and \acrshortpl{TA} are dependent on the \acrlong{ME}.\\\\
 
 The \acrlongpl{PA} need to be constantly on a loop. They look at their production sequence and search for a \acrshort{RA} capable of performing the current skill. Upon finding it, they will request transportation to the station. Upon arrival, they will call for the skill to be performed on them. If the production sequence has been completed, they request transportation out of the production line. If not, the process must repeat until this condition is met.\\
 
@@ -43,7 +43,7 @@ The \acrlong{ME} will need to operate between the layers of agent and hardware. 
 \subsection{Implementation Tools}
 \label{subsec:implementation_tools}
 
-For the implementation of the \acrlong{ME} framework and accompanying \acrshort{MAS}, the Java programming language was selected, more specifically version 21.0.2 of the openjdk. As mentioned in \ref{subsec:best_practices_and_common_architectures}, \acrshort{JADE} was built with the \acrshort{FIPA} specifications in mind and its Java version is well supported, so this framework was chosen to implement the \acrfull{MAS}.
+For the implementation of the \acrlong{ME} framework and accompanying \acrshort{MAS}, the Java programming language was selected, more specifically version 21.0.2 of the OpenJDK. As mentioned in \ref{subsec:best_practices_and_common_architectures}, \acrshort{JADE} was built with the \acrshort{FIPA} specifications in mind and its Java version is well supported, so this framework was chosen to implement the \acrlong{MAS}.
 
 The \acrshort{JADE} framework provides a lot of tools for agent development, communication and management. It provides a lot of classes and methods useful for agent setup, communication, \acrshort{DF} registration and more. Since the Java language was going to be used for the \acrshort{MAS} and is one of the best supported in the world, the \acrlong{ME} and the \acrlongpl{LL} were also developed using it.\\
 
@@ -51,17 +51,17 @@ As mentioned in Chapter \ref{cha:architecture}, three main cyber-physical agent 
 
 This interface contains a lot of useful methods and variables, although not all of them are used in this \acrshort{MAS}. The methods used are the "setup" method, executed once when an agent is launched, and the "takeDown" method, executed when a agent is terminated. These methods must be overwritten to provide the agent with instructions on launch and termination.
 
-Because the agents are launched through \acrshort{JADE}, the class constructor cannot have any initial arguments. To launch an agent with arguments, the method "getArguments" present in every agent can be used. It returns a generic object array the developer can then use to retrieve the arguments an agent is launched with.\\
+Because the agents are launched through \acrshort{JADE}, the class constructor cannot have any initial arguments. To launch an agent with arguments, the method "getArguments" present in every agent can be used. It returns a generic object array a developer can then use to retrieve the arguments an agent is launched with.
 
 \acrshort{JADE} also provides a lot of other classes that define agent behaviour. These classes must be defined inside the agents class to add new behaviours. Some of them must be used in order to make use of the different \acrshort{JADE} functionalities, like the \acrshort{FIPA} Contract Net. Others simply exist to add a bit more flexibility during development.\\
 
 The behaviour classes used in this project were:
 \begin{itemize}
 	\item The "OneShotBehaviour" class, that adds a single behaviour to the agents behaviour sequence. It is executed once, and then is excluded from the sequence;
-	\item The "ContractNetInitiator" class, that allows an agent to start interacting with other agents as the Initiator in the \acrshort{FIPA} Contract Net protocol;
-	\item The "ContractNetResponder" class, that allows an agent to respond to messages as one of the Participants in the \acrshort{FIPA} Contract Net protocol. Once it finishes communications, it is excluded from the behaviour sequence;
-	\item The "AchieveREInitiator" class, that allows an agent to start interacting with anoter agent as the Initiator in the \acrshort{FIPA} Requests protocol;
-	\item And the "AchieveREResponder" class, that allows an agent to respond to messages as a Participant in the \acrshort{FIPA} Requests protocol. This class is also excluded from the behaviour sequence after communications are done.
+	\item The "ContractNetInitiator" class, that allows an agent to start interacting with other agents as the Initiator in the \acrshort{FIPA} Contract Net protocol. Once it finishes communications, it is excluded from the behaviour sequence;
+	\item The "ContractNetResponder" class, that allows an agent to respond to messages as one of the Participants in the \acrshort{FIPA} Contract Net protocol; 
+	\item The "AchieveREInitiator" class, that allows an agent to start interacting with anoter agent as the Initiator in the \acrshort{FIPA} Requests protocol. This class is also excluded from the behaviour sequence after communications are done;
+	\item And the "AchieveREResponder" class, that allows an agent to respond to messages as a Participant in the \acrshort{FIPA} Requests protocol.
 \end{itemize}
 
 \subsection{Deployment Agent}
@@ -69,13 +69,13 @@ The behaviour classes used in this project were:
 
 Starting with deployment, the \acrlong{DA} was designed to allow a human user to deploy and terminate agents during the execution of the \acrshort{MAS}. In its constructor the functionalities of the \acrshort{GUI} are defined and some initial values are set. This class extends the "Agent" class, and only makes use of the "setup" method. All other functionalities are called on button presses, through events.
 
-The "selectedAgent" specifies which type of agent (\acrshort{RA} or \acrshort{TA}) is to be launched. This can be changed through a radio button on the interface.
+The "selectedAgent" field specifies which type of agent (\acrshort{RA} or \acrshort{TA}) is to be launched. This can be changed through a radio button on the interface.
 
-The "xmlMarketplace" is loaded during "setup" with the method "getMarketplaceLibraries", using the file pointed to by the "marketplaceXMLPath" String. It holds the path of the \acrshort{XML} file that contains the available \acrlongpl{LL}.
+The "xmlMarketplace" field is loaded during "setup" with the method "getMarketplaceLibraries", using the file pointed to by the "marketplaceXMLPath" String. It holds the path of the \acrshort{XML} file that contains the available \acrlongpl{LL}.
 
 The "agentContainer" field holds a reference to the container where the agents deployed will be hosted. Finally, the "xmlConfigPath" is a user loaded value that is used to pass the \acrshort{LL} configurations file.\\
 
-In Figure~\ref{fig:da_class_diagram}, some of the classes the agent uses to draw the \acrshort{GUI} are shown. These classes are part of the "javax.swing" package, useful to draw graphic interfaces. as the "ContainerController" used to create a container where other agents are deployed. This is a \acrshort{JADE} class. Also shown are the auxiliary "Constants" class, that stores constants useful for the correct operations of the \acrshort{MAS}. This class will be explained in more detail in \ref{subsec:constants}.\\
+In Figure~\ref{fig:da_class_diagram}, some of the classes the agent uses to draw the \acrshort{GUI} are shown. These classes are part of the "javax.swing" package, useful to draw graphical interfaces. The "ContainerController", used to create a container where other agents are deployed, is a \acrshort{JADE} class. Also shown are the auxiliary "Constants" class, that stores constants useful for the correct operations of the \acrshort{MAS}. This class will be explained in more detail in Section~\ref{subsec:constants}.\\
 
 \begin{figure}[h!]
 	\centering
@@ -87,11 +87,9 @@ In Figure~\ref{fig:da_class_diagram}, some of the classes the agent uses to draw
 \subsection{Resource Agent}
 \label{subsec:resource_agent}
 
-This agent is launched by the \acrshort{DA} because it is dependent on the parameters provided by it.
+This agent is launched by the \acrshort{DA} because it is dependent on the parameters provided by it. The \acrlong{RA} class also extends the "Agent" abstract class, and overrides the "setup" and "takeDown" methods. It makes use of the "addBehaviour" and "getArguments" methods, as well as the "ContractNetResponder" and "AchieveREResponder" classes.
 
-The \acrlong{RA} class also extends the "Agent" abstract class, and overrides the "setup" and "takeDown" methods. It makes use of the "addBehaviour" and "getArguments" methods, as well as the "ContractNetResponder" and "AchieveREResponder" classes.
-
-It makes use of the auxiliary "Constants" and "DFInteraction" classes, which will be explained in \ref{subsec:constants} and \ref{subsec:directory_facilitator}, respectively. It has two objects of type File called "xmlConfigFile" and "xmlMarketplaceFile", given as a parameter by the \acrshort{DA}, that store the corresponding files. The String "libType", also given as a parameter by the \acrshort{DA}, contains the type of \acrshort{LL} this agent is using and the String "location" contains the position of this agent in the physical system.
+It makes use of the auxiliary "Constants" and "DFInteraction" classes, which will be explained in \ref{subsec:constants} and \ref{subsec:directory_facilitator}, respectively. It has two objects of type File called "xmlConfigFile" and "xmlMarketplaceFile", given as a parameter by the \acrshort{DA}, that store the corresponding files. The String "libType", also given as a parameter by the \acrshort{DA}, contains the type of \acrshort{LL} this agent is using and the String "location" contains the position of this agent in the physical system.\\
 
 Finally, the object "moduleEngine" of type ModuleEngine holds the \acrshort{ME} instance this agent instantiates, and the ArrayList of Strings "associatedSkills" holds the list of all skills this agent is able to perform. This last object is initialized during setup, with the configurations provided by the \acrshort{DA} as well.\\
 
@@ -113,7 +111,7 @@ The only differences are in the variables it uses and the classes it implements.
 
 The only exception is the variable "location", since the \acrlong{TA} does not have a static location in the physical system. This class also makes use of the "Constants" and "DFInteraction" classes.
 
-It implements a single "requestResponder" class which extends the "AchieveREResponder" class, used to respond to \acrshort{FIPA} Requests, provided by \acrshort{JADE}. This is because this agent does not make use of the \acrshort{FIPA} Contract Net, therefore does not need any of the classes that allow its use.
+It implements a single "requestResponder" class which extends the "AchieveREResponder" class, used to respond to \acrshort{FIPA} Requests, provided by \acrshort{JADE}. This is because this agent does not make use of the \acrshort{FIPA} Contract Net, therefore does not need any of the classes that enable its use.
 
 Figure~\ref{fig:ta_class_diagram} has a representation of its implementation. Once again the classes related to the \acrshort{ME} have been omitted.\\
 
@@ -127,15 +125,17 @@ Figure~\ref{fig:ta_class_diagram} has a representation of its implementation. On
 \subsection{Constants}
 \label{subsec:constants}
 
-To help define all of the constants needed for the \acrshort{MAS}, an auxiliary class of constants was created. This "Constants" class also contains a few methods to help with information retrieval. It is mostly composed of String fields. Other classes can reference it to check information about the system. All of these are implementation specific, and define the system used for testing in Chapter~\ref{cha:implementation}. The "SKILL" Strings define the type of skills available in the whole system. The "STATION" Strings hold the two \acrshort{RA} types and the "TRANSPORT" holds the single \acrshort{TA} type. "PROD" represents the product types available. "LOCATION" holds the values for all locations in the system. "STATION\_SKILLS" and "TRANSPORT\_SKILLS" list the skills those agents can perform. Finally, "PROD\_SKILLS" contains the list of skills those products need to complete their production and "PRODUCT\_TYPES" holds a list of all product types.
+To help define all of the constants needed for the \acrshort{MAS}, an auxiliary class of constants was created. This "Constants" class also contains a few methods to help with information retrieval. It is mostly composed of String fields. Other classes can reference it to check information about the system. All of these are implementation specific, and define the system used for testing in Chapter~\ref{cha:implementation}.\\
 
-The methods help with information retrieval. Given a \acrshort{RA} or \acrshort{TA} name, "getStationTransportSkills" returns a list of all skills that agent can perform. With a name as parameter, "getStationLocation" gives the location of the station in question. "getLocationStation" does the opposite, it returns the agent name at the location passed to the method. And "getProdSkills" returns the list of skills of the product type passed as a parameter.
+Figure~\ref{fig:const_class_diagram} shows a representation of this class, as it is solution specific. Generic names for each type of constant are shown to shorten the size of the diagram, with the letter "X" being used as a placeholder for names of skills, stations, products, etc. 
 
-All of this information is visible in Figure~\ref{fig:const_class_diagram}. 
+The Strings "SKILL\_X" define the type of skills available in the whole system. The Strings "STATION\_X" hold the \acrshort{RA} types and the "TRANSPORT\_X" holds the \acrshort{TA} types. "PROD\_X" represents the product types available. "LOCATION\_X" fields hold the value for all locations in the system. "STATION\_X\_SKILLS" and "TRANSPORT\_X\_SKILLS" list the skills those agents can perform. Finally, "PROD\_X\_SKILLS" contains the list of skills a specific product needs to complete their production and "PRODUCT\_TYPES" holds a list of all product types.\\
+
+The methods help with information retrieval. Given an \acrshort{RA} or \acrshort{TA} name, "getStationTransportSkills" returns a list of all skills that agent is able to perform. With a name as parameter, "getStationLocation" gives the location of the station in question. "getLocationStation" does the opposite, it returns the agent name at the location passed to the method. Lastly, "getProdSkills" returns the list of skills of the product type passed as a parameter.\\
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{Const_Class_Diagram}
+	\includegraphics[scale=0.8]{Const_Class_Diagram}
 	\caption{Constants class diagram.}
 	\label{fig:const_class_diagram}
 \end{figure}
@@ -163,7 +163,7 @@ It generates a button per product type based on the information present in the A
 
 The "productID" is an integer appended to the name of each agent launched under the \acrshort{PM}, because \acrshort{JADE} does not allow agents with the same name to exist. The "products" ArrayList of Strings holds a list of product agents that have been launched so far.
 
-In Figure~\ref{fig:pm_class_diagram}, the classes that it uses to draw the \acrshort{GUI} are shown, once again the "ContainerController" used to instantiate a container where \acrlongpl{PA} are launched. The "DefaultTableModel" class helps with the definition of the \acrshort{GUI}, and is a class in the "javax.swing" package.\\
+In Figure~\ref{fig:pm_class_diagram}, the classes that it uses to draw the \acrshort{GUI} are shown, once again the "ContainerController" used to instantiate a container where \acrlongpl{PA} are launched. The "DefaultTableModel" class helps with the definition of the \acrshort{GUI}, and is a class in the "javax.swing" package.
 
 \begin{figure}[h!]
 	\centering
@@ -219,7 +219,7 @@ The "LinkLibraryHTTP" was implemented with the classes and methods provided in t
 
 The "LinkLibraryMQTT" is dependent on the "org.eclipse.paho.client.mqttv3" package to implement its \acrshort{MQTT} protocol. When the \acrshort{LL} is started, it will immediately try to connect to the broker specified in its configurations, and immediately subscribe to a response topic, also present in the configurations. When a skill needs execution, the \acrshort{LL} publishes the skill in the requests topic, also specified in the configurations. Then, it will wait until the response topic receives a message, which it will return as the result to the operation.
 
-Finally, the "LinkLibraryOPCUA" used the "org.eclipse.milo.opcua" package to implement an \acrshort{OPCUA} communication. It will connect to the \acrshort{OPCUA} server in the configuration file, and subscribe to the response node of the corresponding device. When a skill needs to be executed, the response node is cleared, to make sure the result is read. Then the skill is written on the requests node and the \acrshort{LL} will wait until the response node value changes. When it does, the requests node is cleared and the result is returned to the agent.
+Finally, the "LinkLibraryOPCUA" used the "org.eclipse.milo.opcua" package to implement an \acrshort{OPCUA} communication. It will connect to the \acrshort{OPCUA} server in the configuration file, and subscribe to the response node of the corresponding device. When a skill needs to be executed, the response node is cleared to make sure the result is read properly. Then the skill is written on the requests node and the \acrshort{LL} will wait until the response node value changes. When it does, the requests node is cleared, so it is ready for the next communication, and the result is returned to the agent.
 
 All \acrlongpl{LL} must extend the "LinkLibrary" class, because this is the basis of an \acrshort{LL} and it defines the methods on which the \acrlong{ME} depends on for correct execution. All further \acrlongpl{LL} also need to take this base, to ensure correct integration with the \acrshort{ME}.
 
@@ -232,12 +232,12 @@ Figure~\ref{fig:link_library_class_diagram} has a representation of these classe
 	\label{fig:link_library_class_diagram}
 \end{figure}
 
-All developed \acrlongpl{LL} were registered in the marketplace file, one \acrshort{LL} per \acrshort{XML} tag, each tag with two attributes. The first attribute is the exact name of the class and the second attribute the file path that points to where the given \acrshort{LL} is located. With these two attributes, the \acrshort{ME} is capable of finding and loading the correct \acrshort{LL}.\\
-
-In order to use these \acrlongpl{LL} however, the hardware that would work underneath the agent would also need to implement these three protocols in some way. In addition, a configuration file must always be provided to the \acrshort{LL} for it to communicate properly.\\
+All developed \acrlongpl{LL} were registered in the marketplace file, one \acrshort{LL} per \acrshort{XML} tag, each tag with two attributes. The first attribute is the exact name of the class and the second attribute the file path that points to where the given \acrshort{LL} is located. With these two attributes, the \acrshort{ME} is capable of finding and loading the correct \acrshort{LL}. In order to use these \acrlongpl{LL} however, the hardware that would work underneath the agent would also need to implement these three protocols in some way. In addition, a configuration file must always be provided to the \acrshort{LL} for it to communicate properly.
 
 \section{Interfaces}
 \label{sec:interfaces}
+
+In this Section, the three interfaces between entities in the \acrshort{MAS} are explained. Starting with the human to agent interface, for agent deployment. Then agent to agent interfaces, for \acrshort{MAS} operations. Finally, agent to hardware for skill execution.
 
 \subsection{Human to Agent}
 \label{subsec:human_to_agent_interface}
@@ -283,6 +283,8 @@ Agent to agent communication is done through ACLMessages. These have been define
 
 The performative of a message can take multiple values. For the \acrshort{FIPA} Requests protocol, messages of type "request", "refuse", "agree", "failure", "inform-done" and "inform-result". The \acrshort{FIPA} ContractNet protocol makes use of messages of type "Call For Proposals" or "CFP", "refuse", "propose", "reject-proposal", "accept-proposal", "failure", "inform-done" and "inform-result". These message types and their respective protocols can be seen in Table~\ref{tb:aclmessage_performative_types}.\\
 
+The sender and receiver parameters are pretty self explanatory, they hold the agent ID of both the sender and receiver of the messages. The content parameter holds the content of the message. For this \acrshort{MAS} it can be a location or a skill, depending on which type of agents are communicating and at what stage a product is along its cycle.\\
+
 \begin{table}[h!]
 	\centering
 	\caption{ACLMessage performative types}
@@ -309,7 +311,7 @@ The performative of a message can take multiple values. For the \acrshort{FIPA} 
 
 To interface with the hardware, an agent must call the "executeSkill" method of the \acrlong{ME}. In its parameters it should send the skill as a String. The \acrshort{ME} will then call the "ExecuteSkill" of the \acrshort{LL} loaded by it. All \acrlongpl{LL} must contain the method "ExecuteSkill", otherwise calling it would be impossible. This method is implemented by the abstract class "LinkLibrary", as described in \ref{subsec:module_engine}.
 
-The \acrshort{LL} will now forward the skill through the protocol it is implementing, in whatever format it was designed for. A developer could reformat this message to whatever type they want, but the \acrshort{LL} must always return a result of type String. As long as these rules are obeyed, \acrlongpl{LL} can be used in the way most suitable to the system they are in. The result is passed to the \acrshort{ME} as a String, which is then passed to the agent.\\
+The \acrshort{LL} will now forward the skill through the protocol it is implementing, in whatever format it was designed for. A developer could reformat this message to whatever type they want, to adapt to the hardware if needed, but the \acrshort{LL} must always return a result of type String. As long as these rules are obeyed, \acrlongpl{LL} can be used in the way most suitable to the system they are in. The result is passed to the \acrshort{ME} as a String, which is then passed to the agent.\\
 
 Three \acrlongpl{LL} were implemented, seen in \ref{subsec:link_library_class}. The \acrshort{HTTP} \acrshort{LL} works by creating an \acrshort{HTTP} connection, every time a skill is to be executed, using the address provided in the configurations. It sends the skill as a payload in a POST request. It then waits for an OK message with code 200 as per the \acrshort{HTTP} protocol.
 
@@ -325,7 +327,7 @@ The \acrshort{OPCUA} \acrshort{LL} is a bit more complex than the other two. It 
 
 When the \acrshort{LL} is loaded, it immediately connects to the \acrshort{OPCUA} server and creates two node objects locally with the namespace and identifiers, one with the request and one with the response identifier. It also creates a subscription to the responses node.
 
-When a skill is to be executed, first the response node is cleared, to make sure the \acrshort{LL} gets notified of a new message. Then the skill is written to the requests node. The \acrshort{LL} waits until a response arrives and when it does it saves it and clears the requests node for the next cycle of communications. The result message is sent to the Module Engine to be returned to the Agent.\\
+When a skill is to be executed, first the response node is cleared, to make sure the \acrshort{LL} gets notified of a new message. Then the skill is written to the requests node. The \acrshort{LL} waits until a response arrives and when it does it saves it and clears the requests node for the next cycle of communications. The result message is sent to the Module Engine to be returned to the agent.\\
 
 
 \section{Multi-agent System Operations}
@@ -353,20 +355,20 @@ Before any product can be produced however, a human operator needs to deploy the
 \subsection{Initial Setup}
 \label{subsec:initial_setup}
 
-\acrlongpl{RA} and \acrlongpl{TA} agents need to be deployed through the \acrshort{DA}. From the available \acrlongpl{LL}, the operator will chose which one needs to be launched with the agent to interface with the hardware. This \acrshort{LL} must have been previously developed according to the specifications so it is compatible with the \acrlong{ME}, and it name and file path added to the marketplace file. Upon selecting an \acrshort{LL}, the corresponding configuration file for this agent must be selected. Then the agent must be given a name and its type selected. Now the agent can be deployed by pressing the "Start Agent" button. This process now needs to be repeated for every agent, until all the agents have been launched.
+\acrlongpl{RA} and \acrlongpl{TA} agents need to be deployed through the \acrshort{DA}. From the available \acrlongpl{LL}, the operator will chose which one needs to be launched with the agent to interface with the hardware. This \acrshort{LL} must have been previously developed according to the specifications so it is compatible with the \acrlong{ME}, and its name and file path added to the marketplace file. Upon selecting an \acrshort{LL}, the corresponding configuration file for this agent must be selected. Then the agent must be given a name and its type selected. Now the agent can be deployed by pressing the "Start Agent" button. This process now needs to be repeated for every agent, until all the agents have been launched.
 
 When an agent is launched, its "setup" method is run. In it the agent will start the \acrshort{ME} with the \acrshort{LL} of the type selected, with the configurations provided to it. It will create a \acrlong{LL} object by getting all the \acrlongpl{LL} in the marketplace file with "parseMarketplaceXML" and create an \acrshort{LL} object with "createObject". This \acrshort{LL} will now connect to the hardware if needed, in its constructor. The agents registers itself in the \acrshort{DF} using the method "RegisterInDF". Then the first behaviour is added to the agents operating sequence. In the case of the \acrshort{RA}, it will be the "contractNetInitiator" and the "requestResponder". In the case of the \acrshort{TA}, it will only be the "requestResponder".
 
-Figure~\ref{fig:mas_operations_2} shows this process for either a \acrlong{RA} or \acrlong{TA}. In the case of the \acrshort{RA}, the "contractNetInitiator" behaviour needs to be added as well. The \acrshort{DA} is omitted here for simplicity, since it would only deploy the agent.
+Figure~\ref{fig:mas_operations_2} shows this process for either a \acrlong{RA} or \acrlong{TA}. In the case of the \acrshort{RA}, the "contractNetInitiator" behaviour needs to be added as well. The \acrshort{DA} is omitted here for simplicity, since it would only deploy the agent.\\
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics{MAS_Operations_2}
+	\includegraphics[scale=1]{MAS_Operations_2}
 	\caption{Agent startup.}
 	\label{fig:mas_operations_2}
 \end{figure}
 
-With the \acrshort{MAS} now built, new products can be launched by pressing the corresponding button in the \acrshort{PM}.\\
+With the \acrshort{MAS} now built, new products can be launched by pressing the corresponding button in the \acrshort{PM}.
 
 \subsection{Launching a Product}
 
@@ -382,7 +384,7 @@ The \acrshort{PA} now updates its location and initiates another \acrshort{FIPA}
 
 After being informed of the skills execution, the "handleInform" method increments the "step" field, which represents the execution step in the skill sequence", an checks if there are more skills to be executed. If there are, it adds a new "executeNextSkill" to the behaviour sequence and the process restarts. If there are not, the transport agent is requested again through "requestTransportMove", but this time to the deposit location in the \acrshort{MAS}, defined in the "Constants" class. After the move is complete, the agent will terminate itself.\\
 
-In Figure~\ref{fig:mas_operations_3}, at the end of this chapter, normal system operations can be observed. The diagram specifies which class executes what method. If no class is specified then it is the agent class. The \acrshort{ME} has been initialized at this point and only needs to execute skills. All agents have been registered to the \acrshort{DF} and the \acrshort{PM} as been omitted since it would only launch the \acrlong{PA}.\\
+In Figure~\ref{fig:mas_operations_3}, at the end of this chapter, normal system operations can be observed. The diagram specifies which class executes what method. If no class is specified then it is the agent class. The \acrshort{ME} has been initialized at this point and only needs to execute skills. All agents have been registered to the \acrshort{DF} and the \acrshort{PM} as been omitted since it would only launch the \acrlong{PA}.
 
 \subsection{Removing Agents}
 
@@ -392,7 +394,7 @@ The \acrshort{LL} will disconnect from the hardware and the agent will remove it
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics{MAS_Operations_4}
+	\includegraphics[scale=0.7]{MAS_Operations_4}
 	\caption{Agent termination.}
 	\label{fig:mas_operations_4}
 \end{figure}
