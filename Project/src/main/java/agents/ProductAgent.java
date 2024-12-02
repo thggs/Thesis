@@ -29,7 +29,6 @@ public class ProductAgent extends Agent {
         executionPlan = (ArrayList<String>) args[0];
         location = Constants.LOCATION_SOURCE;
         System.out.println("Product launched at: " + location + "\nWith exectution plan: " + executionPlan.toString());
-        System.out.println("Executing first skill");
         this.addBehaviour(new executeNextSkill(this));
     }
 
@@ -174,7 +173,6 @@ public class ProductAgent extends Agent {
             // If there are more skills to be executed, restart
             if(executionPlan.size() > step)
             {
-                System.out.println("Executing next skill");
                 myAgent.addBehaviour(new executeNextSkill(myAgent));
             }
             // If not, then ask for move to storage
