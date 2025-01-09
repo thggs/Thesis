@@ -10,21 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93bb5eed-7652-453a-a570-681efe72eb4b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../FinalVersion1.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAD_FinalVersion1.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agents/ProductAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agents/ProductAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/moduleEngine/ModuleEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moduleEngine/ModuleEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/statsMEFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/statsMEFile.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/statsNormalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/statsNormalFile.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../doc/Chapters/Figures/Const_Class_Diagram.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Chapters/Figures/Const_Class_Diagram.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../doc/Chapters/architecture.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Chapters/architecture.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../doc/Chapters/implementation.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Chapters/implementation.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../doc/Chapters/intro.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Chapters/intro.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../doc/Chapters/state-of-the-art.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Chapters/state-of-the-art.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../doc/Chapters/tests.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Chapters/tests.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../doc/Config/1_novathesis.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Config/1_novathesis.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../doc/Config/3_cover.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Config/3_cover.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../doc/Drawio/Const_Class_Diagram.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/Drawio/Const_Class_Diagram.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/Marketplace-Driven_Framework_for_the_Dynamic_Deployment_and_Integration_of_Distributed_Modular_Industrial_Cyber-physical_Systems.pdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,36 +49,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.Boot.executor": "Run",
-    "Application.DelayTest.executor": "Run",
-    "Application.DeployTest.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.Test.executor": "Run",
-    "Application.Unnamed.executor": "Run",
-    "Application.modularLibraries.Test.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "true",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "146",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "368",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ddrod/Documents/GitHub/Thesis/Project/src/main/java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.40952381",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Boot.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DelayTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DeployTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Application.modularLibraries.Test.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH&quot;: &quot;146&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;368&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ddrod/Documents/GitHub/Thesis/Project/src/main/java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.40952381&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ddrod\Documents\GitHub\Thesis\Project\src\main\java" />

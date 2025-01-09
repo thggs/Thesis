@@ -16,7 +16,7 @@ The performance tests were done on a machine with an AMD Ryzen 7 5700X processor
 
 \subsection{Deployment Test}
 
-The first test is the deployment test. In it, an increasingly amount of agents are launched to measure how long it takes to launch each agent. An agent using the \acrlong{ME} and a normal agent are compared to ascertain how much the \acrshort{ME} impacts agent launch times.
+The first test is the deployment test. In it, an increasingly amount of agents are launched to measure how long it takes to launch each agent. An agent using the \acrlong{ME} and a normal agent are compared to each other. The main objective of this test is to ascertain how much the \acrshort{ME} impacts agent launch times.
 
 This test was repeated three times, the first a single agent of each type is launched, the second ten agents of each type are launched, and the third a hundred agents are launched. Measurements are made by starting a timer when the "setup" method of an agent starts, and then stopped once the setup finishes. An agent running the \acrlong{ME} should take longer since it needs to get the parameters from the deployment entity and needs to instantiate its \acrshort{ME} and wait for the \acrshort{LL} loads before it finishes setup. The comparison is made between an agent that needs to follow these procedures versus and agent that does not. The times are written to a file that gets read to extract the values and calculate results.
 
@@ -36,7 +36,7 @@ Although the launch times increased considerably, it must be taken into account 
 		\multirow{2}{*}{Number of agents} & \multicolumn{2}{c|}{with Module Engine} 				& \multicolumn{2}{c|}{without Module Engine} \\ \cline{2-5} 
 										  & \multicolumn{1}{c|}{Total}   	  & Average  			& \multicolumn{1}{c|}{Total}      			& Average  	  \\ \hline
 		1                                 & \multicolumn{1}{c|}{15 ms}        & 15 ms               & \multicolumn{1}{c|}{0.0016 ms}    		& 0.0016 ms   \\ \hline
-		10                                & \multicolumn{1}{c|}{1.75 ms}      & 17.5 ms             & \multicolumn{1}{c|}{0.0018 ms}    		& 0.00018 ms  \\ \hline
+		10                                & \multicolumn{1}{c|}{17.5 ms}      & 1.75 ms             & \multicolumn{1}{c|}{0.0018 ms}    		& 0.00018 ms  \\ \hline
 		100                               & \multicolumn{1}{c|}{799 ms}       & 7.99 ms             & \multicolumn{1}{c|}{0.0658 ms}  			& 0.000658 ms \\ \hline
 	\end{tabular}
 	\label{tab:deployment_times}
@@ -44,7 +44,9 @@ Although the launch times increased considerably, it must be taken into account 
 
 \subsection{Execution Test}
 
-The second test is the skill execution delay test. Here, a skill is executed through the \acrlong{ME}. A special \acrlong{LL} was developed for this test, and its only function is to return a String to simulate the result of a skill. This result is then written on the console. The execution time of this operation is compared to the time it takes for the system to write the same message to the console, without going through the \acrshort{ME}.\\
+The second test is the skill execution delay test. Here, a skill is executed through the \acrlong{ME}. A special \acrlong{LL} was developed for this test, and its only function is to return a String to simulate the result of a skill. This result is then written on the console. The execution time of this operation is compared to the time it takes for the system to write the same message directly from the agent, without going through the \acrshort{ME}.
+
+The main objective of this test is to ascertain how long a message takes to arrive from the agent to the \acrlong{LL}, and to figure out if this delay might impact system performance.
 
 This test was repeated sixty times, the five best and worst results excluded from the measured values to control for variations. The average time was calculated and compared. The operation without the \acrshort{ME} takes an average time of 0.012576 milliseconds. The operation with the \acrshort{ME} takes an average time of 0.028976 milliseconds, also less than a millisecond.\\
 
